@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Admin Panel | Tea Station</title>
+
+        <link rel="icon" href="./assets/logo.png" />
+        <link rel="stylesheet" href="../dist/output.css" />
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <!doctype html>
+    <html lang="vi">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Admin Panel | Tea Station</title>
+
+            <link rel="icon" href="./assets/logo.png" />
+            <link rel="stylesheet" href="./dist/output.css" />
+        </head>
+
+        <body class="bg-p-50">
+            <div class="flex min-h-screen">
+                <!-- ========== SIDEBAR ========== -->
+                <aside class="w-[260px] bg-white/80 backdrop-blur-xs shadow-xl flex flex-col">
+                    <div class="p-6 border-b">
+                        <a href="./" class="flex items-center gap-2">
+                            <img src="../assets/logo.png" class="w-10 h-10" />
+                            <span class="text-lg font-lobster text-p-900">Tea Admin</span>
+                        </a>
+                    </div>
+
+                    <nav class="flex flex-col flex-1 gap-2 p-4">
+                        <button class="admin-tab btn-tab active" data-tab="dashboard">Dashboard</button>
+                        <button class="admin-tab btn-tab" data-tab="products">Sản phẩm</button>
+                        <button class="admin-tab btn-tab" data-tab="orders">Đơn hàng</button>
+                        <button class="admin-tab btn-tab" data-tab="users">Người dùng</button>
+                        <button class="admin-tab btn-tab" data-tab="settings">Cài đặt</button>
+                    </nav>
+
+                    <div class="p-4 text-sm border-t text-n-500">Admin • <a href="./login.html" class="hover:underline">Đăng xuất</a></div>
+                </aside>
+
+                <!-- ========== MAIN ========== -->
+                <main class="flex-1 p-10 space-y-10">
+                    <!-- ===== DASHBOARD ===== -->
+                    <section class="block admin-content" id="dashboard">
+                        <h1 class="mb-8 text-2xl font-semibold">Dashboard</h1>
+
+                        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                            <div class="p-6 bg-white shadow-lg rounded-2xl">
+                                <p class="text-sm text-n-500">Doanh thu</p>
+                                <h3 class="mt-2 text-2xl font-semibold">12.500.000₫</h3>
+                            </div>
+                            <div class="p-6 bg-white shadow-lg rounded-2xl">
+                                <p class="text-sm text-n-500">Đơn hàng</p>
+                                <h3 class="mt-2 text-2xl font-semibold">128</h3>
+                            </div>
+                            <div class="p-6 bg-white shadow-lg rounded-2xl">
+                                <p class="text-sm text-n-500">Sản phẩm</p>
+                                <h3 class="mt-2 text-2xl font-semibold">24</h3>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- ===== PRODUCTS ===== -->
+                    <section class="hidden admin-content" id="products">
+                        <div class="flex items-center justify-between mb-6">
+                            <h1 class="text-2xl font-semibold">Quản lý sản phẩm</h1>
+                            <button class="btn">+ Thêm sản phẩm</button>
+                        </div>
+
+                        <table class="w-full overflow-hidden bg-white shadow-lg rounded-2xl">
+                            <thead class="text-sm bg-p-50">
+                                <tr>
+                                    <th class="p-4 text-left">Tên</th>
+                                    <th class="p-4">Giá</th>
+                                    <th class="p-4">Danh mục</th>
+                                    <th class="p-4">Trạng thái</th>
+                                    <th class="p-4">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-t">
+                                    <td class="p-4">Zen Garden</td>
+                                    <td class="p-4 text-center">89.000₫</td>
+                                    <td class="p-4 text-center">Matcha</td>
+                                    <td class="p-4 text-center text-green-600">Active</td>
+                                    <td class="p-4 space-x-2 text-center">
+                                        <button class="btn-sm">Edit</button>
+                                        <button class="btn-danger">Delete</button>
+                                    </td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4">Golden Lotus</td>
+                                    <td class="p-4 text-center">99.000₫</td>
+                                    <td class="p-4 text-center">Oolong</td>
+                                    <td class="p-4 text-center text-green-600">Active</td>
+                                    <td class="p-4 space-x-2 text-center">
+                                        <button class="btn-sm">Edit</button>
+                                        <button class="btn-danger">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== ORDERS ===== -->
+                    <section class="hidden admin-content" id="orders">
+                        <h1 class="mb-6 text-2xl font-semibold">Quản lý đơn hàng</h1>
+
+                        <table class="w-full overflow-hidden bg-white shadow-lg rounded-2xl">
+                            <thead class="text-sm bg-p-50">
+                                <tr>
+                                    <th class="p-4">Mã</th>
+                                    <th class="p-4">Khách</th>
+                                    <th class="p-4">Tổng</th>
+                                    <th class="p-4">Trạng thái</th>
+                                    <th class="p-4">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-t">
+                                    <td class="p-4 text-center">#TS001</td>
+                                    <td class="p-4 text-center">Nguyễn Văn A</td>
+                                    <td class="p-4 text-center">277.000₫</td>
+                                    <td class="p-4 text-center text-orange-500">Pending</td>
+                                    <td class="p-4 text-center">
+                                        <button class="btn-sm">Xem</button>
+                                    </td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4 text-center">#TS002</td>
+                                    <td class="p-4 text-center">Trần Thị B</td>
+                                    <td class="p-4 text-center">178.000₫</td>
+                                    <td class="p-4 text-center text-green-600">Completed</td>
+                                    <td class="p-4 text-center">
+                                        <button class="btn-sm">Xem</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== USERS ===== -->
+                    <section class="hidden admin-content" id="users">
+                        <h1 class="mb-6 text-2xl font-semibold">Người dùng</h1>
+
+                        <table class="w-full overflow-hidden bg-white shadow-lg rounded-2xl">
+                            <thead class="text-sm bg-p-50">
+                                <tr>
+                                    <th class="p-4">Tên</th>
+                                    <th class="p-4">Email</th>
+                                    <th class="p-4">Vai trò</th>
+                                    <th class="p-4">Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-sm">
+                                <tr class="border-t">
+                                    <td class="p-4">Admin</td>
+                                    <td class="p-4">admin@tea.com</td>
+                                    <td class="p-4 text-center">Admin</td>
+                                    <td class="p-4 text-center">
+                                        <button class="btn-sm">View</button>
+                                    </td>
+                                </tr>
+                                <tr class="border-t">
+                                    <td class="p-4">User A</td>
+                                    <td class="p-4">usera@gmail.com</td>
+                                    <td class="p-4 text-center">Customer</td>
+                                    <td class="p-4 text-center">
+                                        <button class="btn-danger">Lock</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== SETTINGS ===== -->
+                    <section class="hidden admin-content" id="settings">
+                        <h1 class="mb-6 text-2xl font-semibold">Cài đặt hệ thống</h1>
+
+                        <div class="max-w-xl p-6 bg-white shadow-lg rounded-2xl">
+                            <label class="block mb-4">
+                                <span class="text-sm">Tên cửa hàng</span>
+                                <input class="w-full px-4 py-3 mt-2 border rounded-xl" value="Tea Station" />
+                            </label>
+
+                            <label class="block mb-6">
+                                <span class="text-sm">Email liên hệ</span>
+                                <input class="w-full px-4 py-3 mt-2 border rounded-xl" value="contact@tea.com" />
+                            </label>
+
+                            <button class="btn">Lưu thay đổi</button>
+                        </div>
+                    </section>
+                </main>
+            </div>
+
+            <!-- ========== TAB SCRIPT ========== -->
+            <script>
+                const tabs = document.querySelectorAll(".admin-tab");
+                const contents = document.querySelectorAll(".admin-content");
+
+                tabs.forEach((tab) => {
+                    tab.addEventListener("click", () => {
+                        tabs.forEach((t) => t.classList.remove("active"));
+                        tab.classList.add("active");
+
+                        contents.forEach((c) => {
+                            c.classList.add("hidden");
+                            if (c.id === tab.dataset.tab) c.classList.remove("hidden");
+                        });
+                    });
+                });
+            </script>
+
+            <!-- ========== ADMIN BUTTON STYLE ========== -->
+            <style>
+                .btn-tab {
+                    text-align: left;
+                    padding: 0.75rem 1rem;
+                    border-radius: 0.75rem;
+                    font-size: 0.9rem;
+                    color: #374151;
+                    transition: 0.2s;
+                }
+                .btn-tab.active {
+                    background: rgba(22, 163, 74, 0.15);
+                    color: #14532d;
+                    font-weight: 600;
+                }
+                .btn-sm {
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 0.5rem;
+                    background: #e5f5ec;
+                    color: #14532d;
+                    font-size: 0.8rem;
+                }
+                .btn-danger {
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 0.5rem;
+                    background: #fee2e2;
+                    color: #991b1b;
+                    font-size: 0.8rem;
+                }
+            </style>
+        </body>
+    </html>
+</html>

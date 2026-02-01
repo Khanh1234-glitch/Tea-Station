@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tea Station</title>
+        <link rel="icon" type="image/png" href="../public/assets/logo.png" />
+
+        <!--------------- 
+
+    CSS
+    
+    ----------------->
+        <link type="text/css" rel="stylesheet" href="../public/css/showHideNav.css" />
+        <link type="text/css" rel="stylesheet" href="../public/css/responsive-tabs.css" />
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="../public/css/animated-counter-prograssbar.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <link href="../public/css/animation.css" rel="stylesheet" />
+        <link href="../dist/output.css" rel="stylesheet" />
+
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- JQuery -->
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+        <!--------------- 
+
+    Scripts
+    
+    ----------------->
+        <script src="../public/js/jquery.hidescroll.js" defer></script>
+        <script src="../public/js/jquery.responsiveTabs.js" defer></script>
+        <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="../public/js/animated-counter-prograssbar.js" defer></script>
+        <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
+        <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script defer type="module" src="../public/js/main.js"></script>
+    </head>
+    <body>
+        <!----------------- 
+        Navigation
+    ------------------>
+        <header class="relative z-50">
+            <div class="flex items-center justify-center navbar">
+                <div class="flex items-center justify-between w-full px-4 py-4 max-w-384 md:py-10 md:px-18">
+                    <!-- Logo -->
+                    <a href="./" class="flex items-center justify-center flex-none">
+                        <img src="../public/assets/logo.png" alt="logo" class="w-16 h-16" />
+                        <p class="text-lg capitalize font-lobster text-p-900">Tea Station</p>
+                    </a>
+
+                    <!-- Nav Links -->
+                    <nav class="items-center justify-end hidden w-full gap-4 lg:flex lg:gap-8">
+                        <a href="./products.html" class="navLink">Sản Phẩm</a>
+                        <a href="./cart.html" class="navLink">Giỏ hàng</a>
+                        <a href="./#story" class="navLink">Giới Thiệu</a>
+                        <a href="./#contact" class="navLink">Liên Hệ</a>
+                        <a href="./register.html" class="navLink">Đăng ký</a>
+                        <a href="./login.html" class="navLink">Đăng nhập</a>
+                    </nav>
+
+                    <!-- Hamburger Icon -->
+                    <div class="block cursor-pointer lg:hidden" id="toggle_btn">
+                        <img src="./public/assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div class="dropdown-menu lg:hidden">
+                        <a href="./products.html" class="navLink mobileNavLink">Sản Phẩm</a>
+                        <a href="#story" class="navLink mobileNavLink">Giới Thiệu</a>
+                        <a href="#contact" class="navLink mobileNavLink">Liên Hệ</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= REGISTER ================= -->
+        <main class="container pb-20 pt-30">
+            <!-- title -->
+            <div class="mb-12 text-center">
+                <h2 class="sub_heading">Create account</h2>
+                <h1 class="main_heading">Đăng ký</h1>
+            </div>
+
+            <!-- FORM WRAPPER -->
+            <section class="p-6 mx-auto shadow-lg max-w-140 bg-white/40 backdrop-blur-xs rounded-3xl md:p-10">
+                <form class="flex flex-col gap-8">
+                    <!-- Thông tin cá nhân -->
+                    <div class="p-6 shadow-lg bg-white/70 backdrop-blur-xs rounded-2xl">
+                        <h3 class="mb-6 text-lg font-semibold text-p-900">Thông tin cá nhân</h3>
+
+                        <div class="flex flex-col gap-5">
+                            <div>
+                                <label class="block mb-2 text-sm">Họ và tên</label>
+                                <input type="text" placeholder="Nguyễn Văn A" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 text-sm">Email</label>
+                                <input type="email" placeholder="email@example.com" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 text-sm">Số điện thoại</label>
+                                <input type="tel" placeholder="0123 456 789" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thông tin đăng nhập -->
+                    <div class="p-6 shadow-lg bg-white/70 backdrop-blur-xs rounded-2xl">
+                        <h3 class="mb-6 text-lg font-semibold text-p-900">Thông tin đăng nhập</h3>
+
+                        <div class="flex flex-col gap-5">
+                            <div>
+                                <label class="block mb-2 text-sm">Mật khẩu</label>
+                                <input type="password" placeholder="••••••••" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                            </div>
+
+                            <div>
+                                <label class="block mb-2 text-sm">Xác nhận mật khẩu</label>
+                                <input type="password" placeholder="••••••••" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Terms -->
+                    <label class="flex items-start gap-3 text-sm">
+                        <input type="checkbox" class="mt-1" />
+                        <span>
+                            Tôi đồng ý với
+                            <a href="#" class="underline">Điều khoản sử dụng</a>
+                            và
+                            <a href="#" class="underline">Chính sách bảo mật</a>
+                        </span>
+                    </label>
+
+                    <!-- Submit -->
+                    <button type="submit" class="w-full py-4 text-base tracking-wide btn">Tạo tài khoản</button>
+
+                    <!-- Login -->
+                    <p class="text-sm text-center text-n-500">
+                        Đã có tài khoản?
+                        <a href="./login.html" class="text-p-900 hover:underline"> Đăng nhập </a>
+                    </p>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>

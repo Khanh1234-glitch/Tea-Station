@@ -1,0 +1,242 @@
+{
+    "roles": [
+        { "id": "1", "name": "admin" },
+        { "id": "2", "name": "customer" }
+    ],
+
+    "users": [
+        {
+            "id": "1",
+            "role_id": "1",
+            "name": "Admin Tea",
+            "email": "admin@teastation.com",
+            "phone": "0900000000",
+            "password": "admin123",
+            "address": "Tea Station HQ"
+        },
+        {
+            "id": "2",
+            "role_id": "2",
+            "name": "Nguyễn Văn A",
+            "email": "user@gmail.com",
+            "phone": "0123456789",
+            "password": "123456",
+            "address": "TP.HCM"
+        }
+    ],
+
+    "categories": [
+        { "id": "1", "name": "Trà Matcha", "slug": "matcha" },
+        { "id": "2", "name": "Trà Đen", "slug": "blackTea" },
+        { "id": "3", "name": "Trà Oolong", "slug": "oolongTea" },
+        { "id": "4", "name": "Trà Trắng", "slug": "whiteTea" }
+    ],
+
+    "products": [
+        {
+            "id": "1",
+            "category_id": "1",
+            "name": "Trà Matcha",
+            "slug": "Matcha Magic",
+            "short_desc": "Khám phá những lợi ích tiềm năng của 'vàng xanh' từ Nhật Bản",
+            "description": "Sẵn sàng nâng cao sức khỏe của bạn? Hãy làm quen với matcha, loại bột màu xanh lá cây rực rỡ đang làm khuynh đảo thế giới chăm sóc sức khỏe. Chứa đầy chất chống oxy hóa và chất dinh dưỡng, matcha cung cấp nguồn năng lượng mạnh mẽ mà không gây bồn chồn, nhờ sự kết hợp độc đáo giữa caffeine và L-theanine.<br/> Loại trà này không chỉ tăng cường sự tập trung và trao đổi chất mà còn thêm hương vị thơm ngon cho sinh tố, đồ nướng và cà phê latte. Hãy đắm mình vào thế giới matcha và trải nghiệm cách siêu thực phẩm cổ xưa này có thể tiếp thêm sinh lực cho cơ thể và trí óc của bạn!",
+            "base_price": 89000,
+            "featured": true,
+            "idName": "matcha",
+            "image": "product_1.jpg"
+        },
+        {
+            "id": "2",
+            "category_id": "3",
+            "name": "Trà Olong",
+            "slug": "Cuộc cách mạng trà ô long",
+            "short_desc": "Mở khóa bí mật của loại trà lành mạnh nhất từ ​​thiên nhiên",
+            "description": "Bạn có tò mò về bí quyết trường thọ và sống lâu không? Không cần tìm đâu xa, hãy tìm đến trà xanh! Thức uống cổ xưa này, được tôn sùng trong nhiều nền văn hóa trên thế giới, chứa đầy chất chống oxy hóa mạnh mẽ có thể thúc đẩy quá trình trao đổi chất, tăng cường chức năng não và thúc đẩy sức khỏe tim mạch. Với hương vị tinh tế và vô số lợi ích cho sức khỏe, trà xanh không chỉ là một thức uống mà còn là một lựa chọn về lối sống. Hãy tham gia cuộc cách mạng trà xanh và khám phá cách thức pha chế đơn giản này có thể biến đổi sức khỏe của bạn từng ngụm một!",
+            "base_price": 99000,
+            "featured": true,
+            "idName": "oolongTea",
+            "image": "product_2.jpg"
+        },
+        {
+            "id": "3",
+            "category_id": "4",
+            "name": "Trà Trắng",
+            "slug": "Tinh chất tinh tế từ trà trắng",
+            "short_desc": "Hành trình khám phá hương vị tinh khiết nhất từ thiên nhiên",
+            "description": "Trà trắng, được tôn sùng vì sự nhẹ nhàng và tinh tế của nó, được chế biến từ lá non và nụ của cây Camellia sinensis. Với hương hoa nhẹ nhàng và vị ngọt tự nhiên, loại trà này mang đến trải nghiệm nhẹ nhàng nhưng sảng khoái. Giàu chất chống oxy hóa và ít caffeine, trà trắng không chỉ làm hài lòng khẩu vị mà còn hỗ trợ sức khỏe, khiến nó trở thành lựa chọn hoàn hảo cho những khoảnh khắc thư giãn hoặc trẻ hóa. Khám phá vẻ đẹp thanh bình của trà trắng và nâng tầm nghi thức uống trà của bạn lên một tầm cao mới.",
+            "base_price": 99000,
+            "featured": true,
+            "idName": "whiteTea",
+            "image": "product_3.jpg"
+        },
+        {
+            "id": "4",
+            "category_id": "2",
+            "name": "Trà Đen",
+            "slug": "Đánh thức các giác quan của bạn cùng trà đen",
+            "short_desc": "Hương vị đậm đà truyền thống vượt thời gian",
+            "description": "Hãy thưởng thức hương vị đậm đà, mạnh mẽ của trà đen, được chế tác hoàn hảo cho khẩu vị sành điệu. Mỗi ngụm trà mang đến sự pha trộn hài hòa giữa hương vị sâu lắng và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ trưa. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+            "base_price": 99000,
+            "featured": true,
+            "idName": "blackTea",
+            "image": "product_4.png"
+        }
+    ],
+
+    "product_images": [
+        { "id": "1", "product_id": "1", "url": "matcha1.jpg", "is_main": true },
+        { "id": "2", "product_id": "1", "url": "matcha2.jpg", "is_main": false },
+        { "id": "3", "product_id": "1", "url": "matcha3.jpg", "is_main": false },
+        { "id": "4", "product_id": "1", "url": "matcha4.jpg", "is_main": false },
+        { "id": "5", "product_id": "1", "url": "matcha5.jpg", "is_main": false },
+        { "id": "6", "product_id": "1", "url": "matcha6.jpg", "is_main": false },
+        { "id": "7", "product_id": "1", "url": "matcha7.jpg", "is_main": false },
+        { "id": "8", "product_id": "1", "url": "matcha8.jpg", "is_main": false },
+        { "id": "9", "product_id": "1", "url": "matcha9.jpg", "is_main": false },
+        { "id": "10", "product_id": "1", "url": "matcha10.jpg", "is_main": false },
+        { "id": "11", "product_id": "1", "url": "matcha11.jpg", "is_main": false },
+        { "id": "12", "product_id": "1", "url": "matcha12.jpg", "is_main": false },
+        { "id": "13", "product_id": "1", "url": "matcha13.jpg", "is_main": false },
+        { "id": "14", "product_id": "1", "url": "matcha14.jpg", "is_main": false },
+        { "id": "15", "product_id": "1", "url": "matcha15.jpg", "is_main": false },
+
+        { "id": "16", "product_id": "2", "url": "oolong1.jpg", "is_main": true },
+        { "id": "17", "product_id": "2", "url": "oolong2.jpg", "is_main": false },
+        { "id": "18", "product_id": "2", "url": "oolong3.jpg", "is_main": false },
+        { "id": "19", "product_id": "2", "url": "oolong4.jpg", "is_main": false },
+        { "id": "20", "product_id": "2", "url": "oolong5.jpg", "is_main": false },
+        { "id": "21", "product_id": "2", "url": "oolong6.jpg", "is_main": false },
+        { "id": "22", "product_id": "2", "url": "oolong7.jpg", "is_main": false },
+        { "id": "23", "product_id": "2", "url": "oolong8.jpg", "is_main": false },
+
+        { "id": "24", "product_id": "4", "url": "blacktea1.jpg", "is_main": true },
+        { "id": "25", "product_id": "4", "url": "blacktea2.jpg", "is_main": false },
+        { "id": "26", "product_id": "4", "url": "blacktea3.jpg", "is_main": false },
+        { "id": "27", "product_id": "4", "url": "blacktea4.jpg", "is_main": false },
+
+        { "id": "28", "product_id": "3", "url": "whitetea1.jpg", "is_main": true },
+        { "id": "29", "product_id": "3", "url": "whitetea2.jpg", "is_main": false },
+        { "id": "30", "product_id": "3", "url": "whitetea3.jpg", "is_main": false },
+        { "id": "31", "product_id": "3", "url": "whitetea4.jpg", "is_main": false },
+        { "id": "32", "product_id": "3", "url": "whitetea5.jpg", "is_main": false },
+        { "id": "33", "product_id": "3", "url": "whitetea6.jpg", "is_main": false },
+        { "id": "34", "product_id": "3", "url": "whitetea7.jpg", "is_main": false },
+        { "id": "35", "product_id": "3", "url": "whitetea8.jpg", "is_main": false }
+    ],
+
+    "product_variants": [
+        {
+            "id": "1",
+            "product_id": "1",
+            "size": "50g",
+            "extra_price": 0,
+            "price": 89000,
+            "stock": 100
+        },
+        {
+            "id": "2",
+            "product_id": "1",
+            "size": "100g",
+            "extra_price": 40000,
+            "price": 129000,
+            "stock": 60
+        },
+        {
+            "id": "3",
+            "product_id": "1",
+            "size": "200g",
+            "extra_price": 90000,
+            "price": 179000,
+            "stock": 30
+        },
+
+        {
+            "id": "4",
+            "product_id": "2",
+            "size": "50g",
+            "extra_price": 0,
+            "price": 99000,
+            "stock": 80
+        }
+    ],
+
+    "product_attributes": [
+        {
+            "product_id": "1",
+            "origin": "Uji, Kyoto – Nhật Bản",
+            "brew_guide": "2g matcha – 70ml nước – 75°C",
+            "shelf_life": "12 tháng",
+            "storage": "Nơi khô ráo, tránh ánh nắng"
+        },
+        {
+            "product_id": "2",
+            "origin": "Đài Loan",
+            "brew_guide": "5g trà – 150ml nước – 90°C",
+            "shelf_life": "18 tháng",
+            "storage": "Nơi thoáng mát"
+        }
+    ],
+
+    "cart": [
+        {
+            "id": "1",
+            "user_id": "2",
+            "product_id": "1",
+            "variant_id": "1",
+            "quantity": 2
+        },
+        {
+            "id": "2",
+            "user_id": "2",
+            "product_id": "2",
+            "variant_id": "4",
+            "quantity": 1
+        }
+    ],
+
+    "orders": [
+        {
+            "id": "1",
+            "user_id": "2",
+            "status": "pending",
+            "total": 277000,
+            "shipping_fee": 0,
+            "created_at": "2026-01-26"
+        }
+    ],
+
+    "order_items": [
+        {
+            "id": "1",
+            "order_id": "1",
+            "product_id": "1",
+            "variant_id": "1",
+            "price": 89000,
+            "quantity": 2,
+            "total": 178000
+        },
+        {
+            "id": "2",
+            "order_id": "1",
+            "product_id": "2",
+            "variant_id": "4",
+            "price": 99000,
+            "quantity": 1,
+            "total": 99000
+        }
+    ],
+
+    "payments": [
+        {
+            "order_id": "1",
+            "method": "COD",
+            "status": "unpaid"
+        }
+    ],
+
+    "site_stats": {
+        "products": 100,
+        "customers": "500k+",
+        "rating": 4.9
+    }
+}

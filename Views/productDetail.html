@@ -3,23 +3,24 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Zen Garden | Tea Station</title>
+        <title>Tea Station</title>
+        <link rel="icon" type="image/png" href="../public/assets/logo.png" />
 
         <!--------------- 
 
     CSS
     
     ----------------->
-        <link type="text/css" rel="stylesheet" href="./css/showHideNav.css" />
-        <link type="text/css" rel="stylesheet" href="./css/responsive-tabs.css" />
+        <link type="text/css" rel="stylesheet" href="../public/css/showHideNav.css" />
+        <link type="text/css" rel="stylesheet" href="../public/css/responsive-tabs.css" />
         <!-- Add the slick-theme.css if you want default styling -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
         <!-- Add the slick-theme.css if you want default styling -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-        <link rel="stylesheet" type="text/css" href="./css/animated-counter-prograssbar.css" />
+        <link rel="stylesheet" type="text/css" href="../public/css/animated-counter-prograssbar.css" />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-        <link href="./css/animation.css" rel="stylesheet" />
-        <link href="./dist/output.css" rel="stylesheet" />
+        <link href="../public/css/animation.css" rel="stylesheet" />
+        <link href="../dist/output.css" rel="stylesheet" />
 
         <!-- FONT -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,23 +39,24 @@
     Scripts
     
     ----------------->
-        <script src="./js/jquery.hidescroll.js" defer></script>
-        <script src="./js/jquery.responsiveTabs.js" defer></script>
+        <script src="../public/js/jquery.hidescroll.js" defer></script>
+        <script src="../public/js/jquery.responsiveTabs.js" defer></script>
         <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="./js/animated-counter-prograssbar.js" defer></script>
+        <script src="../public/js/animated-counter-prograssbar.js" defer></script>
         <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
         <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script defer type="module" src="./js/main.js"></script>
+        <script defer type="module" src="../public/js/main.js"></script>
     </head>
-
-    <body class="bg-p-50">
-        <!-- ================= HEADER ================= -->
+    <body>
+        <!----------------- 
+        Navigation
+    ------------------>
         <header class="relative z-50">
             <div class="flex items-center justify-center navbar">
-                <div class="max-w-[1536px] w-full px-4 py-4 md:py-10 md:px-[72px] flex items-center justify-between">
+                <div class="flex items-center justify-between w-full px-4 py-4 max-w-384 md:py-10 md:px-18">
                     <!-- Logo -->
                     <a href="./" class="flex items-center justify-center flex-none">
-                        <img src="./assets/logo.png" alt="logo" class="w-16 h-16" />
+                        <img src="../public/assets/logo.png" alt="logo" class="w-16 h-16" />
                         <p class="text-lg capitalize font-lobster text-p-900">Tea Station</p>
                     </a>
 
@@ -64,11 +66,13 @@
                         <a href="./cart.html" class="navLink">Giỏ hàng</a>
                         <a href="./#story" class="navLink">Giới Thiệu</a>
                         <a href="./#contact" class="navLink">Liên Hệ</a>
+                        <a href="./register.html" class="navLink">Đăng ký</a>
+                        <a href="./login.html" class="navLink">Đăng nhập</a>
                     </nav>
 
                     <!-- Hamburger Icon -->
                     <div class="block cursor-pointer lg:hidden" id="toggle_btn">
-                        <img src="./assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
+                        <img src="./public/assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
                     </div>
 
                     <!-- Mobile Menu -->
@@ -82,7 +86,7 @@
         </header>
 
         <!-- ================= PRODUCT DETAIL ================= -->
-        <main class="container pt-[120px] pb-20">
+        <main class="container pb-20 pt-30">
             <!-- Breadcrumb -->
             <div class="mb-8 text-sm text-n-500">
                 <a href="./" class="hover:underline">Trang chủ</a>
@@ -98,14 +102,14 @@
                     <!-- ================= LEFT: IMAGES ================= -->
                     <section class="flex flex-col gap-6 lg:col-span-6">
                         <div class="p-6 shadow-lg bg-white/70 rounded-2xl">
-                            <img src="./assets/products/matcha1.jpg" alt="Zen Garden" class="w-full h-[420px] object-cover rounded-2xl" />
+                            <img src="../public/assets/products/matcha1.jpg" alt="Zen Garden" class="w-full h-[420px] object-cover rounded-2xl" />
                         </div>
 
                         <!-- Thumbnails -->
                         <div class="flex gap-4">
-                            <img src="./assets/products/matcha1.jpg" class="object-cover w-20 h-20 rounded-xl ring-2 ring-p-900" />
-                            <img src="./assets/products/matcha2.jpg" class="object-cover w-20 h-20 rounded-xl opacity-70" />
-                            <img src="./assets/products/matcha3.jpg" class="object-cover w-20 h-20 rounded-xl opacity-70" />
+                            <img src="../public/assets/products/matcha1.jpg" class="object-cover w-20 h-20 rounded-xl ring-2 ring-p-900" />
+                            <img src="../public/assets/products/matcha2.jpg" class="object-cover w-20 h-20 rounded-xl opacity-70" />
+                            <img src="../public/assets/products/matcha3.jpg" class="object-cover w-20 h-20 rounded-xl opacity-70" />
                         </div>
                     </section>
 
