@@ -238,5 +238,115 @@
         "products": 100,
         "customers": "500k+",
         "rating": 4.9
+    },
+
+    "hero": {
+        "type": "video",
+        "src": "video.mp4",
+        "text": "Chỉ những lá trà ngon nhất mới được đưa vào sản phẩm của chúng tôi,<br class='hidden lg:block'/> đảm bảo mỗi ngụm trà đều mang hương vị tinh khiết và tuyệt hảo.",
+        "image": "hero_img.png"
+    },
+
+    "features": {
+        "id": "features",
+        "type": "feature-grid",
+        "heading": {
+            "subTitle": "Why Us?",
+            "title": "Sự <span class='text-gradient'>độc đáo</span> từ<br/>Tea Station"
+        },
+        "items": [
+            {
+                "id": "feature-1",
+                "title": "Nguồn cung cao cấp",
+                "description": "Chúng tôi tự hào sản xuất trà ngay tại Hoa Kỳ, sử dụng nguyên liệu chất lượng cao từ các trang trại địa phương.",
+                "image": "benefit_1.jpg",
+                "aos": { "animation": "zoom-in", "delay": 0 },
+                "position": "left-top"
+            },
+            {
+                "id": "feature-2",
+                "title": "Hương vị và pha chế độc đáo",
+                "description": "Sản phẩm độc quyền của chúng tôi gồm các loại trà với hương vị độc đáo, được chế tác để làm hài lòng mọi khẩu vị.",
+                "image": "pic1.jpg",
+                "aos": { "animation": "zoom-in", "delay": 100 },
+                "position": "right-top"
+            },
+            {
+                "id": "feature-3",
+                "title": "Tập trung vào sức khỏe",
+                "description": "Hãy thưởng thức các loại trà tốt cho sức khỏe của chúng tôi, được pha chế cẩn thận để hỗ trợ trí óc, cơ thể và tâm hồn của bạn.",
+                "image": "benefit_3.jpg",
+                "aos": { "animation": "zoom-in", "delay": 200 },
+                "position": "left-bottom"
+            },
+            {
+                "id": "feature-4",
+                "title": "Trải Nghiệm Cá Nhân Hoá",
+                "description": "Trải nghiệm dịch vụ được cá nhân hóa với mọi đơn hàng, phù hợp với sở thích và nhu cầu trà riêng của bạn.",
+                "image": "benefit_4.jpg",
+                "aos": { "animation": "zoom-in", "delay": 300 },
+                "position": "right-bottom"
+            }
+        ]
+    },
+
+    "bestSellers": {
+        "id": "best-sellers",
+        "type": "product-slider",
+        "heading": {
+            "subTitle": "Khách hàng yêu thích",
+            "title": "Những Sản Phẩm <span class='text-gradient'>Bán Chạy Nhất</span>"
+        },
+        "description": "Khám phá những sản phẩm bán chạy nhất của chúng tôi, nơi chất lượng kết hợp hương vị trong mỗi tách trà. Hãy tham gia cùng hàng ngàn khách hàng hài lòng đã biến những hỗn hợp này thành sở thích của họ và nâng tầm thời gian uống trà của bạn ngay hôm nay!",
+        "products": [
+            {
+                "id": "best-1",
+                "name": "Peppermint Velvet",
+                "image": "products/matcha1.jpg",
+                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+                "benefits": [
+                    { "title": "Tăng cường năng lượng và tập trung", "percentage": 94, "position": "top" },
+                    { "title": "Giàu chất chống oxy hoá", "percentage": 93, "position": "top" },
+                    { "title": "Tăng cường trao đổi chất", "percentage": 90, "position": "bot" },
+                    { "title": "Thúc đẩy sự bình tĩnh và thư giãn", "percentage": 95, "position": "bot" }
+                ]
+            },
+            {
+                "id": "best-2",
+                "name": "Chamomile Bliss",
+                "image": "products/blacktea1.jpg",
+                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+                "benefits": [
+                    { "title": "Tăng cường năng lượng và tập trung", "percentage": 96 },
+                    { "title": "Giàu chất chống oxy hoá", "percentage": 97 },
+                    { "title": "Tăng cường trao đổi chất", "percentage": 90 },
+                    { "title": "Thúc đẩy sự bình tĩnh và thư giãn", "percentage": 89 }
+                ]
+            },
+            {
+                "id": "best-3",
+                "name": "Lemon Ginger Zest",
+                "image": "products/whitetea1.jpg",
+                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+                "benefits": [
+                    { "title": "Tăng cường năng lượng và tập trung", "percentage": 85 },
+                    { "title": "Giàu chất chống oxy hoá", "percentage": 95 },
+                    { "title": "Tăng cường trao đổi chất", "percentage": 88 },
+                    { "title": "Thúc đẩy sự bình tĩnh và thư giãn", "percentage": 99 }
+                ]
+            },
+            {
+                "id": "best-4",
+                "name": "Mystic Earl Grey",
+                "image": "products/oolong1.jpg",
+                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+                "benefits": [
+                    { "title": "Tăng cường năng lượng và tập trung", "percentage": 83 },
+                    { "title": "Giàu chất chống oxy hoá", "percentage": 89 },
+                    { "title": "Tăng cường trao đổi chất", "percentage": 97 },
+                    { "title": "Thúc đẩy sự bình tĩnh và thư giãn", "percentage": 99 }
+                ]
+            }
+        ]
     }
 }
