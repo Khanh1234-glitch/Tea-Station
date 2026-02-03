@@ -1,4 +1,6 @@
 import { HomeController } from "./Controller/HomeController.js";
+import { ProductDetailController } from "./Controller/ProductDetailController.js";
+import { ProductListController } from "./Controller/ProductListController.js";
 let controller;
 let page = location.pathname;
 switch (page) {
@@ -6,7 +8,12 @@ switch (page) {
     case `/index.html`:
         controller = new HomeController();
         break;
-    case `/products.html`:
+    case `/Views/products.html`:
+        controller = new ProductListController();
+        break;
+    case `/Views/productDetail.html`:
+        controller = new ProductDetailController();
+        break;
     default:
         controller = new HomeController();
         break;

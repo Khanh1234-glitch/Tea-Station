@@ -72,62 +72,89 @@
 
                     <!-- Hamburger Icon -->
                     <div class="block cursor-pointer lg:hidden" id="toggle_btn">
-                        <img src="./public/assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
+                        <img src="../public/assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
                     </div>
 
                     <!-- Mobile Menu -->
                     <div class="dropdown-menu lg:hidden">
-                        <a href="./products.html" class="navLink mobileNavLink">Sản Phẩm</a>
-                        <a href="#story" class="navLink mobileNavLink">Giới Thiệu</a>
-                        <a href="#contact" class="navLink mobileNavLink">Liên Hệ</a>
+                        <a href="/#products.html" class="navLink mobileNavLink">Sản Phẩm</a>
+                        <a href="/#story" class="navLink mobileNavLink">Giới Thiệu</a>
+                        <a href="/#contact" class="navLink mobileNavLink">Liên Hệ</a>
                     </div>
                 </div>
             </div>
         </header>
-
-        <!----------------- 
-       Tất cả sản phẩm
-    ------------------>
         <section id="products">
-            <main class="container mt-20">
-                <!-- banner -->
-                <img
-                    data-aos="flip-up"
-                    src="../public/assets/banners/banner1.jpg"
-                    alt="products banner"
-                    class="w-full h-87.5 object-cover shadow-xl"
-                />
-
-                <!-- tiêu đề -->
+            <div class="container mt-20">
+                <!-- Banner -->
+                <img src="../public/assets/banners/banner1.jpg" class="w-full h-87.5 object-cover shadow-xl" alt="" />
+                <!-- Tieu de -->
                 <div class="mt-4 md:mt-9">
-                    <div data-aos="fade-right">
+                    <div>
                         <h2 class="sub_heading">Shop with us</h2>
                         <h1 class="main_heading">Tất cả sản phẩm</h1>
                     </div>
-
-                    <p data-aos="fade-right" data-aos-delay="100" class="max-w-lg mt-2 text-xs text-n-500">
-                        Cho dù bạn là người đam mê trà lâu năm hay mới bước chân vào thế giới trà, chúng tôi ở đây để giúp bạn khám phá loại trà pha
-                        trộn yêu thích tiếp theo của mình. Khám phá bộ sưu tập của chúng tôi và trải nghiệm nghệ thuật pha trà trong từng ngụm.
+                    <p class="max-w-lg mt-2 text-xs text-n-500">
+                        Sứ mệnh của chúng tôi là mang đến cho bạn sự yên bình và kết nối thông qua các hương vị trà được chọn lọc cẩn thận và được tạo
+                        ra để nâng cao trải nghiệm hàng ngày và sức khoẻ toàn diện cho bạn.
                     </p>
                 </div>
-
-                <!-- filter tabs -->
+                <!-- Filter tab -->
                 <div id="allProduct-filters" class="flex gap-8 mt-4 md:mt-9">
                     <a id="f-all" href="?">Tất cả <span class="hidden md:inline">sản phẩm</span></a>
-
-                    <a id="f-blacktea" href="?filter-category=blacktea"><span class="hidden md:inline">Trà</span> đen</a>
-                    <a id="f-whitetea" href="?filter-category=whitetea"><span class="hidden md:inline">Trà</span> trắng</a>
-                    <a id="f-oolong" href="?filter-category=oolong"><span class="hidden md:inline">Trà</span> ô long</a>
-                    <a id="f-matcha" href="?filter-category=matcha"><span class="hidden md:inline">Trà</span> matcha</a>
+                    <a id="f-blacktea" href="?filter-category=blacktea"><span class="hidden md:inline">Trà</span> đen </a>
+                    <a id="f-whitetea" href="?filter-category=whitetea"><span class="hidden md:inline">Trà</span> trắng </a>
+                    <a id="f-oolong" href="?filter-category=oolong"><span class="hidden md:inline">Trà</span> oolong </a>
+                    <a id="f-matcha" href="?filter-category=matcha"><span class="hidden md:inline">Trà</span> matcha </a>
                 </div>
-
-                <!-- sản phẩm -->
-                <section id="product-wrapper">
+                <!-- Product wrapper -->
+                <section class="product-wrapper">
                     <div class="mt-9">
-                        <div id="product-items--container" class="grid grid-cols-3 gap-4 md:grid-cols-6 lg:grid-cols-12"></div>
+                        <div id="productList" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12">
+                            <div class="relative col-span-3 overflow-hidden group hover:shadow-md">
+                                <div class="portfolio-item">
+                                    <div>
+                                        <img src="../public/assets/products/matcha1.jpg" alt="" />
+                                        <div class="product-item-overlay">
+                                            <div class="product-details">
+                                                <h3>Tên sản phẩm</h3>
+                                                <p>Mô tả sản phẩm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative col-span-3 overflow-hidden group hover:shadow-md">
+                                <div class="portfolio-item">
+                                    <div>
+                                        <img src="../public/assets/products/matcha1.jpg" alt="" />
+                                        <div class="product-item-overlay">
+                                            <div class="product-details">
+                                                <h3>Tên sản phẩm</h3>
+                                                <p>Mô tả sản phẩm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative col-span-3 overflow-hidden group hover:shadow-md">
+                                <div class="portfolio-item">
+                                    <div>
+                                        <img src="../public/assets/products/matcha1.jpg" alt="" />
+                                        <div class="product-item-overlay">
+                                            <div class="product-details">
+                                                <h3>Tên sản phẩm</h3>
+                                                <p>Mô tả sản phẩm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
-            </main>
+            </div>
         </section>
+        <script defer type="module" src="../dist/jsCompile/app.js"></script>
     </body>
 </html>

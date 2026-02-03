@@ -1,4 +1,4 @@
-import { partnerLogos, productList, partnerLogoBasePath } from "./data.js";
+import { partnerLogos, partnerLogoBasePath } from "./data.js";
 
 /* ================ 
     Nav
@@ -46,9 +46,9 @@ $(function () {
         $('div[id="products-tabs"] ul .r-tabs-state-active').addClass("activeTab");
     });
 
-    $("#products-tabs").responsiveTabs({
-        animation: "slide",
-    });
+    // $("#products-tabs").responsiveTabs({
+    //     animation: "slide",
+    // });
 });
 
 /* ================ 
@@ -88,77 +88,77 @@ $(function () {
 /* ================ 
   Tất Cả Sản Phẩm
   =================== */
-$(function () {
-    productList.map((product) => {
-        $("#product-items--container").append(`
-      <div data-filterable data-filter-category=${product.category}
- class="relative col-span-3 overflow-hidden group hover:shadow-md">
-                <div class="portfolio-item">
-                  <div>
-                    <img
-                      src=${product.img}
-                      alt="product-img"
-                    />
+// $(function () {
+//     //     productList.map((product) => {
+//     //         $("#product-items--container").append(`
+//     //       <div data-filterable data-filter-category=${product.category}
+//     //  class="relative col-span-3 overflow-hidden group hover:shadow-md">
+//     //                 <div class="portfolio-item">
+//     //                   <div>
+//     //                     <img
+//     //                       src=${product.img}
+//     //                       alt="product-img"
+//     //                     />
 
-                    <div class="product-item-overlay">
-                      <div class="product-details">
-                        <h3>${product.name}</h3>
-                        <p>${product.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-      `);
-    });
+//     //                     <div class="product-item-overlay">
+//     //                       <div class="product-details">
+//     //                         <h3>${product.name}</h3>
+//     //                         <p>${product.description}</p>
+//     //                       </div>
+//     //                     </div>
+//     //                   </div>
+//     //                 </div>
+//     //               </div>
+//     //       `);
+//     //     });
 
-    $.fn.filterjitsu();
+//     //     $.fn.filterjitsu();
 
-    // xử lý active tab
-    function getAllUrlParam(url) {
-        url = url || window.location.href;
+//     // xử lý active tab
+//     function getAllUrlParam(url) {
+//         url = url || window.location.href;
 
-        const param = {};
+//         const param = {};
 
-        const queryString = url.split("?")[1];
+//         const queryString = url.split("?")[1];
 
-        if (!queryString) {
-            return param;
-        }
+//         if (!queryString) {
+//             return param;
+//         }
 
-        const [key, value] = queryString.split("=");
+//         const [key, value] = queryString.split("=");
 
-        if (key) {
-            param[key] = value ? value : "";
-        }
+//         if (key) {
+//             param[key] = value ? value : "";
+//         }
 
-        return param;
-    }
+//         return param;
+//     }
 
-    const urlParam = getAllUrlParam();
+//     const urlParam = getAllUrlParam();
 
-    $("#allProduct-filters a").removeClass("activeFilter");
+//     $("#allProduct-filters a").removeClass("activeFilter");
 
-    const category = urlParam["filter-category"];
+//     const category = urlParam["filter-category"];
 
-    switch (category) {
-        case "whiteTea":
-            $("#f-whitetea").addClass("activeFilter");
-            break;
-        case "blackTea":
-            $("#f-blacktea").addClass("activeFilter");
-            break;
-        case "oolongTea":
-            $("#f-oolong").addClass("activeFilter");
-            break;
-        case "matcha":
-            $("#f-matcha").addClass("activeFilter");
-            break;
-        default:
-            $("#f-all").addClass("activeFilter");
-            break;
-    }
-});
+//     switch (category) {
+//         case "whiteTea":
+//             $("#f-whitetea").addClass("activeFilter");
+//             break;
+//         case "blackTea":
+//             $("#f-blacktea").addClass("activeFilter");
+//             break;
+//         case "oolongTea":
+//             $("#f-oolong").addClass("activeFilter");
+//             break;
+//         case "matcha":
+//             $("#f-matcha").addClass("activeFilter");
+//             break;
+//         default:
+//             $("#f-all").addClass("activeFilter");
+//             break;
+//     }
+// });
 
 /* ================ 
   AOS Animation

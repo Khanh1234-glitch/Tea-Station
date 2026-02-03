@@ -667,18 +667,6 @@
   .bg-\[url\(\.\.\/public\/assets\/aboutUsImg\.jpg\)\] {
     background-image: url(../public/assets/aboutUsImg.jpg);
   }
-  .bg-\[url\(\.\.\/public\/assets\/benefit_1\.jpg\)\] {
-    background-image: url(../public/assets/benefit_1.jpg);
-  }
-  .bg-\[url\(\.\.\/public\/assets\/benefit_3\.jpg\)\] {
-    background-image: url(../public/assets/benefit_3.jpg);
-  }
-  .bg-\[url\(\.\.\/public\/assets\/benefit_4\.jpg\)\] {
-    background-image: url(../public/assets/benefit_4.jpg);
-  }
-  .bg-\[url\(\.\.\/public\/assets\/pic1\.jpg\)\] {
-    background-image: url(../public/assets/pic1.jpg);
-  }
   .bg-\[url\(\.\.\/public\/assets\/statsBg\.jpg\)\] {
     background-image: url(../public/assets/statsBg.jpg);
   }
