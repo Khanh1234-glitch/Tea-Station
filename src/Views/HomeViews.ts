@@ -4,6 +4,7 @@ import type { Category } from "../Model/Category.js";
 import type { Feature } from "../Model/Feature.js";
 import type { Hero } from "../Model/Hero.js";
 import type { HeroSection } from "../Model/HeroSection.js";
+import type { PartnerLogo } from "../Model/PartnerLogo.js";
 import type { Product } from "../Model/Product.js";
 import type { siteStat } from "../Model/siteStats.js";
 
@@ -46,7 +47,7 @@ export class HomeView {
                         (c, index) => `
                         <li>
                             <a href="#${c.slug}" class="tab-link">
-                                <span>Trà</span> ${c.name}
+                                 ${c.name}
                             </a>
                         </li>
                         ${index < categories.length - 1 ? "<li>|</li>" : ""}
@@ -370,5 +371,20 @@ export class HomeView {
             </div>
         
         `;
+    }
+    renderPartnerLogo(partner: PartnerLogo[]): string {
+        return Array(2)
+            .fill(null)
+            .map(() =>
+                partner
+                    .map(
+                        (p) => `
+            <img src="../public/assets/partner-logos/${p.fileName}" alt="${p.alt}" class="logo-ticker-image" />
+            
+            `,
+                    )
+                    .join(``),
+            )
+            .join(``);
     }
 }

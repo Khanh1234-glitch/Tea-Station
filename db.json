@@ -298,11 +298,15 @@
             "basePrice": 69000,
             "unit": "gói",
             "sizes": [
-                { "label": "50g", "price": 69000 },
-                { "label": "100g", "price": 99000 },
-                { "label": "200g", "price": 149000 }
+                { "id": "1", "label": "50g", "price": 69000 },
+                { "id": "2", "label": "100g", "price": 99000 },
+                { "id": "3", "label": "200g", "price": 149000 }
             ],
-            "variants": ["Nguyên chất", "Black tea + Mật ong", "Black tea + Quế"],
+            "variants": [
+                { "id": "1", "label": "Nguyên chất" },
+                { "id": "2", "label": "Black tea + Mật ong" },
+                { "id": "3", "label": "Black tea + Quế" }
+            ],
             "origin": "Assam – Ấn Độ",
             "brewGuide": {
                 "tea": "3g trà đen",
@@ -327,11 +331,15 @@
             "basePrice": 89000,
             "unit": "gói",
             "sizes": [
-                { "label": "50g", "price": 0 },
-                { "label": "100g", "price": 178000 },
-                { "label": "200g", "price": 267000 }
+                { "id": "1", "label": "50g", "price": 0 },
+                { "id": "2", "label": "100g", "price": 178000 },
+                { "id": "3", "label": "200g", "price": 267000 }
             ],
-            "variants": ["Nguyên chất", "Matcha + Hoa nhài", "Matcha + Mật ong"],
+            "variants": [
+                { "id": "1", "label": "Nguyên chất" },
+                { "id": "2", "label": "Matcha + Hoa nhài" },
+                { "id": "3", "label": "Matcha + Mật ong" }
+            ],
             "origin": "Uji, Kyoto – Nhật Bản",
             "brewGuide": {
                 "tea": "2g matcha",
@@ -356,11 +364,14 @@
             "basePrice": 79000,
             "unit": "gói",
             "sizes": [
-                { "label": "50g", "price": 79000 },
-                { "label": "100g", "price": 119000 },
-                { "label": "200g", "price": 169000 }
+                { "id": "1", "label": "50g", "price": 79000 },
+                { "id": "2", "label": "100g", "price": 119000 },
+                { "id": "3", "label": "200g", "price": 169000 }
             ],
-            "variants": ["Nguyên chất", "Ô long + Hoa nhài"],
+            "variants": [
+                { "id": "1", "label": "Nguyên chất" },
+                { "id": "2", "label": "Ô long + Hoa nhài" }
+            ],
             "origin": "Nantou – Đài Loan",
             "brewGuide": {
                 "tea": "5g trà oolong",
@@ -385,10 +396,13 @@
             "basePrice": 85000,
             "unit": "gói",
             "sizes": [
-                { "label": "50g", "price": 85000 },
-                { "label": "100g", "price": 125000 }
+                { "id": "1", "label": "50g", "price": 85000 },
+                { "id": "2", "label": "100g", "price": 125000 }
             ],
-            "variants": ["Nguyên chất", "White tea + Hoa nhài"],
+            "variants": [
+                { "id": "1", "label": "Nguyên chất" },
+                { "id": "2", "label": "White tea + Hoa nhài" }
+            ],
             "origin": "Phúc Đỉnh – Phúc Kiến, Trung Quốc",
             "brewGuide": {
                 "tea": "4g trà trắng",
@@ -400,5 +414,17 @@
             "stock": 70,
             "status": "active"
         }
+    ],
+
+    "partnerLogos": [
+        { "id": "costco-1", "fileName": "costco.png", "alt": "Costco Logo" },
+        { "id": "kroger-2", "fileName": "kroger.png", "alt": "Kroger Logo" },
+        { "id": "meijer-3", "fileName": "meijer.png", "alt": "Meijer Logo" },
+        { "id": "publix-4", "fileName": "publix.png", "alt": "Publix Logo" },
+        { "id": "safeway-5", "fileName": "safeway.png", "alt": "Safeway Logo" },
+        { "id": "target-6", "fileName": "target.png", "alt": "Target Logo" },
+        { "id": "walmart-7", "fileName": "walmart.png", "alt": "Walmart Logo" },
+        { "id": "wegmans-8", "fileName": "wegmans.png", "alt": "Wegmans Logo" },
+        { "id": "whole-foods-9", "fileName": "whole-foods.png", "alt": "Whole Foods Logo" }
     ]
 }

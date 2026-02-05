@@ -8,6 +8,7 @@ export declare class HomeController {
     private siteStatService;
     private aboutService;
     private heroSectionSerive;
+    private partnerLogoService;
     init(): void;
     renderHomeView(): Promise<void>;
     private observeSiteStat;

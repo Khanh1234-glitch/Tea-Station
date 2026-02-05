@@ -20,7 +20,8 @@ export class ProductList {
     }
 }
 export class Size {
-    constructor(label, price) {
+    constructor(id, label, price) {
+        this.id = id;
         this.label = label;
         this.price = price;
     }
@@ -30,6 +31,12 @@ export class BrewGuide {
         this.tea = tea;
         this.water = water;
         this.temperature = temperature;
+    }
+}
+export class Variants {
+    constructor(id, label) {
+        this.id = id;
+        this.label = label;
     }
 }
 //# sourceMappingURL=ProductList.js.map

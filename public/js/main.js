@@ -1,5 +1,3 @@
-import { partnerLogos, partnerLogoBasePath } from "./data.js";
-
 /* ================ 
     Nav
   =================== */
@@ -19,19 +17,19 @@ $(function () {
 /* ================ 
     Partner Logos
   =================== */
-$(function () {
-    const container = document.getElementById("partner-logo-list");
+// $(function () {
+//     const container = document.getElementById("partner-logo-list");
 
-    for (let i = 0; i < 2; i++) {
-        partnerLogos.forEach((logo) => {
-            const img = document.createElement("img");
-            img.src = partnerLogoBasePath + logo.fileName;
-            img.alt = logo.alt;
-            img.classList.add("logo-ticker-image");
-            container.appendChild(img);
-        });
-    }
-});
+//     for (let i = 0; i < 2; i++) {
+//         partnerLogos.forEach((logo) => {
+//             const img = document.createElement("img");
+//             img.src = partnerLogoBasePath + logo.fileName;
+//             img.alt = logo.alt;
+//             img.classList.add("logo-ticker-image");
+//             container.appendChild(img);
+//         });
+//     }
+// });
 
 /* ================ 
     Products

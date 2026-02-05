@@ -15,6 +15,7 @@ import { AboutService } from "../service/AboutService.js";
 import { About } from "../Model/About.js";
 import { HeroSection } from "../Model/HeroSection.js";
 import { HeroSectionService } from "../service/HeroSectionService.js";
+import { PartnerLogoService } from "../service/PartnerLogoService.js";
 export class HomeController {
     constructor() {
         this.homeView = new HomeView();
@@ -26,6 +27,7 @@ export class HomeController {
         this.siteStatService = new SiteStatService();
         this.aboutService = new AboutService();
         this.heroSectionSerive = new HeroSectionService();
+        this.partnerLogoService = new PartnerLogoService();
     }
     init() {
         this.renderHomeView();
@@ -39,6 +41,7 @@ export class HomeController {
         const siteStat = await this.siteStatService.getAll();
         const about = await this.aboutService.getAll();
         const heroSection = await this.heroSectionSerive.getAll();
+        const partnerLogo = await this.partnerLogoService.getAll();
         document.querySelector("#products-tabs").innerHTML = this.homeView.render(products, categories);
         document.querySelector("#features").innerHTML = this.homeView.renderFeature(features);
         document.querySelector("#slogan").innerHTML = this.homeView.renderHero(hero);
@@ -46,6 +49,7 @@ export class HomeController {
         document.querySelector("#stats").innerHTML = this.homeView.renderSiteStat(siteStat);
         document.querySelector("#story").innerHTML = this.homeView.renderAbout(about);
         document.querySelector("#hero").innerHTML = this.homeView.renderHeroSection(heroSection);
+        document.querySelector("#partner-logo-list").innerHTML = this.homeView.renderPartnerLogo(partnerLogo);
         this.observeSiteStat();
         this.initProductTabs();
         this.observeBestSeller();

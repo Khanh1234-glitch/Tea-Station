@@ -86,7 +86,7 @@
         </header>
 
         <!-- ================= CART ================= -->
-        <main class="container pt-[120px] pb-20">
+        <main class="container pb-20 pt-30">
             <!-- title -->
             <div class="mb-12">
                 <h2 class="sub_heading">Your order</h2>
@@ -97,7 +97,7 @@
             <section class="p-6 shadow-lg bg-white/40 backdrop-blur-xs rounded-3xl md:p-10">
                 <div class="grid items-start grid-cols-1 lg:grid-cols-12 gap-14">
                     <!-- ================= LEFT ================= -->
-                    <section class="flex flex-col gap-8 lg:col-span-8">
+                    <section id="cart" class="flex flex-col gap-8 lg:col-span-8">
                         <!-- ITEM -->
                         <div class="flex gap-6 p-6 transition shadow-lg bg-white/70 backdrop-blur-xs rounded-2xl hover:shadow-xl">
                             <img src="../public/assets/products/matcha1.jpg" alt="product" class="w-[96px] h-[96px] object-cover rounded-xl" />
@@ -138,7 +138,10 @@
                     </section>
 
                     <!-- ================= RIGHT ================= -->
-                    <aside class="lg:col-span-4 p-10 rounded-2xl bg-white/80 backdrop-blur-xs shadow-xl h-fit lg:sticky lg:top-[140px]">
+                    <aside
+                        id="cartRight"
+                        class="lg:col-span-4 p-10 rounded-2xl bg-white/80 backdrop-blur-xs shadow-xl h-fit lg:sticky lg:top-[140px]"
+                    >
                         <h3 class="mb-6 text-lg font-semibold text-p-900">Tóm tắt đơn hàng</h3>
 
                         <div class="flex justify-between mb-3 text-sm">
@@ -157,8 +160,6 @@
                             <span>Tổng cộng</span>
                             <span>277.000₫</span>
                         </div>
-
-                        <button class="w-full py-4 text-base tracking-wide btn"><a href="./checkout.html">Thanh toán</a></button>
                     </aside>
                 </div>
             </section>
@@ -179,5 +180,6 @@
         <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
         <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script defer type="module" src="./js/main.js"></script>
+        <script defer type="module" src="../dist/jsCompile/app.js"></script>
     </body>
 </html>

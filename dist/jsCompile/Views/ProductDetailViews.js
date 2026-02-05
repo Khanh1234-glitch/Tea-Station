@@ -30,7 +30,7 @@ export class ProductDetailViews {
 
                         <!-- Price -->
                         <div class="text-2xl font-semibold text-p-900">
-                            ${productDetail.basePrice.toLocaleString("vi-VN")}₫
+                           <strong id="product-price" class="text-2xl font-semibold text-p-900"> ${productDetail.basePrice.toLocaleString("vi-VN")}₫</strong>
                             <span class="ml-2 text-sm font-normal text-n-500"> / ${productDetail.unit} </span>
                         </div>
 
@@ -42,7 +42,7 @@ export class ProductDetailViews {
             ? productDetail.sizes
                 .map((s, i) => `
                                 <label class="px-5 py-2 bg-white border cursor-pointer rounded-xl  ${i === 0 ? "ring-p-900 ring-2" : ""}">
-                                    <input type="radio" name="size" hidden ${i === 0 ? "checked" : ""} />
+                                    <input data-id="${s.id}" data-name="${s.label}" data-price="${s.price}" type="radio" name="size" hidden ${i === 0 ? "checked" : ""} />
                                     ${s.label} (+${s.price.toLocaleString("vi-VN")}₫)
                                 </label>
                                 `)
@@ -58,8 +58,8 @@ export class ProductDetailViews {
                             ${productDetail.variants
             .map((v, i) => `
                                 <label class="px-4 py-2 cursor-pointer rounded-xl border bg-p-50 ${i === 0 ? "ring-2 ring-p-900" : ""} ">
-                                    <input type="radio" name="variant" hidden ${i === 0 ? "checked" : ""} />
-                                    ${v}
+                                    <input type="radio" data-id="${v.id}" data-name="${v.label}" name="variant" hidden ${i === 0 ? "checked" : ""} />
+                                    ${v.label}
                                 </label>
                                 `)
             .join(``)}
@@ -68,9 +68,9 @@ export class ProductDetailViews {
 
                         <!-- Quantity -->
                         <div class="flex items-center gap-6">
-                            <input type="number" value="1" min="1" class="w-25 px-4 py-3 border border-n-200 rounded-xl" />
+                            <input type="number" id="quantity" value="1" min="1" class="w-25 px-4 py-3 border border-n-200 rounded-xl" />
 
-                            <button class="px-8 py-4 btn">Thêm vào giỏ</button>
+                            <button type="button" id="addToCart" class="px-8 py-4 btn">Thêm vào giỏ</button>
                         </div>
 
                         <!-- Description -->

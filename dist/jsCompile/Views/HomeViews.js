@@ -32,7 +32,7 @@ export class HomeView {
             .map((c, index) => `
                         <li>
                             <a href="#${c.slug}" class="tab-link">
-                                <span>Trà</span> ${c.name}
+                                 ${c.name}
                             </a>
                         </li>
                         ${index < categories.length - 1 ? "<li>|</li>" : ""}
@@ -341,6 +341,17 @@ export class HomeView {
             </div>
         
         `;
+    }
+    renderPartnerLogo(partner) {
+        return Array(2)
+            .fill(null)
+            .map(() => partner
+            .map((p) => `
+            <img src="../public/assets/partner-logos/${p.fileName}" alt="${p.alt}" class="logo-ticker-image" />
+            
+            `)
+            .join(``))
+            .join(``);
     }
 }
 //# sourceMappingURL=HomeViews.js.map

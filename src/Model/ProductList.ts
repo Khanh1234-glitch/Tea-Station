@@ -9,7 +9,7 @@ export class ProductList {
     basePrice: number;
     unit: string;
     sizes: Size[];
-    variants: string[];
+    variants: Variants[];
     origin: string;
     brewGuide: BrewGuide;
     expiry: string;
@@ -27,7 +27,7 @@ export class ProductList {
         basePrice: number,
         unit: string,
         sizes: Size[],
-        variants: string[],
+        variants: Variants[],
         origin: string,
         brewGuide: BrewGuide,
         expiry: string,
@@ -55,9 +55,11 @@ export class ProductList {
     }
 }
 export class Size {
+    id: string;
     label: string;
     price: number;
-    constructor(label: string, price: number) {
+    constructor(id: string, label: string, price: number) {
+        this.id = id;
         this.label = label;
         this.price = price;
     }
@@ -70,5 +72,13 @@ export class BrewGuide {
         this.tea = tea;
         this.water = water;
         this.temperature = temperature;
+    }
+}
+export class Variants {
+    id: string;
+    label: string;
+    constructor(id: string, label: string) {
+        this.id = id;
+        this.label = label;
     }
 }
