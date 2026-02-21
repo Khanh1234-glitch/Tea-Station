@@ -15,5 +15,11 @@ export class ApiService {
             throw error;
         }
     }
+    async getOne(endpoint) {
+        const res = await fetch(`${this.baseUrl}${endpoint}`);
+        if (!res.ok)
+            throw new Error("Loi lay du lieu");
+        return await res.json(); // KHÔNG ép thành array
+    }
 }
 //# sourceMappingURL=ApiService.js.map

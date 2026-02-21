@@ -36,20 +36,20 @@ $(function () {
 /* ================ 
     Products
   =================== */
-$(function () {
-    // thêm activeTab vào li đầu tiên
-    $("li:first").addClass("activeTab");
+// $(function () {
+//     // thêm activeTab vào li đầu tiên
+//     $("li:first").addClass("activeTab");
 
-    // đổi màu activeTab
-    $("li").on("click", function () {
-        $("li").removeClass("activeTab");
-        $('div[id="products-tabs"] ul .r-tabs-state-active').addClass("activeTab");
-    });
+//     // đổi màu activeTab
+//     $("li").on("click", function () {
+//         $("li").removeClass("activeTab");
+//         $('div[id="products-tabs"] ul .r-tabs-state-active').addClass("activeTab");
+//     });
 
-    $("#products-tabs").responsiveTabs({
-        animation: "slide",
-    });
-});
+//     $("#products-tabs").responsiveTabs({
+//         animation: "slide",
+//     });
+// });
 
 /* ================ 
    Best Sellers
@@ -112,7 +112,7 @@ $(function () {
       `);
     });
 
-    $.fn.filterjitsu();
+    // $.fn.filterjitsu();
 
     // xử lý active tab
     function getAllUrlParam(url) {

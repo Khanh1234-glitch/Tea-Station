@@ -1,0 +1,1 @@
+{"version":3,"file":"SiteStat.js","sourceRoot":"","sources":["../../../src/Model/SiteStat.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,QAAQ;IAKjB,YAAY,QAAgB,EAAE,SAAiB,EAAE,MAAc;QAC3D,IAAI,CAAC,QAAQ,GAAG,QAAQ,CAAC;QACzB,IAAI,CAAC,SAAS,GAAG,SAAS,CAAC;QAC3B,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACzB,CAAC;CACJ"}
