@@ -1,5 +1,5 @@
 export class ApiService {
-    protected baseUrl: string = `http://localhost:3001`;
+    protected baseUrl: string = `http://localhost:3000`;
     async get<T>(endpoint: string): Promise<T> {
         try {
             let res: Response = await fetch(`${this.baseUrl}${endpoint}`);

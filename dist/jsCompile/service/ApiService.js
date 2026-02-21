@@ -1,6 +1,6 @@
 export class ApiService {
     constructor() {
-        this.baseUrl = `http://localhost:3001`;
+        this.baseUrl = `http://localhost:3000`;
     }
     async get(endpoint) {
         try {
