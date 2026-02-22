@@ -1,18 +1,27 @@
-export declare class FeatureItem {
+export declare class Feature {
+    id: string;
+    type: string;
+    heading: Heading;
+    item: Item[];
+    constructor(id: string, type: string, heading: Heading, item: Item[]);
+}
+export declare class Heading {
+    subTitle: string;
+    title: string;
+    constructor(subTitle: string, title: string);
+}
+export declare class Item {
     id: string;
     title: string;
     description: string;
     image: string;
+    aos: Aos;
+    position: string;
+    constructor(id: string, title: string, description: string, image: string, aos: Aos, position: string);
+}
+export declare class Aos {
     animation: string;
     delay: number;
-    constructor(id: string, title: string, description: string, image: string, animation: string, delay: number);
-}
-export declare class Feature {
-    id: string;
-    type: string;
-    subTitle: string;
-    title: string;
-    item: FeatureItem[];
-    constructor(id: string, type: string, subTitle: string, title: string, item: FeatureItem[]);
+    constructor(animation: string, delay: number);
 }
 //# sourceMappingURL=Features.d.ts.map

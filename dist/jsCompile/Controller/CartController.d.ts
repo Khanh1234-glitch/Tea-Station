@@ -1,7 +1,9 @@
 export declare class CartController {
     private cartService;
     private view;
-    init(): void;
+    private productListService;
+    init(): Promise<void>;
     private render;
+    private initEvents;
 }
 //# sourceMappingURL=CartController.d.ts.map

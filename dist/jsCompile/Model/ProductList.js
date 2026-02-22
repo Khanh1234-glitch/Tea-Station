@@ -1,3 +1,16 @@
+export class ProductSize {
+    constructor(id, label, price) {
+        this.id = id;
+        this.label = label;
+        this.price = price;
+    }
+}
+export class ProductVariant {
+    constructor(id, label) {
+        this.id = id;
+        this.label = label;
+    }
+}
 export class ProductList {
     constructor(id, name, image, description, categoryId, slug, images, basePrice, unit, sizes, variants, origin, brewGuide, expiry, storage, stock, status) {
         this.id = id;
@@ -19,24 +32,11 @@ export class ProductList {
         this.status = status;
     }
 }
-export class Size {
-    constructor(id, label, price) {
-        this.id = id;
-        this.label = label;
-        this.price = price;
-    }
-}
 export class BrewGuide {
     constructor(tea, water, temperature) {
         this.tea = tea;
         this.water = water;
         this.temperature = temperature;
-    }
-}
-export class Variants {
-    constructor(id, label) {
-        this.id = id;
-        this.label = label;
     }
 }
 //# sourceMappingURL=ProductList.js.map

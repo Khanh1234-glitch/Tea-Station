@@ -1,7 +1,7 @@
 import { CartController } from "./Controller/CartController.js";
 import { HomeController } from "./Controller/HomeController.js";
+import { ProductController } from "./Controller/ProductController.js";
 import { ProductDetailController } from "./Controller/ProductDetailController.js";
-import { ProductListController } from "./Controller/ProductListController.js";
 let controller;
 let page = location.pathname;
 switch (page) {
@@ -10,7 +10,7 @@ switch (page) {
         controller = new HomeController();
         break;
     case `/Views/products.html`:
-        controller = new ProductListController();
+        controller = new ProductController();
         break;
     case `/Views/productDetail.html`:
         controller = new ProductDetailController();

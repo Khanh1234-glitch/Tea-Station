@@ -1,0 +1,1 @@
+{"version":3,"file":"PageProductService.d.ts","sourceRoot":"","sources":["../../../src/service/PageProductService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,yBAAyB,CAAC;AACvD,OAAO,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAE7C,qBAAa,kBAAmB,SAAQ,UAAU;IACxC,MAAM,IAAI,OAAO,CAAC,YAAY,EAAE,CAAC;CAI1C"}

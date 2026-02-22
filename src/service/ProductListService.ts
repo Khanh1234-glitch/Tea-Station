@@ -1,9 +1,10 @@
-import { BrewGuide, ProductList, Size, Variants } from "../Model/ProductList.js";
 import { ApiService } from "./ApiService.js";
+import { BrewGuide, ProductList, ProductSize, ProductVariant } from "../Model/ProductList.js";
 
 export class ProductListService extends ApiService {
     async getAll(): Promise<ProductList[]> {
-        const data: ProductList[] = await this.get<ProductList[]>("/productsList");
+        const data = await this.get<ProductList[]>("/productsList");
+
         return data.map(
             (p) =>
                 new ProductList(
@@ -16,8 +17,8 @@ export class ProductListService extends ApiService {
                     p.images,
                     p.basePrice,
                     p.unit,
-                    (p.sizes ?? []).map((s) => new Size(s.id, s.label, s.price)),
-                    (p.variants ?? []).map((v) => new Variants(v.id, v.label)),
+                    p.sizes.map((s: any) => new ProductSize(s.id, s.label, s.price)),
+                    p.variants.map((v: any) => new ProductVariant(v.id, v.label)),
                     p.origin,
                     new BrewGuide(p.brewGuide.tea, p.brewGuide.water, p.brewGuide.temperature),
                     p.expiry,
@@ -25,28 +26,6 @@ export class ProductListService extends ApiService {
                     p.stock,
                     p.status,
                 ),
-        );
-    }
-    async getById(id: string): Promise<ProductList> {
-        const data: ProductList = await this.get<ProductList>(`/productsList/${id}`);
-        return new ProductList(
-            data.id,
-            data.name,
-            data.image,
-            data.description,
-            data.categoryId,
-            data.slug,
-            data.images,
-            data.basePrice,
-            data.unit,
-            (data.sizes ?? []).map((s) => new Size(s.id, s.label, s.price)),
-            data.variants,
-            data.origin,
-            new BrewGuide(data.brewGuide.tea, data.brewGuide.water, data.brewGuide.temperature),
-            data.expiry,
-            data.storage,
-            data.stock,
-            data.status,
         );
     }
 }

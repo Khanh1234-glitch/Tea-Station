@@ -1,25 +1,22 @@
-import { ProductList, Size, Variants } from "./ProductList.js";
-
 export class CartItem {
-    product: ProductList;
-    size: Size | null;
-    variant: Variants | null;
+    product_id: string;
+    name: string;
+    price: number;
+    image: string;
     quantity: number;
-
-    constructor(product: ProductList, size: Size | null, variant: Variants | null, quantity: number) {
-        this.product = product;
+    size: string;
+    variant: string;
+    constructor(product_id: string, name: string, price: number, image: string, quantity: number, size: string, variant: string) {
+        this.product_id = product_id;
+        this.name = name;
+        this.price = price;
+        this.image = image;
+        this.quantity = quantity;
         this.size = size;
         this.variant = variant;
-        this.quantity = quantity;
     }
 
-    getTotal(): number {
-        return (this.product.basePrice + (this.size?.price ?? 0)) * this.quantity;
-    }
-    getSize(): string {
-        return this.size ? this.size.label : "Không có size";
-    }
-    static isTheSame(a: CartItem, b: CartItem): boolean {
-        return a.product.id === b.product.id && a.size?.id === b.size?.id && a.variant?.id === b.variant?.id;
+    get total(): number {
+        return this.price * this.quantity;
     }
 }

@@ -1,12 +1,12 @@
-import { ProductList, Size, Variants } from "./ProductList.js";
 export declare class CartItem {
-    product: ProductList;
-    size: Size | null;
-    variant: Variants | null;
+    product_id: string;
+    name: string;
+    price: number;
+    image: string;
     quantity: number;
-    constructor(product: ProductList, size: Size | null, variant: Variants | null, quantity: number);
-    getTotal(): number;
-    getSize(): string;
-    static isTheSame(a: CartItem, b: CartItem): boolean;
+    size: string;
+    variant: string;
+    constructor(product_id: string, name: string, price: number, image: string, quantity: number, size: string, variant: string);
+    get total(): number;
 }
 //# sourceMappingURL=CartItem.d.ts.map
