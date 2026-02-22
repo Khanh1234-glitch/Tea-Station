@@ -64,7 +64,7 @@ export class HomeView {
                         (c, index) => `
                         <li>
                             <a href="#${c.slug}" class="tab-link">
-                                <span>Trà</span> ${c.name}
+                                ${c.name}
                             </a>
                         </li>
                         ${index < categories.length - 1 ? "<li>|</li>" : ""}
