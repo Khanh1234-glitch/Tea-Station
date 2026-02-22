@@ -1,72 +1,40 @@
-import { CartItem } from "../Model/CartItem.js";
-import { Size, Variants } from "../Model/ProductList.js";
 export class CartService {
     constructor() {
-        this.items = [];
-        this.loadFromStorage();
+        this.storageKey = "tea_station_cart";
     }
-    getItem() {
-        return this.items;
+    getCart() {
+        const data = localStorage.getItem(this.storageKey);
+        return data ? JSON.parse(data) : [];
     }
-    static getInstance() {
-        if (!CartService.Instance) {
-            CartService.Instance = new CartService();
-        }
-        return CartService.Instance;
+    save(cart) {
+        localStorage.setItem(this.storageKey, JSON.stringify(cart));
     }
-    addItem(newItem) {
-        const quantityInput = document.querySelector("#quantity");
-        const quantity = Number((quantityInput === null || quantityInput === void 0 ? void 0 : quantityInput.value) || 1);
-        let cart = [];
-        let found = false;
-        for (const cartItem of cart) {
-            if (CartItem.isTheSame(cartItem, newItem)) {
-                cartItem.quantity += quantity;
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            newItem.quantity = quantity;
-            cart.push(newItem);
-        }
-        this.saveToStorage();
-    }
-    removeItem(id) {
-        this.items = this.items.filter((item) => item.product.id != id);
-        this.saveToStorage();
-    }
-    updateItemQuantity(id, quantity) {
-        if (quantity <= 0) {
-            // this.removeItem(id);
+    add(item) {
+        const cart = this.getCart();
+        const existing = cart.find((i) => i.product_id === item.product_id && i.size === item.size && i.variant === item.variant);
+        if (existing) {
+            existing.quantity += item.quantity;
         }
         else {
-            this.items.find((item) => item.product.id == id).quantity = quantity;
+            cart.push(item);
         }
-        this.saveToStorage();
+        localStorage.setItem(this.storageKey, JSON.stringify(cart));
     }
-    getTotalPrice() {
-        return this.items.reduce((sum, item) => sum + item.getTotal(), 0);
+    remove(product_id, size, variant) {
+        const cart = this.getCart();
+        const newCart = cart.filter((i) => !(i.product_id === product_id && i.size === size && i.variant === variant));
+        this.save(newCart);
     }
-    clearCart() {
-        this.items = [];
-        this.saveToStorage();
+    update(product_id, size, variant, quantity) {
+        const cart = this.getCart();
+        const item = cart.find((i) => i.product_id === product_id && i.size === size && i.variant === variant);
+        if (item) {
+            item.quantity = quantity;
+        }
+        this.save(cart);
     }
-    saveToStorage() {
-        localStorage.setItem("cart-tea", JSON.stringify(this.items));
-    }
-    loadFromStorage() {
-        const data = localStorage.getItem("cart-tea");
-        if (!data)
-            return;
-        const rawItems = JSON.parse(data);
-        this.items = rawItems.map((item) => {
-            return new CartItem(item.product, 
-            // 👇 MAP TỪ sizes → size
-            item.size ? item.size : item.sizes ? item.sizes : null, 
-            // 👇 MAP TỪ variants → variant
-            item.variant ? item.variant : item.variants ? item.variants : null, Number(item.quantity) || 1);
-        });
+    getTotal() {
+        return this.getCart().reduce((sum, i) => sum + i.price * i.quantity, 0);
     }
 }
 //# sourceMappingURL=CartService.js.map

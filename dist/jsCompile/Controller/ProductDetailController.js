@@ -1,119 +1,114 @@
 import { CartItem } from "../Model/CartItem.js";
-import { ProductList, Size, Variants } from "../Model/ProductList.js";
-import { ProductListService } from "../service/ProductListService.js";
+import { ProductDetailService } from "../service/ProductDetailService.js";
 import { ProductDetailViews } from "../Views/ProductDetailViews.js";
+import { CartService } from "../service/CartService.js";
 export class ProductDetailController {
     constructor() {
-        this.DetailView = new ProductDetailViews();
-        this.productDetailService = new ProductListService();
-        this.productDetail = null;
-        this.total = null;
-        this.selectedSize = null;
-        this.selectedVariant = null;
+        this.service = new ProductDetailService();
+        this.view = new ProductDetailViews();
+        this.cartService = new CartService();
     }
     async init() {
-        const URLParams = new URLSearchParams(window.location.search);
-        const productId = URLParams.get("id");
-        if (!productId) {
-            alert("Khong tim thay san pham");
-            window.location.href = "/Views/products.html";
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        if (!id)
             return;
+        try {
+            const product = await this.service.getById(id);
+            this.render(product);
+            this.initOptionToggle(product.basePrice);
+            this.initThumbnailChange();
+            this.currentProduct = product;
+            this.initAddToCart();
         }
-        this.productDetail = await this.productDetailService.getById(productId);
-        this.renderProductDetail();
-        this.addEvents();
+        catch (error) {
+            console.error("Product detail error:", error);
+        }
     }
-    renderProductDetail() {
-        if (!this.productDetail) {
-            alert("Không tìm thấy sản phẩm");
+    render(product) {
+        const container = document.querySelector("#productDetail");
+        if (!container)
             return;
-        }
-        document.querySelector("#productDetail").innerHTML = this.DetailView.renderProductDetail(this.productDetail);
+        container.innerHTML = this.view.renderProductDetail(product);
     }
-    addEvents() {
-        var _a, _b, _c;
-        const sizeRadios = document.querySelectorAll('input[type="radio"][name="size"]');
-        const variantRadios = document.querySelectorAll(`input[type="radio"][name="variant"]`);
-        const basePrice = (_b = (_a = this.productDetail) === null || _a === void 0 ? void 0 : _a.basePrice) !== null && _b !== void 0 ? _b : 0;
-        variantRadios.forEach((v) => {
+    initThumbnailChange() {
+        const thumbnails = document.querySelectorAll(".thumbnail");
+        const mainImage = document.querySelector("#main-product-image");
+        if (!mainImage)
+            return;
+        thumbnails.forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                const newSrc = thumb.dataset.image;
+                if (newSrc)
+                    mainImage.src = newSrc;
+                thumbnails.forEach((t) => {
+                    t.classList.remove("ring-2", "ring-p-900");
+                    t.classList.add("ring-1", "ring-n-200");
+                });
+                thumb.classList.remove("ring-1", "ring-n-200");
+                thumb.classList.add("ring-2", "ring-p-900");
+            });
+        });
+    }
+    initOptionToggle(basePrice) {
+        const priceEl = document.querySelector("#product-price");
+        const handleGroup = (selector) => {
+            const labels = document.querySelectorAll(selector);
+            labels.forEach((label) => {
+                const input = label.querySelector("input");
+                if (!input)
+                    return;
+                label.addEventListener("click", () => {
+                    labels.forEach((l) => {
+                        l.classList.remove("ring-2", "ring-p-900");
+                        l.classList.add("ring-1", "ring-n-200");
+                        const radio = l.querySelector("input");
+                        if (radio)
+                            radio.checked = false;
+                    });
+                    label.classList.remove("ring-1", "ring-n-200");
+                    label.classList.add("ring-2", "ring-p-900");
+                    input.checked = true;
+                    // 🔥 Cập nhật giá ngay tại đây
+                    if (priceEl && selector === ".size-option") {
+                        const extra = Number(input.dataset.price || 0);
+                        const finalPrice = basePrice + extra;
+                        priceEl.textContent = finalPrice.toLocaleString("vi-VN") + "₫";
+                    }
+                });
+            });
+        };
+        handleGroup(".size-option");
+        handleGroup(".variant-option");
+        // set giá mặc định theo size đầu tiên
+        const checked = document.querySelector('input[name="size"]:checked');
+        if (checked && priceEl) {
+            const extra = Number(checked.dataset.price || 0);
+            priceEl.textContent = (basePrice + extra).toLocaleString("vi-VN") + "₫";
+        }
+    }
+    initAddToCart() {
+        const btn = document.querySelector("#add-to-cart");
+        if (!btn)
+            return;
+        btn.addEventListener("click", () => {
             var _a;
-            v.addEventListener("change", (e) => {
-                var _a;
-                const input = e.currentTarget;
-                if (!input.checked)
-                    return;
-                const id = input.dataset.id;
-                const name = input.dataset.name;
-                this.selectedVariant = new Variants(id, name);
-                // remove highlight all
-                variantRadios.forEach((r) => {
-                    var _a;
-                    (_a = r.closest("label")) === null || _a === void 0 ? void 0 : _a.classList.remove("ring-p-900", "ring-2");
-                });
-                // add highlight current
-                (_a = input.closest("label")) === null || _a === void 0 ? void 0 : _a.classList.add("ring-p-900", "ring-2");
-                console.log("SELECTED VARIANT:", this.selectedVariant);
-            });
-            // init highlight (radio checked sẵn)
-            if (v.checked) {
-                (_a = v.closest("label")) === null || _a === void 0 ? void 0 : _a.classList.add("ring-p-900", "ring-2");
-            }
+            const priceEl = document.querySelector("#product-price");
+            const quantityInput = document.querySelector("#product-quantity");
+            const sizeInput = document.querySelector("input[name='size']:checked");
+            const variantInput = document.querySelector("input[name='variant']:checked");
+            const price = priceEl ? Number((_a = priceEl.textContent) === null || _a === void 0 ? void 0 : _a.replace(/[^\d]/g, "")) : this.currentProduct.basePrice;
+            if (!quantityInput || !sizeInput || !variantInput)
+                return;
+            const quantity = Number(quantityInput.value);
+            const size = sizeInput.value;
+            const variant = variantInput.value;
+            const extraPrice = Number(sizeInput.dataset.price || 0);
+            const finalPrice = this.currentProduct.basePrice + extraPrice;
+            const item = new CartItem(this.currentProduct.id, this.currentProduct.name, finalPrice, this.currentProduct.image, quantity, size, variant);
+            this.cartService.add(item);
+            alert("Đã thêm vào giỏ hàng!");
         });
-        sizeRadios.forEach((rd) => {
-            rd.addEventListener("change", (e) => {
-                var _a;
-                const input = e.currentTarget;
-                if (!input.checked)
-                    return;
-                const id = input.dataset.id;
-                const name = input.dataset.name;
-                const price = Number(input.dataset.price || 0);
-                this.selectedSize = new Size(id, name, price);
-                sizeRadios.forEach((r) => {
-                    var _a;
-                    (_a = r.closest("label")) === null || _a === void 0 ? void 0 : _a.classList.remove("ring-p-900", "ring-2");
-                });
-                // 2. Thêm highlight cho label đang check
-                if (rd.checked) {
-                    (_a = rd.closest("label")) === null || _a === void 0 ? void 0 : _a.classList.add("ring-p-900", "ring-2");
-                }
-                this.total = basePrice + price;
-                console.log("TOTAL:", this.total);
-                console.log("SELECTED SIZE:", this.selectedSize);
-                document.querySelector("#product-price").innerHTML = this.total.toLocaleString("vi-VN");
-            });
-        });
-        (_c = document.querySelector("#addToCart")) === null || _c === void 0 ? void 0 : _c.addEventListener("click", (e) => {
-            this.addToCart();
-        });
-    }
-    addToCart() {
-        const quantityInput = document.querySelector("#quantity");
-        const quantity = Number((quantityInput === null || quantityInput === void 0 ? void 0 : quantityInput.value) || 1);
-        if (!this.productDetail || !this.selectedSize || !this.selectedVariant) {
-            alert("Vui lòng chọn kích cỡ và biến thể");
-            return;
-        }
-        let cart = [];
-        if (localStorage.getItem("cart-tea")) {
-            cart = JSON.parse(localStorage.getItem("cart-tea") || "[]");
-        }
-        if (!this.selectedVariant)
-            return;
-        const newItem = new CartItem(this.productDetail, this.selectedSize, this.selectedVariant, quantity);
-        let found = false;
-        for (const item of cart) {
-            if (CartItem.isTheSame(newItem, item)) {
-                item.quantity += quantity;
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            cart.push(newItem);
-        }
-        localStorage.setItem("cart-tea", JSON.stringify(cart));
-        console.log("CART:", cart);
     }
 }
 //# sourceMappingURL=ProductDetailController.js.map

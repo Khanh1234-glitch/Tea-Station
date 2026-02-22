@@ -1,6 +1,6 @@
-import { Feature } from "../Model/Feature.js";
 import { ApiService } from "./ApiService.js";
+import { Feature } from "../Model/Features.js";
 export declare class FeatureService extends ApiService {
-    getAll(): Promise<Feature>;
+    getFeature(): Promise<Feature>;
 }
 //# sourceMappingURL=FeatureService.d.ts.map

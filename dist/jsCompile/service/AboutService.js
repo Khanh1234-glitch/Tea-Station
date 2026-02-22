@@ -1,10 +1,9 @@
-import { About, Heading } from "../Model/About.js";
 import { ApiService } from "./ApiService.js";
+import { About, Heading } from "../Model/About.js";
 export class AboutService extends ApiService {
-    async getAll() {
-        const data = await this.get("/about");
-        const heading = new Heading(data.heading.subTitle, data.heading.title);
-        return new About(data.id, data.type, data.background, data.overlay, data.watermark, heading, data.content);
+    async getAbout() {
+        const data = await this.getOne("/about");
+        return new About(data.id, data.type, data.background, data.overlay, data.watermark, new Heading(data.heading.subTitle, data.heading.title), data.content);
     }
 }
 //# sourceMappingURL=AboutService.js.map

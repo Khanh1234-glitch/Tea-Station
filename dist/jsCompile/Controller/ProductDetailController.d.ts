@@ -1,13 +1,12 @@
 export declare class ProductDetailController {
-    private DetailView;
-    private productDetailService;
-    private productDetail;
-    private total;
-    private selectedSize;
-    private selectedVariant;
+    private service;
+    private view;
+    private cartService;
+    private currentProduct;
     init(): Promise<void>;
-    private renderProductDetail;
-    private addEvents;
-    private addToCart;
+    private render;
+    private initThumbnailChange;
+    private initOptionToggle;
+    private initAddToCart;
 }
 //# sourceMappingURL=ProductDetailController.d.ts.map

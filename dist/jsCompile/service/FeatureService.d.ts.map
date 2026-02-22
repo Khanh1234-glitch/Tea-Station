@@ -1,1 +1,1 @@
-{"version":3,"file":"FeatureService.d.ts","sourceRoot":"","sources":["../../../src/service/FeatureService.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,OAAO,EAAW,MAAM,qBAAqB,CAAC;AAEvD,OAAO,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAE7C,qBAAa,cAAe,SAAQ,UAAU;IACpC,MAAM,IAAI,OAAO,CAAC,OAAO,CAAC;CAwBnC"}
+{"version":3,"file":"FeatureService.d.ts","sourceRoot":"","sources":["../../../src/service/FeatureService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAC7C,OAAO,EAAE,OAAO,EAAsB,MAAM,sBAAsB,CAAC;AAEnE,qBAAa,cAAe,SAAQ,UAAU;IACpC,UAAU,IAAI,OAAO,CAAC,OAAO,CAAC;CAavC"}

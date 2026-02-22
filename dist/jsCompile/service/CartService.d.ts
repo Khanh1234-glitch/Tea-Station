@@ -1,16 +1,11 @@
-import { CartItem } from "../Model/CartItem.js";
+import type { CartItem } from "../Model/CartItem.js";
 export declare class CartService {
-    private static Instance;
-    items: CartItem[];
-    constructor();
-    getItem(): CartItem[];
-    static getInstance(): CartService;
-    addItem(newItem: CartItem): void;
-    removeItem(id: string): void;
-    updateItemQuantity(id: string, quantity: number): void;
-    getTotalPrice(): number;
-    clearCart(): void;
-    private saveToStorage;
-    private loadFromStorage;
+    private storageKey;
+    getCart(): CartItem[];
+    private save;
+    add(item: CartItem): void;
+    remove(product_id: string, size: string, variant: string): void;
+    update(product_id: string, size: string, variant: string, quantity: number): void;
+    getTotal(): number;
 }
 //# sourceMappingURL=CartService.d.ts.map

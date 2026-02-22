@@ -1,12 +1,9 @@
-import { Feature, Heading } from "../Model/Feature.js";
-import { FeatureItem } from "../Model/FeaturesItem.js";
 import { ApiService } from "./ApiService.js";
+import { Feature, Heading, Item, Aos } from "../Model/Features.js";
 export class FeatureService extends ApiService {
-    async getAll() {
-        const data = await this.get("/features");
-        const items = data.items.map((f) => new FeatureItem(f.id, f.title, f.description, f.image, f.aos, f.position));
-        const heading = new Heading(data.heading.subTitle, data.heading.title);
-        return new Feature(data.id, data.type, heading, items);
+    async getFeature() {
+        const data = await this.getOne("/features");
+        return new Feature(data.id, data.type, new Heading(data.heading.subTitle, data.heading.title), data.items.map((item) => new Item(item.id, item.title, item.description, item.image, new Aos(item.aos.animation, item.aos.delay), item.position)));
     }
 }
 //# sourceMappingURL=FeatureService.js.map

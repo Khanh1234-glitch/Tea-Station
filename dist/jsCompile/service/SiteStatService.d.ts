@@ -1,6 +1,6 @@
-import { siteStat } from "../Model/siteStats.js";
 import { ApiService } from "./ApiService.js";
+import { SiteStat } from "../Model/SiteStat.js";
 export declare class SiteStatService extends ApiService {
-    getAll(): Promise<siteStat>;
+    getSiteStat(): Promise<SiteStat>;
 }
 //# sourceMappingURL=SiteStatService.d.ts.map

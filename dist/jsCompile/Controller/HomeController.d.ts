@@ -2,20 +2,22 @@ export declare class HomeController {
     private homeView;
     private productService;
     private categoryService;
-    private featureService;
     private heroService;
+    private featureService;
     private bestSellerService;
     private siteStatService;
     private aboutService;
-    private heroSectionSerive;
-    private partnerLogoService;
-    init(): void;
-    renderHomeView(): Promise<void>;
-    private observeSiteStat;
+    init(): Promise<void>;
+    private renderPage;
+    private renderTabs;
+    private renderHero;
+    private renderFeature;
+    private renderBestSeller;
+    private renderSiteStat;
+    private renderAbout;
     private initProductTabs;
-    private observeBestSeller;
     private initBestSellerSlider;
     private animateSlideProgress;
-    private animateProgressBar;
+    private observeSiteStat;
 }
 //# sourceMappingURL=HomeController.d.ts.map

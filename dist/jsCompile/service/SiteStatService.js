@@ -1,9 +1,9 @@
-import { siteStat } from "../Model/siteStats.js";
 import { ApiService } from "./ApiService.js";
+import { SiteStat } from "../Model/SiteStat.js";
 export class SiteStatService extends ApiService {
-    async getAll() {
-        const data = await this.get("/site_stats");
-        return new siteStat(data.products, data.customers, data.rating);
+    async getSiteStat() {
+        const data = await this.getOne("/site_stats");
+        return new SiteStat(data.products, data.customers, data.rating);
     }
 }
 //# sourceMappingURL=SiteStatService.js.map

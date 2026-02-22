@@ -1,6 +1,6 @@
-import { About } from "../Model/About.js";
 import { ApiService } from "./ApiService.js";
+import { About } from "../Model/About.js";
 export declare class AboutService extends ApiService {
-    getAll(): Promise<About>;
+    getAbout(): Promise<About>;
 }
 //# sourceMappingURL=AboutService.d.ts.map
