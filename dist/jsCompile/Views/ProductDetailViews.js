@@ -89,9 +89,9 @@ export class ProductDetailViews {
 
                         <!-- Quantity -->
                         <div class="flex items-center gap-6">
-                            <input type="number" value="1" min="1" class="w-[100px] px-4 py-3 border border-n-200 rounded-xl" />
+                            <input id="product-quantity" type="number" value="1" min="1" max="${product.stock}" class="w-[100px] px-4 py-3 border border-n-200 rounded-xl" />
 
-                            <button class="px-8 py-4 btn">Thêm vào giỏ</button>
+                            <button data-id="${product.id}" id="add-to-cart" class="px-8 py-4  btn">Thêm vào giỏ</button>
                         </div>
 
                         <!-- Description -->

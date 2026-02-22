@@ -1,9 +1,12 @@
+import { CartItem } from "../Model/CartItem.js";
 import { ProductDetailService } from "../service/ProductDetailService.js";
 import { ProductDetailViews } from "../Views/ProductDetailViews.js";
+import { CartService } from "../service/CartService.js";
 export class ProductDetailController {
     constructor() {
         this.service = new ProductDetailService();
         this.view = new ProductDetailViews();
+        this.cartService = new CartService();
     }
     async init() {
         const params = new URLSearchParams(window.location.search);
@@ -15,6 +18,8 @@ export class ProductDetailController {
             this.render(product);
             this.initOptionToggle(product.basePrice);
             this.initThumbnailChange();
+            this.currentProduct = product;
+            this.initAddToCart();
         }
         catch (error) {
             console.error("Product detail error:", error);
@@ -81,6 +86,29 @@ export class ProductDetailController {
             const extra = Number(checked.dataset.price || 0);
             priceEl.textContent = (basePrice + extra).toLocaleString("vi-VN") + "₫";
         }
+    }
+    initAddToCart() {
+        const btn = document.querySelector("#add-to-cart");
+        if (!btn)
+            return;
+        btn.addEventListener("click", () => {
+            var _a;
+            const priceEl = document.querySelector("#product-price");
+            const quantityInput = document.querySelector("#product-quantity");
+            const sizeInput = document.querySelector("input[name='size']:checked");
+            const variantInput = document.querySelector("input[name='variant']:checked");
+            const price = priceEl ? Number((_a = priceEl.textContent) === null || _a === void 0 ? void 0 : _a.replace(/[^\d]/g, "")) : this.currentProduct.basePrice;
+            if (!quantityInput || !sizeInput || !variantInput)
+                return;
+            const quantity = Number(quantityInput.value);
+            const size = sizeInput.value;
+            const variant = variantInput.value;
+            const extraPrice = Number(sizeInput.dataset.price || 0);
+            const finalPrice = this.currentProduct.basePrice + extraPrice;
+            const item = new CartItem(this.currentProduct.id, this.currentProduct.name, finalPrice, this.currentProduct.image, quantity, size, variant);
+            this.cartService.add(item);
+            alert("Đã thêm vào giỏ hàng!");
+        });
     }
 }
 //# sourceMappingURL=ProductDetailController.js.map

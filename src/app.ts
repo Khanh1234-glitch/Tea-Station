@@ -1,3 +1,4 @@
+import { CartController } from "./Controller/CartController.js";
 import { HomeController } from "./Controller/HomeController.js";
 import { ProductController } from "./Controller/ProductController.js";
 import { ProductDetailController } from "./Controller/ProductDetailController.js";
@@ -15,6 +16,9 @@ switch (page) {
         break;
     case `/Views/productDetail.html`:
         controller = new ProductDetailController();
+        break;
+    case `/Views/cart.html`:
+        controller = new CartController();
         break;
     default:
         controller = new HomeController();
