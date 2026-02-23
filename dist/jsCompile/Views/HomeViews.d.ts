@@ -3,6 +3,7 @@ import type { BestSeller } from "../Model/BestSeller.js";
 import type { Category } from "../Model/Category.js";
 import type { Feature } from "../Model/Features.js";
 import type { Hero } from "../Model/Hero.js";
+import type { PartnerLogo } from "../Model/PartnerLogo.js";
 import type { Product } from "../Model/Product.js";
 import type { SiteStat } from "../Model/SiteStat.js";
 export declare class HomeView {
@@ -15,5 +16,6 @@ export declare class HomeView {
     renderBestSeller(bestSeller: BestSeller): string;
     renderSiteStat(stat: SiteStat): string;
     renderAbout(about: About): string;
+    renderPartnerLogo(partners: PartnerLogo[]): string;
 }
 //# sourceMappingURL=HomeViews.d.ts.map

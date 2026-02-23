@@ -86,9 +86,9 @@ export class CartView {
                     <span>${totalPrice.toLocaleString()}₫</span>
                 </div>
 
-                <button class="w-full py-4 btn mt-6">
+               <a href="./checkout.html"><button class="w-full py-4 btn mt-6">
                     Thanh toán
-                </button>
+                </button></a> 
             </div>
         `;
     }

@@ -15,6 +15,8 @@ import { SiteStatService } from "../service/SiteStatService.js";
 import { AboutService } from "../service/AboutService.js";
 
 import { HomeView } from "../Views/HomeViews.js";
+import { PartnerLogoService } from "../service/PartnerLogoService.js";
+import type { PartnerLogo } from "../Model/PartnerLogo.js";
 
 export class HomeController {
     private homeView = new HomeView();
@@ -26,7 +28,7 @@ export class HomeController {
     private bestSellerService = new BestSellerService();
     private siteStatService = new SiteStatService();
     private aboutService = new AboutService();
-
+    private partnerService = new PartnerLogoService();
     /* ================= INIT ================= */
 
     public async init(): Promise<void> {
@@ -38,14 +40,16 @@ export class HomeController {
 
     private async renderPage(): Promise<void> {
         try {
-            const [products, categories, hero] = await Promise.all([
+            const [products, categories, hero, partnerLogo] = await Promise.all([
                 this.productService.getAll(),
                 this.categoryService.getAll(),
                 this.heroService.getAll(),
+                this.partnerService.getAllLogo(),
             ]);
 
             this.renderTabs(products, categories);
             this.renderHero(hero);
+            this.renderPartner(partnerLogo);
         } catch (err) {
             console.error("Main section error:", err);
         }
@@ -86,7 +90,11 @@ export class HomeController {
         if (!container) return;
         container.innerHTML = this.homeView.render(products, categories);
     }
-
+    private renderPartner(partner: PartnerLogo[]) {
+        const container = document.querySelector("#partner-logo-list");
+        if (!container) return;
+        container.innerHTML = this.homeView.renderPartnerLogo(partner);
+    }
     private renderHero(hero: any): void {
         const container = document.querySelector("#slogan");
         if (!container) return;

@@ -1,0 +1,1 @@
+{"version":3,"file":"PartnerLogoService.d.ts","sourceRoot":"","sources":["../../../src/service/PartnerLogoService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,WAAW,EAAE,MAAM,yBAAyB,CAAC;AACtD,OAAO,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAC;AAE7C,qBAAa,kBAAmB,SAAQ,UAAU;IACxC,UAAU,IAAI,OAAO,CAAC,WAAW,EAAE,CAAC;CAI7C"}

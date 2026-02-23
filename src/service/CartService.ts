@@ -48,4 +48,7 @@ export class CartService {
     getTotal(): number {
         return this.getCart().reduce((sum, i) => sum + i.price * i.quantity, 0);
     }
+    clear() {
+        localStorage.removeItem(this.storageKey);
+    }
 }

@@ -1,0 +1,17 @@
+<h2 class="text-2xl font-bold text-p-900">Address System</h2>
+
+<div class="p-6 bg-white shadow rounded-2xl">
+    <button class="font-semibold district-btn">Quận 1</button>
+    <ul class="hidden ml-4 ward-list">
+        <li>Phường Bến Nghé</li>
+        <li>Phường Bến Thành</li>
+    </ul>
+</div>
+
+<script>
+    document.querySelectorAll(".district-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            btn.nextElementSibling.classList.toggle("hidden");
+        });
+    });
+</script>

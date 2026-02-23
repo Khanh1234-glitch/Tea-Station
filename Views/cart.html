@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="vi">
-    <head>
+    <head id="head">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tea Station</title>
@@ -51,39 +51,7 @@
         <!----------------- 
         Navigation
     ------------------>
-        <header class="relative z-50">
-            <div class="flex items-center justify-center navbar">
-                <div class="flex items-center justify-between w-full px-4 py-4 max-w-384 md:py-10 md:px-18">
-                    <!-- Logo -->
-                    <a href="./" class="flex items-center justify-center flex-none">
-                        <img src="../public/assets/logo.png" alt="logo" class="w-16 h-16" />
-                        <p class="text-lg capitalize font-lobster text-p-900">Tea Station</p>
-                    </a>
-
-                    <!-- Nav Links -->
-                    <nav class="items-center justify-end hidden w-full gap-4 lg:flex lg:gap-8">
-                        <a href="./products.html" class="navLink">Sản Phẩm</a>
-                        <a href="./cart.html" class="navLink">Giỏ hàng</a>
-                        <a href="./#story" class="navLink">Giới Thiệu</a>
-                        <a href="./#contact" class="navLink">Liên Hệ</a>
-                        <a href="./register.html" class="navLink">Đăng ký</a>
-                        <a href="./login.html" class="navLink">Đăng nhập</a>
-                    </nav>
-
-                    <!-- Hamburger Icon -->
-                    <div class="block cursor-pointer lg:hidden" id="toggle_btn">
-                        <img src="../public/assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
-                    </div>
-
-                    <!-- Mobile Menu -->
-                    <div class="dropdown-menu lg:hidden">
-                        <a href="./products.html" class="navLink mobileNavLink">Sản Phẩm</a>
-                        <a href="#story" class="navLink mobileNavLink">Giới Thiệu</a>
-                        <a href="#contact" class="navLink mobileNavLink">Liên Hệ</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <header class="relative z-50" id="header"></header>
 
         <!-- ================= CART ================= -->
         <main class="container pt-[120px] pb-20">
@@ -107,6 +75,7 @@
                 </div>
             </section>
         </main>
+        <footer id="footer" class="pt-16 pb-8 text-white bg-p-950"></footer>
         <!-- JQuery -->
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>

@@ -3,6 +3,7 @@ import type { Benefit, BestSeller, BestSellerProduct } from "../Model/BestSeller
 import type { Category } from "../Model/Category.js";
 import type { Feature, Item } from "../Model/Features.js";
 import type { Hero } from "../Model/Hero.js";
+import type { PartnerLogo } from "../Model/PartnerLogo.js";
 import type { Product } from "../Model/Product.js";
 import type { SiteStat } from "../Model/SiteStat.js";
 
@@ -342,5 +343,21 @@ export class HomeView {
             </div>
         </section>
     `;
+    }
+    renderPartnerLogo(partners: PartnerLogo[]): string {
+        const duplicate = [...partners, ...partners];
+        return duplicate
+            .map(
+                (p) => `
+             <div class="flex items-center justify-center w-[120px] h-[70px]  hover:grayscale-0 transition duration-300">
+                                <img 
+                                    src="/public/assets/partner-logos/${p.fileName}" 
+                                    alt="${p.alt}" 
+                                    class="max-h-[50px] object-contain"
+                                />
+                            </div>
+        `,
+            )
+            .join("");
     }
 }

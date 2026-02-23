@@ -322,5 +322,19 @@ export class HomeView {
         </section>
     `;
     }
+    renderPartnerLogo(partners) {
+        const duplicate = [...partners, ...partners];
+        return duplicate
+            .map((p) => `
+             <div class="flex items-center justify-center w-[120px] h-[70px]  hover:grayscale-0 transition duration-300">
+                                <img 
+                                    src="/public/assets/partner-logos/${p.fileName}" 
+                                    alt="${p.alt}" 
+                                    class="max-h-[50px] object-contain"
+                                />
+                            </div>
+        `)
+            .join("");
+    }
 }
 //# sourceMappingURL=HomeViews.js.map

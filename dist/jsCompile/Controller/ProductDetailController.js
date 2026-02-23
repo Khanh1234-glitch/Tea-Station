@@ -92,20 +92,18 @@ export class ProductDetailController {
         if (!btn)
             return;
         btn.addEventListener("click", () => {
-            var _a;
-            const priceEl = document.querySelector("#product-price");
             const quantityInput = document.querySelector("#product-quantity");
             const sizeInput = document.querySelector("input[name='size']:checked");
             const variantInput = document.querySelector("input[name='variant']:checked");
-            const price = priceEl ? Number((_a = priceEl.textContent) === null || _a === void 0 ? void 0 : _a.replace(/[^\d]/g, "")) : this.currentProduct.basePrice;
             if (!quantityInput || !sizeInput || !variantInput)
                 return;
             const quantity = Number(quantityInput.value);
             const size = sizeInput.value;
             const variant = variantInput.value;
+            const variant_id = variantInput.dataset.id; // 🔥 lấy ID thật
             const extraPrice = Number(sizeInput.dataset.price || 0);
             const finalPrice = this.currentProduct.basePrice + extraPrice;
-            const item = new CartItem(this.currentProduct.id, this.currentProduct.name, finalPrice, this.currentProduct.image, quantity, size, variant);
+            const item = new CartItem(this.currentProduct.id, variant_id, this.currentProduct.name, finalPrice, this.currentProduct.image, quantity, size, variant);
             this.cartService.add(item);
             alert("Đã thêm vào giỏ hàng!");
         });

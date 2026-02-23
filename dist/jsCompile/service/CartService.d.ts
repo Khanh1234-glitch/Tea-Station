@@ -7,5 +7,6 @@ export declare class CartService {
     remove(product_id: string, size: string, variant: string): void;
     update(product_id: string, size: string, variant: string, quantity: number): void;
     getTotal(): number;
+    clear(): void;
 }
 //# sourceMappingURL=CartService.d.ts.map

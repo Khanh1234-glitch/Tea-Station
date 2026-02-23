@@ -7,9 +7,11 @@ export declare class HomeController {
     private bestSellerService;
     private siteStatService;
     private aboutService;
+    private partnerService;
     init(): Promise<void>;
     private renderPage;
     private renderTabs;
+    private renderPartner;
     private renderHero;
     private renderFeature;
     private renderBestSeller;

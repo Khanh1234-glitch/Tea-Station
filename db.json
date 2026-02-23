@@ -1,7 +1,13 @@
 {
     "roles": [
-        { "id": "1", "name": "admin" },
-        { "id": "2", "name": "customer" }
+        {
+            "id": "1",
+            "name": "admin"
+        },
+        {
+            "id": "2",
+            "name": "customer"
+        }
     ],
     "hero": {
         "type": "video",
@@ -11,32 +17,128 @@
     },
     "users": [
         {
+            "createdAt": "",
+            "id": "7c03",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "khanhtnb220@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "1231241412"
+        },
+        {
+            "createdAt": "2026-02-23T04:16:25.284Z",
+            "id": "4f8f",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "123@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "7b74",
+            "createdAt": "2026-02-23T06:28:19.663Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "khanh123@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "17dd",
+            "createdAt": "2026-02-23T06:32:04.747Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "123412123@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "79b5",
+            "createdAt": "2026-02-23T06:33:08.090Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "12321421412@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "0b16",
+            "createdAt": "2026-02-23T06:33:23.995Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "123141234213@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "30ee",
+            "createdAt": "2026-02-23T06:39:11.186Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "123123214124123@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "5fa2",
+            "createdAt": "2026-02-23T06:40:32.184Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "1232141231@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "0427",
+            "createdAt": "2026-02-23T06:45:13.491Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "1234141edsdad@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        },
+        {
+            "id": "3f57",
+            "createdAt": "2026-02-23T06:46:43.365Z",
+            "role": "customer",
+            "name": "Trương Nguyễn Bảo Khánh",
+            "email": "12311aqeqad0@gmail.com",
+            "password": "123456",
+            "address": "",
+            "phone": "0916022815"
+        }
+    ],
+    "categories": [
+        {
             "id": "1",
-            "role_id": "1",
-            "name": "Admin Tea",
-            "email": "admin@teastation.com",
-            "phone": "0900000000",
-            "password": "admin123",
-            "address": "Tea Station HQ"
+            "name": "Trà Matcha",
+            "slug": "matcha"
         },
         {
             "id": "2",
-            "role_id": "2",
-            "name": "Nguyễn Văn A",
-            "email": "user@gmail.com",
-            "phone": "0123456789",
-            "password": "123456",
-            "address": "TP.HCM"
+            "name": "Trà Đen",
+            "slug": "blackTea"
+        },
+        {
+            "id": "3",
+            "name": "Trà Oolong",
+            "slug": "oolongTea"
+        },
+        {
+            "id": "4",
+            "name": "Trà Trắng",
+            "slug": "whiteTea"
         }
     ],
-
-    "categories": [
-        { "id": "1", "name": "Trà Matcha", "slug": "matcha" },
-        { "id": "2", "name": "Trà Đen", "slug": "blackTea" },
-        { "id": "3", "name": "Trà Oolong", "slug": "oolongTea" },
-        { "id": "4", "name": "Trà Trắng", "slug": "whiteTea" }
-    ],
-
     "products": [
         {
             "id": "1",
@@ -87,48 +189,218 @@
             "image": "product_4.png"
         }
     ],
-
     "product_images": [
-        { "id": "1", "product_id": "1", "url": "matcha1.jpg", "is_main": true },
-        { "id": "2", "product_id": "1", "url": "matcha2.jpg", "is_main": false },
-        { "id": "3", "product_id": "1", "url": "matcha3.jpg", "is_main": false },
-        { "id": "4", "product_id": "1", "url": "matcha4.jpg", "is_main": false },
-        { "id": "5", "product_id": "1", "url": "matcha5.jpg", "is_main": false },
-        { "id": "6", "product_id": "1", "url": "matcha6.jpg", "is_main": false },
-        { "id": "7", "product_id": "1", "url": "matcha7.jpg", "is_main": false },
-        { "id": "8", "product_id": "1", "url": "matcha8.jpg", "is_main": false },
-        { "id": "9", "product_id": "1", "url": "matcha9.jpg", "is_main": false },
-        { "id": "10", "product_id": "1", "url": "matcha10.jpg", "is_main": false },
-        { "id": "11", "product_id": "1", "url": "matcha11.jpg", "is_main": false },
-        { "id": "12", "product_id": "1", "url": "matcha12.jpg", "is_main": false },
-        { "id": "13", "product_id": "1", "url": "matcha13.jpg", "is_main": false },
-        { "id": "14", "product_id": "1", "url": "matcha14.jpg", "is_main": false },
-        { "id": "15", "product_id": "1", "url": "matcha15.jpg", "is_main": false },
-
-        { "id": "16", "product_id": "2", "url": "oolong1.jpg", "is_main": true },
-        { "id": "17", "product_id": "2", "url": "oolong2.jpg", "is_main": false },
-        { "id": "18", "product_id": "2", "url": "oolong3.jpg", "is_main": false },
-        { "id": "19", "product_id": "2", "url": "oolong4.jpg", "is_main": false },
-        { "id": "20", "product_id": "2", "url": "oolong5.jpg", "is_main": false },
-        { "id": "21", "product_id": "2", "url": "oolong6.jpg", "is_main": false },
-        { "id": "22", "product_id": "2", "url": "oolong7.jpg", "is_main": false },
-        { "id": "23", "product_id": "2", "url": "oolong8.jpg", "is_main": false },
-
-        { "id": "24", "product_id": "4", "url": "blacktea1.jpg", "is_main": true },
-        { "id": "25", "product_id": "4", "url": "blacktea2.jpg", "is_main": false },
-        { "id": "26", "product_id": "4", "url": "blacktea3.jpg", "is_main": false },
-        { "id": "27", "product_id": "4", "url": "blacktea4.jpg", "is_main": false },
-
-        { "id": "28", "product_id": "3", "url": "whitetea1.jpg", "is_main": true },
-        { "id": "29", "product_id": "3", "url": "whitetea2.jpg", "is_main": false },
-        { "id": "30", "product_id": "3", "url": "whitetea3.jpg", "is_main": false },
-        { "id": "31", "product_id": "3", "url": "whitetea4.jpg", "is_main": false },
-        { "id": "32", "product_id": "3", "url": "whitetea5.jpg", "is_main": false },
-        { "id": "33", "product_id": "3", "url": "whitetea6.jpg", "is_main": false },
-        { "id": "34", "product_id": "3", "url": "whitetea7.jpg", "is_main": false },
-        { "id": "35", "product_id": "3", "url": "whitetea8.jpg", "is_main": false }
+        {
+            "id": "1",
+            "product_id": "1",
+            "url": "matcha1.jpg",
+            "is_main": true
+        },
+        {
+            "id": "2",
+            "product_id": "1",
+            "url": "matcha2.jpg",
+            "is_main": false
+        },
+        {
+            "id": "3",
+            "product_id": "1",
+            "url": "matcha3.jpg",
+            "is_main": false
+        },
+        {
+            "id": "4",
+            "product_id": "1",
+            "url": "matcha4.jpg",
+            "is_main": false
+        },
+        {
+            "id": "5",
+            "product_id": "1",
+            "url": "matcha5.jpg",
+            "is_main": false
+        },
+        {
+            "id": "6",
+            "product_id": "1",
+            "url": "matcha6.jpg",
+            "is_main": false
+        },
+        {
+            "id": "7",
+            "product_id": "1",
+            "url": "matcha7.jpg",
+            "is_main": false
+        },
+        {
+            "id": "8",
+            "product_id": "1",
+            "url": "matcha8.jpg",
+            "is_main": false
+        },
+        {
+            "id": "9",
+            "product_id": "1",
+            "url": "matcha9.jpg",
+            "is_main": false
+        },
+        {
+            "id": "10",
+            "product_id": "1",
+            "url": "matcha10.jpg",
+            "is_main": false
+        },
+        {
+            "id": "11",
+            "product_id": "1",
+            "url": "matcha11.jpg",
+            "is_main": false
+        },
+        {
+            "id": "12",
+            "product_id": "1",
+            "url": "matcha12.jpg",
+            "is_main": false
+        },
+        {
+            "id": "13",
+            "product_id": "1",
+            "url": "matcha13.jpg",
+            "is_main": false
+        },
+        {
+            "id": "14",
+            "product_id": "1",
+            "url": "matcha14.jpg",
+            "is_main": false
+        },
+        {
+            "id": "15",
+            "product_id": "1",
+            "url": "matcha15.jpg",
+            "is_main": false
+        },
+        {
+            "id": "16",
+            "product_id": "2",
+            "url": "oolong1.jpg",
+            "is_main": true
+        },
+        {
+            "id": "17",
+            "product_id": "2",
+            "url": "oolong2.jpg",
+            "is_main": false
+        },
+        {
+            "id": "18",
+            "product_id": "2",
+            "url": "oolong3.jpg",
+            "is_main": false
+        },
+        {
+            "id": "19",
+            "product_id": "2",
+            "url": "oolong4.jpg",
+            "is_main": false
+        },
+        {
+            "id": "20",
+            "product_id": "2",
+            "url": "oolong5.jpg",
+            "is_main": false
+        },
+        {
+            "id": "21",
+            "product_id": "2",
+            "url": "oolong6.jpg",
+            "is_main": false
+        },
+        {
+            "id": "22",
+            "product_id": "2",
+            "url": "oolong7.jpg",
+            "is_main": false
+        },
+        {
+            "id": "23",
+            "product_id": "2",
+            "url": "oolong8.jpg",
+            "is_main": false
+        },
+        {
+            "id": "24",
+            "product_id": "4",
+            "url": "blacktea1.jpg",
+            "is_main": true
+        },
+        {
+            "id": "25",
+            "product_id": "4",
+            "url": "blacktea2.jpg",
+            "is_main": false
+        },
+        {
+            "id": "26",
+            "product_id": "4",
+            "url": "blacktea3.jpg",
+            "is_main": false
+        },
+        {
+            "id": "27",
+            "product_id": "4",
+            "url": "blacktea4.jpg",
+            "is_main": false
+        },
+        {
+            "id": "28",
+            "product_id": "3",
+            "url": "whitetea1.jpg",
+            "is_main": true
+        },
+        {
+            "id": "29",
+            "product_id": "3",
+            "url": "whitetea2.jpg",
+            "is_main": false
+        },
+        {
+            "id": "30",
+            "product_id": "3",
+            "url": "whitetea3.jpg",
+            "is_main": false
+        },
+        {
+            "id": "31",
+            "product_id": "3",
+            "url": "whitetea4.jpg",
+            "is_main": false
+        },
+        {
+            "id": "32",
+            "product_id": "3",
+            "url": "whitetea5.jpg",
+            "is_main": false
+        },
+        {
+            "id": "33",
+            "product_id": "3",
+            "url": "whitetea6.jpg",
+            "is_main": false
+        },
+        {
+            "id": "34",
+            "product_id": "3",
+            "url": "whitetea7.jpg",
+            "is_main": false
+        },
+        {
+            "id": "35",
+            "product_id": "3",
+            "url": "whitetea8.jpg",
+            "is_main": false
+        }
     ],
-
     "product_variants": [
         {
             "id": "1",
@@ -154,7 +426,6 @@
             "price": 179000,
             "stock": 30
         },
-
         {
             "id": "4",
             "product_id": "2",
@@ -164,7 +435,6 @@
             "stock": 80
         }
     ],
-
     "product_attributes": [
         {
             "product_id": "1",
@@ -181,7 +451,6 @@
             "storage": "Nơi thoáng mát"
         }
     ],
-
     "cart": [
         {
             "id": "1",
@@ -198,18 +467,78 @@
             "quantity": 1
         }
     ],
-
     "orders": [
         {
             "id": "1",
             "user_id": "2",
+            "customer_name": "Nguyễn Văn A",
+            "phone": "0123456789",
+            "email": "abc@gmail.com",
+            "address": "123 Nguyễn Trãi, Q1, HCM",
+            "note": "",
+            "payment_method": "cod",
             "status": "pending",
             "total": 277000,
             "shipping_fee": 0,
             "created_at": "2026-01-26"
+        },
+        {
+            "id": "9db0",
+            "user_id": "2",
+            "customer_name": "Trương Nguyễn Bảo Khánh",
+            "phone": "0916022815",
+            "email": "khanhtnb220@gmail.com",
+            "address": "324 Phạm Văn Chí, Quận 1, TP Hồ Chí Minh",
+            "note": "ádassd",
+            "payment_method": "cod",
+            "status": "pending",
+            "total": 89000,
+            "shipping_fee": 0,
+            "created_at": "2026-02-22"
+        },
+        {
+            "id": "1e59",
+            "user_id": "2",
+            "customer_name": "Trương Nguyễn Bảo Khánh",
+            "phone": "0916022815",
+            "email": "khanhtnb220@gmail.com",
+            "address": "324 Phạm Văn Chí, Phường 3, Quận 3, TP Hồ Chí Minh",
+            "note": "âsdasdqwd",
+            "payment_method": "cod",
+            "status": "pending",
+            "total": 89000,
+            "shipping_fee": 0,
+            "created_at": "2026-02-23"
+        },
+        {
+            "id": "8171",
+            "user_id": "2",
+            "customer_name": "Trương Nguyễn Bảo Khánh",
+            "phone": "0916022815",
+            "email": "khanhtnb220@gmail.com",
+            "address": "324 Phạm Văn Chí, Phường 1, Quận 3, TP Hồ Chí Minh",
+            "note": "",
+            "payment_method": "cod",
+            "status": "pending",
+            "total": 89000,
+            "shipping_fee": 0,
+            "created_at": "2026-02-23"
+        },
+        {
+            "id": "5453",
+            "user_id": "4f8f",
+            "customer_name": "Trương Nguyễn Bảo Khánh",
+            "phone": "0916022815",
+            "email": "khanhtnb220@gmail.com",
+            "address": "324 Phạm Văn Chí, Phường 3, Quận 3, TP Hồ Chí Minh",
+            "note": "asfsadqfqfdqwedq",
+            "payment_method": "cod",
+            "status": "pending",
+            "total": 89000,
+            "shipping_fee": 0,
+            "created_at": "2026-02-23"
         }
     ],
-
     "order_items": [
         {
             "id": "1",
@@ -228,9 +557,48 @@
             "price": 99000,
             "quantity": 1,
             "total": 99000
+        },
+        {
+            "id": "c147",
+            "order_id": "587d",
+            "product_id": "matcha-zen-garden-1",
+            "price": 89000,
+            "quantity": 2,
+            "total": 178000
+        },
+        {
+            "id": "4fef",
+            "order_id": "9db0",
+            "product_id": "matcha-zen-garden-1",
+            "price": 89000,
+            "quantity": 1,
+            "total": 89000
+        },
+        {
+            "id": "9494",
+            "order_id": "1e59",
+            "product_id": "matcha-zen-garden-1",
+            "price": 89000,
+            "quantity": 1,
+            "total": 89000
+        },
+        {
+            "id": "b889",
+            "order_id": "8171",
+            "product_id": "matcha-zen-garden-1",
+            "price": 89000,
+            "quantity": 1,
+            "total": 89000
+        },
+        {
+            "id": "9e5b",
+            "order_id": "5453",
+            "product_id": "matcha-zen-garden-1",
+            "price": 89000,
+            "quantity": 1,
+            "total": 89000
         }
     ],
-
     "payments": [
         {
             "order_id": "1",
@@ -628,5 +996,222 @@
         "products": 100,
         "customers": "500k+",
         "rating": 4.9
-    }
+    },
+    "address": {
+        "code": "HCM",
+        "name": "TP Hồ Chí Minh",
+        "districts": [
+            {
+                "code": "Q1",
+                "name": "Quận 1",
+                "wards": [
+                    {
+                        "code": "Q1_PBN",
+                        "name": "Phường Bến Nghé"
+                    },
+                    {
+                        "code": "Q1_PBT",
+                        "name": "Phường Bến Thành"
+                    },
+                    {
+                        "code": "Q1_PDK",
+                        "name": "Phường Đa Kao"
+                    },
+                    {
+                        "code": "Q1_PNTB",
+                        "name": "Phường Nguyễn Thái Bình"
+                    },
+                    {
+                        "code": "Q1_PNCT",
+                        "name": "Phường Nguyễn Cư Trinh"
+                    }
+                ]
+            },
+            {
+                "code": "Q3",
+                "name": "Quận 3",
+                "wards": [
+                    {
+                        "code": "Q3_P1",
+                        "name": "Phường 1"
+                    },
+                    {
+                        "code": "Q3_P3",
+                        "name": "Phường 3"
+                    },
+                    {
+                        "code": "Q3_P7",
+                        "name": "Phường 7"
+                    },
+                    {
+                        "code": "Q3_P10",
+                        "name": "Phường 10"
+                    }
+                ]
+            },
+            {
+                "code": "Q4",
+                "name": "Quận 4",
+                "wards": [
+                    {
+                        "code": "Q4_P1",
+                        "name": "Phường 1"
+                    },
+                    {
+                        "code": "Q4_P2",
+                        "name": "Phường 2"
+                    },
+                    {
+                        "code": "Q4_P8",
+                        "name": "Phường 8"
+                    },
+                    {
+                        "code": "Q4_P9",
+                        "name": "Phường 9"
+                    }
+                ]
+            },
+            {
+                "code": "Q5",
+                "name": "Quận 5",
+                "wards": [
+                    {
+                        "code": "Q5_P1",
+                        "name": "Phường 1"
+                    },
+                    {
+                        "code": "Q5_P4",
+                        "name": "Phường 4"
+                    },
+                    {
+                        "code": "Q5_P7",
+                        "name": "Phường 7"
+                    }
+                ]
+            },
+            {
+                "code": "Q7",
+                "name": "Quận 7",
+                "wards": [
+                    {
+                        "code": "Q7_TP",
+                        "name": "Phường Tân Phú"
+                    },
+                    {
+                        "code": "Q7_TQ",
+                        "name": "Phường Tân Quy"
+                    },
+                    {
+                        "code": "Q7_PM",
+                        "name": "Phường Phú Mỹ"
+                    },
+                    {
+                        "code": "Q7_PTH",
+                        "name": "Phường Phú Thuận"
+                    }
+                ]
+            },
+            {
+                "code": "TPD",
+                "name": "TP Thủ Đức",
+                "wards": [
+                    {
+                        "code": "TD_LX",
+                        "name": "Phường Linh Xuân"
+                    },
+                    {
+                        "code": "TD_LT",
+                        "name": "Phường Linh Trung"
+                    },
+                    {
+                        "code": "TD_TP",
+                        "name": "Phường Tăng Nhơn Phú"
+                    },
+                    {
+                        "code": "TD_HT",
+                        "name": "Phường Hiệp Bình Chánh"
+                    }
+                ]
+            },
+            {
+                "code": "BC",
+                "name": "Huyện Bình Chánh",
+                "wards": [
+                    {
+                        "code": "BC_TK",
+                        "name": "Xã Tân Kiên"
+                    },
+                    {
+                        "code": "BC_VL",
+                        "name": "Xã Vĩnh Lộc A"
+                    },
+                    {
+                        "code": "BC_PL",
+                        "name": "Xã Phong Phú"
+                    }
+                ]
+            },
+            {
+                "code": "HM",
+                "name": "Huyện Hóc Môn",
+                "wards": [
+                    {
+                        "code": "HM_TM",
+                        "name": "Xã Tân Xuân"
+                    },
+                    {
+                        "code": "HM_BA",
+                        "name": "Xã Bà Điểm"
+                    }
+                ]
+            }
+        ]
+    },
+    "partnerLogos": [
+        {
+            "id": "1",
+            "fileName": "costco.png",
+            "alt": "Costco Logo"
+        },
+        {
+            "id": "2",
+            "fileName": "kroger.png",
+            "alt": "Kroger Logo"
+        },
+        {
+            "id": "3",
+            "fileName": "meijer.png",
+            "alt": "Meijer Logo"
+        },
+        {
+            "id": "4",
+            "fileName": "publix.png",
+            "alt": "Publix Logo"
+        },
+        {
+            "id": "5",
+            "fileName": "safeway.png",
+            "alt": "Safeway Logo"
+        },
+        {
+            "id": "6",
+            "fileName": "target.png",
+            "alt": "Target Logo"
+        },
+        {
+            "id": "7",
+            "fileName": "walmart.png",
+            "alt": "Walmart Logo"
+        },
+        {
+            "id": "8",
+            "fileName": "wegmans.png",
+            "alt": "Wegmans Logo"
+        },
+        {
+            "id": "9",
+            "fileName": "whole-foods.png",
+            "alt": "Whole Foods Logo"
+        }
+    ]
 }

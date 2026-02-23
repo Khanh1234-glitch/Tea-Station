@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @config "../../tailwind.config.js";
-
+@import "./animation.css";
 /** Theme **/
 @theme {
     /* Screens */

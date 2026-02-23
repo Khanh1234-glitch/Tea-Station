@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tea Admin</title>
+        <link href="../../dist/output.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lobster&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body class="bg-gray-50 font-inter">
+        <div class="flex min-h-screen">
+            <!-- SIDEBAR -->
+            <aside class="w-64 p-6 overflow-y-auto text-white bg-p-950">
+                <h2 class="mb-6 text-2xl font-lobster">Tea Admin</h2>
+
+                <nav class="space-y-2 text-sm">
+                    <p class="mt-4 text-xs uppercase text-white/40">Dashboard</p>
+                    <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-p-900">Dashboard</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Users</p>
+                    <a href="users.html" class="block px-3 py-2 rounded hover:bg-p-900">Users</a>
+                    <a href="roles.html" class="block px-3 py-2 rounded hover:bg-p-900">Roles</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Product</p>
+                    <a href="categories.html" class="block px-3 py-2 rounded hover:bg-p-900">Categories</a>
+                    <a href="products.html" class="block px-3 py-2 rounded hover:bg-p-900">Products</a>
+                    <a href="product-images.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Images</a>
+                    <a href="product-variants.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Variants</a>
+                    <a href="product-attributes.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Attributes</a>
+                    <a href="products-list.html" class="block px-3 py-2 rounded hover:bg-p-900">Products List</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Orders</p>
+                    <a href="orders.html" class="block px-3 py-2 rounded hover:bg-p-900">Orders</a>
+                    <a href="order-detail.html" class="block px-3 py-2 rounded hover:bg-p-900">Order Detail</a>
+                    <a href="payments.html" class="block px-3 py-2 rounded hover:bg-p-900">Payments</a>
+                    <a href="cart.html" class="block px-3 py-2 rounded hover:bg-p-900">Cart</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">CMS</p>
+                    <a href="cms-hero.html" class="block px-3 py-2 rounded hover:bg-p-900">Hero</a>
+                    <a href="cms-features.html" class="block px-3 py-2 rounded hover:bg-p-900">Features</a>
+                    <a href="cms-best-sellers.html" class="block px-3 py-2 rounded hover:bg-p-900">Best Sellers</a>
+                    <a href="cms-about.html" class="block px-3 py-2 rounded hover:bg-p-900">About</a>
+                    <a href="cms-partners.html" class="block px-3 py-2 rounded hover:bg-p-900">Partners</a>
+                    <a href="cms-site-stats.html" class="block px-3 py-2 rounded hover:bg-p-900">Site Stats</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Address</p>
+                    <a href="address.html" class="block px-3 py-2 rounded hover:bg-p-900">Address</a>
+                </nav>
+            </aside>
+
+            <div class="flex-1">
+                <header class="flex justify-between px-8 py-4 bg-white shadow">
+                    <h1 class="text-xl font-semibold text-p-900">Admin Panel</h1>
+                    <span class="text-sm text-gray-500">Tea Station</span>
+                </header>
+
+                <main class="p-8 space-y-8">
+                    <!-- Page Title -->
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-bold text-p-900">Role Management</h2>
+                    </div>
+
+                    <!-- Add Role -->
+                    <div class="p-6 space-y-4 bg-white shadow rounded-2xl">
+                        <h3 class="text-lg font-semibold text-p-900">Thêm Role Mới</h3>
+
+                        <div class="flex gap-4">
+                            <input
+                                type="text"
+                                placeholder="Nhập tên role..."
+                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm</button>
+                        </div>
+                    </div>
+
+                    <!-- Roles Table -->
+                    <div class="overflow-x-auto bg-white shadow rounded-2xl">
+                        <table class="w-full text-sm">
+                            <thead class="text-xs text-gray-600 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="p-4 text-left">ID</th>
+                                    <th class="text-left">Role Name</th>
+                                    <th class="text-left">Users Count</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- Admin -->
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-4 font-semibold">1</td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value="admin"
+                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
+                                        />
+                                    </td>
+                                    <td>
+                                        <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 1 User </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="text-blue-600 hover:underline">Lưu</button>
+                                    </td>
+                                </tr>
+
+                                <!-- Customer -->
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-4 font-semibold">2</td>
+                                    <td>
+                                        <input
+                                            type="text"
+                                            value="customer"
+                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
+                                        />
+                                    </td>
+                                    <td>
+                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> 10 Users </span>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="text-blue-600 hover:underline">Lưu</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- System Notice -->
+                    <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
+                        <h3 class="mb-2 font-semibold text-p-900">Lưu ý hệ thống</h3>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li>• Không thể xóa role đã gán cho user</li>
+                            <li>• Không thể chỉnh sửa ID role</li>
+                            <li>• Role "admin" có toàn quyền hệ thống</li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

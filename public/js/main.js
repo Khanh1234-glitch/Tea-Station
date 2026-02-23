@@ -1,5 +1,3 @@
-import { partnerLogos, partnerLogoBasePath } from "./data.js";
-
 /* ================ 
     Nav
   =================== */
@@ -14,23 +12,6 @@ $(function () {
     toggleBtn.click(() => {
         dropdownMenu.toggleClass("open");
     });
-});
-
-/* ================ 
-    Partner Logos
-  =================== */
-$(function () {
-    const container = document.getElementById("partner-logo-list");
-    if (!container) return;
-    for (let i = 0; i < 2; i++) {
-        partnerLogos.forEach((logo) => {
-            const img = document.createElement("img");
-            img.src = partnerLogoBasePath + logo.fileName;
-            img.alt = logo.alt;
-            img.classList.add("logo-ticker-image");
-            container.appendChild(img);
-        });
-    }
 });
 
 /* ================ 
@@ -60,5 +41,29 @@ $(function () {
         once: false, // whether animation should happen only once - while scrolling down
         mirror: true, // whether elements should animate out while scrolling past them
         anchorPlacement: "center-bottom", // defines which position of the element regarding to window should trigger the animation
+    });
+});
+// tab profile
+
+const tabs = document.querySelectorAll(".tab-item");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        // reset tab style
+        tabs.forEach((t) => {
+            t.classList.remove("bg-p-100", "text-p-900", "font-semibold");
+            t.classList.add("text-n-500");
+        });
+
+        // hide all content
+        contents.forEach((c) => c.classList.add("hidden"));
+
+        // active tab
+        tab.classList.add("bg-p-100", "text-p-900", "font-semibold");
+        tab.classList.remove("text-n-500");
+
+        // show content
+        document.getElementById(tab.dataset.tab).classList.remove("hidden");
     });
 });

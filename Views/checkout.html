@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="vi">
-    <head>
+    <head id="head">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Tea Station</title>
@@ -51,39 +51,7 @@
         <!----------------- 
         Navigation
     ------------------>
-        <header class="relative z-50">
-            <div class="flex items-center justify-center navbar">
-                <div class="flex items-center justify-between w-full px-4 py-4 max-w-384 md:py-10 md:px-18">
-                    <!-- Logo -->
-                    <a href="./" class="flex items-center justify-center flex-none">
-                        <img src="../public/assets/logo.png" alt="logo" class="w-16 h-16" />
-                        <p class="text-lg capitalize font-lobster text-p-900">Tea Station</p>
-                    </a>
-
-                    <!-- Nav Links -->
-                    <nav class="items-center justify-end hidden w-full gap-4 lg:flex lg:gap-8">
-                        <a href="./products.html" class="navLink">Sản Phẩm</a>
-                        <a href="./cart.html" class="navLink">Giỏ hàng</a>
-                        <a href="./#story" class="navLink">Giới Thiệu</a>
-                        <a href="./#contact" class="navLink">Liên Hệ</a>
-                        <a href="./register.html" class="navLink">Đăng ký</a>
-                        <a href="./login.html" class="navLink">Đăng nhập</a>
-                    </nav>
-
-                    <!-- Hamburger Icon -->
-                    <div class="block cursor-pointer lg:hidden" id="toggle_btn">
-                        <img src="./public/assets/Menu Icon.svg" alt="hamburger icon" class="size-5" />
-                    </div>
-
-                    <!-- Mobile Menu -->
-                    <div class="dropdown-menu lg:hidden">
-                        <a href="./products.html" class="navLink mobileNavLink">Sản Phẩm</a>
-                        <a href="#story" class="navLink mobileNavLink">Giới Thiệu</a>
-                        <a href="#contact" class="navLink mobileNavLink">Liên Hệ</a>
-                    </div>
-                </div>
-            </div>
-        </header>
+        <header class="relative z-50" id="header"></header>
 
         <!-- ================= CHECKOUT ================= -->
         <main class="container pb-20 pt-30">
@@ -105,17 +73,17 @@
                             <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                                 <div>
                                     <label class="block mb-2 text-sm">Họ và tên</label>
-                                    <input type="text" placeholder="Nguyễn Văn A" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                                    <input id="customerName" type="text" required class="w-full px-4 py-3 border border-n-200 rounded-xl" />
                                 </div>
 
                                 <div>
                                     <label class="block mb-2 text-sm">Số điện thoại</label>
-                                    <input type="tel" placeholder="0123 456 789" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                                    <input id="phone" type="tel" required class="w-full px-4 py-3 border border-n-200 rounded-xl" />
                                 </div>
 
                                 <div class="md:col-span-2">
                                     <label class="block mb-2 text-sm">Email</label>
-                                    <input type="email" placeholder="email@example.com" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                                    <input id="email" type="email" required class="w-full px-4 py-3 border border-n-200 rounded-xl" />
                                 </div>
                             </div>
                         </div>
@@ -125,14 +93,23 @@
                             <h3 class="mb-6 text-lg font-semibold text-p-900">Địa chỉ giao hàng</h3>
 
                             <div class="flex flex-col gap-6">
-                                <input type="text" placeholder="Số nhà, tên đường" class="w-full px-4 py-3 border border-n-200 rounded-xl" />
+                                <input
+                                    id="address"
+                                    type="text"
+                                    required
+                                    placeholder="Số nhà, tên đường"
+                                    class="w-full px-4 py-3 border border-n-200 rounded-xl"
+                                />
+                                <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                                    <select id="city" class="px-4 py-3 border border-n-200 rounded-xl"></select>
 
-                                <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-                                    <input type="text" placeholder="Quận / Huyện" class="px-4 py-3 border border-n-200 rounded-xl" />
-                                    <input type="text" placeholder="Tỉnh / Thành phố" class="px-4 py-3 border border-n-200 rounded-xl" />
+                                    <select id="district" class="px-4 py-3 border border-n-200 rounded-xl" disabled></select>
+
+                                    <select id="ward" class="px-4 py-3 border border-n-200 rounded-xl" disabled></select>
                                 </div>
 
                                 <textarea
+                                    id="note"
                                     rows="4"
                                     placeholder="Ghi chú giao hàng (tuỳ chọn)"
                                     class="px-4 py-3 border border-n-200 rounded-xl"
@@ -146,17 +123,17 @@
 
                             <div class="flex flex-col gap-4">
                                 <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="radio" name="payment" checked />
+                                    <input type="radio" name="payment" value="cod" checked />
                                     <span>Thanh toán khi nhận hàng (COD)</span>
                                 </label>
 
                                 <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="radio" name="payment" />
+                                    <input type="radio" name="payment" value="bank" />
                                     <span>Chuyển khoản ngân hàng</span>
                                 </label>
 
                                 <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="radio" name="payment" />
+                                    <input type="radio" name="payment" value="ewallet" />
                                     <span>Ví điện tử (MoMo, ZaloPay)</span>
                                 </label>
                             </div>
@@ -168,22 +145,13 @@
                         <h3 class="mb-6 text-lg font-semibold text-p-900">Đơn hàng của bạn</h3>
 
                         <!-- Items -->
-                        <div class="flex flex-col gap-4 mb-6 text-sm">
-                            <div class="flex justify-between">
-                                <span>Zen Garden × 2</span>
-                                <span>178.000₫</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span>Golden Lotus × 1</span>
-                                <span>99.000₫</span>
-                            </div>
-                        </div>
+                        <div id="checkout-items" class="flex flex-col gap-4 mb-6 text-sm"></div>
 
                         <hr class="my-6 opacity-20" />
 
                         <div class="flex justify-between mb-3 text-sm">
                             <span>Tạm tính</span>
-                            <span>277.000₫</span>
+                            <span id="checkout-subtotal">0₫</span>
                         </div>
 
                         <div class="flex justify-between mb-3 text-sm">
@@ -193,14 +161,15 @@
 
                         <div class="flex justify-between mt-6 text-lg font-semibold text-p-900">
                             <span>Tổng cộng</span>
-                            <span>277.000₫</span>
+                            <span id="checkout-total">0₫</span>
                         </div>
 
-                        <button class="w-full py-4 mt-8 text-base tracking-wide btn">Đặt hàng</button>
+                        <button id="placeOrderBtn" type="button" class="w-full py-4 mt-8 text-base tracking-wide btn">Đặt hàng</button>
                     </aside>
                 </div>
             </section>
         </main>
+        <footer id="footer" class="pt-16 pb-8 text-white bg-p-950"></footer>
         <!-- JQuery -->
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
@@ -210,12 +179,13 @@
     Scripts
     
     ----------------->
-        <script src="./js/jquery.hidescroll.js" defer></script>
-        <script src="./js/jquery.responsiveTabs.js" defer></script>
+        <script src="../public/js/jquery.hidescroll.js" defer></script>
+        <script src="../public/js/jquery.responsiveTabs.js" defer></script>
         <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="./js/animated-counter-prograssbar.js" defer></script>
+        <script src="../public/js/animated-counter-prograssbar.js" defer></script>
         <script defer src="https://unpkg.com/counterup2@2.0.2/dist/index.js"></script>
         <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script defer type="module" src="./js/main.js"></script>
+        <script defer type="module" src="../public/js/main.js"></script>
+        <script type="module" src="../dist/jsCompile/app.js"></script>
     </body>
 </html>

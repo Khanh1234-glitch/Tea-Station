@@ -18,4 +18,30 @@ export class ApiService {
 
         return await res.json(); // KHÔNG ép thành array
     }
+    async post<T>(endpoint: string, data: any): Promise<T> {
+        const res = await fetch(`${this.baseUrl}${endpoint}`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (!res.ok) throw new Error("Loi POST du lieu");
+
+        return await res.json();
+    }
+    async put<T>(endpoint: string, data: any): Promise<T> {
+        const res = await fetch(`${this.baseUrl}${endpoint}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (!res.ok) throw new Error("Update failed");
+
+        return res.json();
+    }
 }
