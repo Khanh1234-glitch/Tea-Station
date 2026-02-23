@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tea Admin</title>
+        <link href="../../dist/output.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lobster&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body class="bg-gray-50 font-inter">
+        <div class="flex min-h-screen">
+            <!-- SIDEBAR -->
+            <aside class="w-64 p-6 overflow-y-auto text-white bg-p-950">
+                <h2 class="mb-6 text-2xl font-lobster">Tea Admin</h2>
+
+                <nav class="space-y-2 text-sm">
+                    <p class="mt-4 text-xs uppercase text-white/40">Dashboard</p>
+                    <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-p-900">Dashboard</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Users</p>
+                    <a href="users.html" class="block px-3 py-2 rounded hover:bg-p-900">Users</a>
+                    <a href="roles.html" class="block px-3 py-2 rounded hover:bg-p-900">Roles</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Product</p>
+                    <a href="categories.html" class="block px-3 py-2 rounded hover:bg-p-900">Categories</a>
+                    <a href="products.html" class="block px-3 py-2 rounded hover:bg-p-900">Products</a>
+                    <a href="product-images.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Images</a>
+                    <a href="product-variants.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Variants</a>
+                    <a href="product-attributes.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Attributes</a>
+                    <a href="products-list.html" class="block px-3 py-2 rounded hover:bg-p-900">Products List</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Orders</p>
+                    <a href="orders.html" class="block px-3 py-2 rounded hover:bg-p-900">Orders</a>
+                    <a href="order-detail.html" class="block px-3 py-2 rounded hover:bg-p-900">Order Detail</a>
+                    <a href="payments.html" class="block px-3 py-2 rounded hover:bg-p-900">Payments</a>
+                    <a href="cart.html" class="block px-3 py-2 rounded hover:bg-p-900">Cart</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">CMS</p>
+                    <a href="cms-hero.html" class="block px-3 py-2 rounded hover:bg-p-900">Hero</a>
+                    <a href="cms-features.html" class="block px-3 py-2 rounded hover:bg-p-900">Features</a>
+                    <a href="cms-best-sellers.html" class="block px-3 py-2 rounded hover:bg-p-900">Best Sellers</a>
+                    <a href="cms-about.html" class="block px-3 py-2 rounded hover:bg-p-900">About</a>
+                    <a href="cms-partners.html" class="block px-3 py-2 rounded hover:bg-p-900">Partners</a>
+                    <a href="cms-site-stats.html" class="block px-3 py-2 rounded hover:bg-p-900">Site Stats</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Address</p>
+                    <a href="address.html" class="block px-3 py-2 rounded hover:bg-p-900">Address</a>
+                </nav>
+            </aside>
+
+            <div class="flex-1">
+                <header class="flex justify-between px-8 py-4 bg-white shadow">
+                    <h1 class="text-xl font-semibold text-p-900">Admin Panel</h1>
+                    <span class="text-sm text-gray-500">Tea Station</span>
+                </header>
+
+                <main class="p-8 space-y-8">
+                    <!-- Page Title -->
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-bold text-p-900">Best Sellers Section</h2>
+                    </div>
+
+                    <!-- Heading Config -->
+                    <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
+                        <h3 class="text-lg font-semibold text-p-900">Heading</h3>
+
+                        <div class="grid gap-4 md:grid-cols-2">
+                            <input
+                                type="text"
+                                value="Khách hàng yêu thích"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <textarea class="h-20 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+Những Sản Phẩm <span class='text-gradient'>Bán Chạy Nhất</span>
+            </textarea
+                            >
+                        </div>
+
+                        <textarea class="w-full h-24 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+Khám phá những sản phẩm bán chạy nhất của chúng tôi...
+        </textarea
+                        >
+
+                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu Heading</button>
+                    </div>
+
+                    <!-- Add Best Seller Product -->
+                    <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
+                        <h3 class="text-lg font-semibold text-p-900">Thêm Best Seller Product</h3>
+
+                        <div class="grid gap-4 md:grid-cols-3">
+                            <input
+                                type="text"
+                                placeholder="Product ID (best-5)"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <input
+                                type="text"
+                                placeholder="Product Name"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <input
+                                type="file"
+                                accept="image/*"
+                                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-p-900 file:text-white hover:file:bg-p-800"
+                            />
+                        </div>
+
+                        <textarea
+                            placeholder="Product Description"
+                            class="w-full h-24 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                        >
+                        </textarea>
+
+                        <!-- Benefits -->
+                        <div class="space-y-4">
+                            <h4 class="font-semibold text-p-900">Benefits</h4>
+
+                            <div class="grid gap-4 md:grid-cols-3">
+                                <input
+                                    type="text"
+                                    placeholder="Benefit Title"
+                                    class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                />
+
+                                <input
+                                    type="number"
+                                    placeholder="Percentage (0-100)"
+                                    class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                />
+
+                                <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                                    <option>Position</option>
+                                    <option>top</option>
+                                    <option>bot</option>
+                                </select>
+                            </div>
+
+                            <button class="text-sm text-blue-600 hover:underline">+ Thêm Benefit</button>
+                        </div>
+
+                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Product</button>
+                    </div>
+
+                    <!-- Product List -->
+                    <div class="space-y-6">
+                        <!-- Sample Product -->
+                        <div class="flex gap-6 p-6 bg-white shadow rounded-2xl">
+                            <img src="../../public/assets/products/matcha1.jpg" class="object-cover w-32 h-32 border shadow rounded-xl" />
+
+                            <div class="flex-1 space-y-4">
+                                <div class="flex justify-between">
+                                    <h4 class="font-semibold text-p-900">Peppermint Velvet</h4>
+                                    <button class="text-sm text-red-500 hover:underline">Xóa</button>
+                                </div>
+
+                                <p class="text-sm text-gray-600">Mỗi ngụm mang đến sự pha trộn hài hòa...</p>
+
+                                <!-- Benefits Preview -->
+                                <div class="grid grid-cols-2 gap-4 text-sm">
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <span>Tăng cường năng lượng</span>
+                                            <span>94%</span>
+                                        </div>
+                                        <div class="h-2 bg-gray-200 rounded">
+                                            <div class="h-2 rounded bg-p-900" style="width: 94%"></div>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div class="flex justify-between">
+                                            <span>Giàu chất chống oxy hoá</span>
+                                            <span>93%</span>
+                                        </div>
+                                        <div class="h-2 bg-gray-200 rounded">
+                                            <div class="h-2 rounded bg-p-900" style="width: 93%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="text-sm text-blue-600 hover:underline">Chỉnh sửa</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Rules -->
+                    <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
+                        <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
+
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li>• Product ID phải unique</li>
+                            <li>• Percentage từ 0 → 100</li>
+                            <li>• Có thể thêm nhiều benefit</li>
+                            <li>• Position quyết định layout hiển thị frontend</li>
+                            <li>• Image phải tối ưu dung lượng</li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

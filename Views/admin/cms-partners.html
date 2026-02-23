@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tea Admin</title>
+        <link href="../../dist/output.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lobster&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body class="bg-gray-50 font-inter">
+        <div class="flex min-h-screen">
+            <!-- SIDEBAR -->
+            <aside class="w-64 p-6 overflow-y-auto text-white bg-p-950">
+                <h2 class="mb-6 text-2xl font-lobster">Tea Admin</h2>
+
+                <nav class="space-y-2 text-sm">
+                    <p class="mt-4 text-xs uppercase text-white/40">Dashboard</p>
+                    <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-p-900">Dashboard</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Users</p>
+                    <a href="users.html" class="block px-3 py-2 rounded hover:bg-p-900">Users</a>
+                    <a href="roles.html" class="block px-3 py-2 rounded hover:bg-p-900">Roles</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Product</p>
+                    <a href="categories.html" class="block px-3 py-2 rounded hover:bg-p-900">Categories</a>
+                    <a href="products.html" class="block px-3 py-2 rounded hover:bg-p-900">Products</a>
+                    <a href="product-images.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Images</a>
+                    <a href="product-variants.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Variants</a>
+                    <a href="product-attributes.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Attributes</a>
+                    <a href="products-list.html" class="block px-3 py-2 rounded hover:bg-p-900">Products List</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Orders</p>
+                    <a href="orders.html" class="block px-3 py-2 rounded hover:bg-p-900">Orders</a>
+                    <a href="order-detail.html" class="block px-3 py-2 rounded hover:bg-p-900">Order Detail</a>
+                    <a href="payments.html" class="block px-3 py-2 rounded hover:bg-p-900">Payments</a>
+                    <a href="cart.html" class="block px-3 py-2 rounded hover:bg-p-900">Cart</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">CMS</p>
+                    <a href="cms-hero.html" class="block px-3 py-2 rounded hover:bg-p-900">Hero</a>
+                    <a href="cms-features.html" class="block px-3 py-2 rounded hover:bg-p-900">Features</a>
+                    <a href="cms-best-sellers.html" class="block px-3 py-2 rounded hover:bg-p-900">Best Sellers</a>
+                    <a href="cms-about.html" class="block px-3 py-2 rounded hover:bg-p-900">About</a>
+                    <a href="cms-partners.html" class="block px-3 py-2 rounded hover:bg-p-900">Partners</a>
+                    <a href="cms-site-stats.html" class="block px-3 py-2 rounded hover:bg-p-900">Site Stats</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Address</p>
+                    <a href="address.html" class="block px-3 py-2 rounded hover:bg-p-900">Address</a>
+                </nav>
+            </aside>
+
+            <div class="flex-1">
+                <header class="flex justify-between px-8 py-4 bg-white shadow">
+                    <h1 class="text-xl font-semibold text-p-900">Admin Panel</h1>
+                    <span class="text-sm text-gray-500">Tea Station</span>
+                </header>
+
+                <main class="p-8 space-y-8">
+                    <!-- Page Title -->
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-bold text-p-900">Partner Logos</h2>
+                    </div>
+
+                    <!-- Add Partner -->
+                    <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
+                        <h3 class="text-lg font-semibold text-p-900">Thêm Partner Logo</h3>
+
+                        <div class="grid gap-4 md:grid-cols-3">
+                            <!-- Upload -->
+                            <input
+                                type="file"
+                                accept="image/*"
+                                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-p-900 file:text-white hover:file:bg-p-800"
+                            />
+
+                            <!-- Alt -->
+                            <input
+                                type="text"
+                                placeholder="Alt text (vd: Costco Logo)"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Logo</button>
+                        </div>
+                    </div>
+
+                    <!-- Partner Grid -->
+                    <div class="p-8 bg-white shadow rounded-2xl">
+                        <h3 class="mb-6 text-lg font-semibold text-p-900">Danh sách Partner</h3>
+
+                        <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
+                            <!-- Partner Item -->
+                            <div class="flex flex-col items-center justify-between p-4 transition border rounded-xl bg-gray-50 hover:shadow">
+                                <img src="../../public/assets/partner-logos/costco.png" alt="Costco Logo" class="object-contain h-12 mb-4" />
+
+                                <p class="mb-2 text-xs text-center text-gray-500">Costco Logo</p>
+
+                                <button class="text-sm text-red-500 hover:underline">Xóa</button>
+                            </div>
+
+                            <!-- Another Item -->
+                            <div class="flex flex-col items-center justify-between p-4 transition border rounded-xl bg-gray-50 hover:shadow">
+                                <img src="../../public/assets/partner-logos/costco.png" alt="Walmart Logo" class="object-contain h-12 mb-4" />
+
+                                <p class="mb-2 text-xs text-center text-gray-500">Walmart Logo</p>
+
+                                <button class="text-sm text-red-500 hover:underline">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Rules -->
+                    <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
+                        <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
+
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li>• ID logo tự sinh từ backend</li>
+                            <li>• Image nên dùng nền trong suốt (.png)</li>
+                            <li>• Alt text bắt buộc để tối ưu SEO</li>
+                            <li>• Có thể thêm không giới hạn logo</li>
+                            <li>• Frontend hiển thị dạng slider hoặc grid</li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

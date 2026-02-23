@@ -55,112 +55,115 @@
                     <h1 class="text-xl font-semibold text-p-900">Admin Panel</h1>
                     <span class="text-sm text-gray-500">Tea Station</span>
                 </header>
-
                 <main class="p-8 space-y-8">
                     <!-- Page Title -->
                     <div class="flex items-center justify-between">
-                        <h2 class="text-2xl font-bold text-p-900">Address Manager</h2>
+                        <h2 class="text-2xl font-bold text-p-900">About Section</h2>
                     </div>
 
-                    <!-- City Config -->
+                    <!-- About Config -->
                     <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
-                        <h3 class="text-lg font-semibold text-p-900">Thành phố / Tỉnh</h3>
+                        <h3 class="text-lg font-semibold text-p-900">Cấu hình About</h3>
 
+                        <!-- Background -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium">Background Image</label>
+
+                            <input
+                                type="file"
+                                accept="image/*"
+                                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-p-900 file:text-white hover:file:bg-p-800"
+                            />
+
+                            <img src="../../public/assets/aboutUsImg.jpg" class="object-cover w-full h-64 mt-3 shadow rounded-xl" />
+                        </div>
+
+                        <!-- Overlay -->
+                        <div>
+                            <label class="block mb-2 text-sm font-medium"> Overlay Class </label>
+
+                            <input
+                                type="text"
+                                value="bg-p-950/80"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+                        </div>
+
+                        <!-- Watermark -->
+                        <div>
+                            <label class="block mb-2 text-sm font-medium"> Watermark (HTML allowed) </label>
+
+                            <input
+                                type="text"
+                                value="TEA <br />STATION"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+                        </div>
+
+                        <!-- Heading -->
                         <div class="grid gap-4 md:grid-cols-2">
                             <input
                                 type="text"
-                                value="HCM"
+                                value="Khám phá"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
                             <input
                                 type="text"
-                                value="TP Hồ Chí Minh"
+                                value="Câu Chuyện & Sứ Mệnh"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
                         </div>
 
-                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu Thành Phố</button>
+                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu cấu hình</button>
                     </div>
 
-                    <!-- Add District -->
+                    <!-- Content Manager -->
                     <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
-                        <h3 class="text-lg font-semibold text-p-900">Thêm Quận / Huyện</h3>
+                        <h3 class="text-lg font-semibold text-p-900">Nội dung About</h3>
 
-                        <div class="grid gap-4 md:grid-cols-3">
-                            <input
-                                type="text"
-                                placeholder="District Code (vd: Q8)"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                            />
+                        <!-- Add Paragraph -->
+                        <textarea
+                            placeholder="Nhập đoạn nội dung..."
+                            class="w-full h-24 px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                        >
+                        </textarea>
 
-                            <input
-                                type="text"
-                                placeholder="District Name"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                            />
+                        <button class="text-sm text-blue-600 hover:underline">+ Thêm đoạn</button>
 
-                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm</button>
+                        <!-- Paragraph List -->
+                        <div class="space-y-4">
+                            <div class="p-4 border rounded-xl bg-gray-50">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-sm font-medium text-p-900"> Đoạn 1 </span>
+
+                                    <button class="text-sm text-red-500 hover:underline">Xóa</button>
+                                </div>
+
+                                <p class="text-sm text-gray-600">Tại Tea Station, chúng tôi tận tâm tạo ra những loại trà đặc biệt...</p>
+
+                                <button class="mt-2 text-sm text-blue-600 hover:underline">Chỉnh sửa</button>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- District List -->
-                    <div class="space-y-6">
-                        <!-- District Item -->
-                        <div class="bg-white shadow rounded-2xl">
-                            <!-- District Header -->
-                            <div class="flex items-center justify-between p-6 border-b">
-                                <div>
-                                    <h4 class="font-semibold text-p-900">Quận 1</h4>
-                                    <p class="text-xs text-gray-500">Code: Q1</p>
-                                </div>
+                    <!-- Live Preview -->
+                    <div class="p-8 bg-white shadow rounded-2xl">
+                        <h3 class="mb-4 text-lg font-semibold text-p-900">Live Preview</h3>
 
-                                <div class="space-x-4">
-                                    <button class="text-sm text-blue-600 hover:underline">Thêm Phường</button>
+                        <div class="relative h-[400px] rounded-xl overflow-hidden shadow">
+                            <img src="../../public/assets/aboutUsImg.jpg" class="absolute inset-0 object-cover w-full h-full" />
 
-                                    <button class="text-sm text-red-500 hover:underline">Xóa Quận</button>
-                                </div>
-                            </div>
+                            <div class="absolute inset-0 bg-p-950/80"></div>
 
-                            <!-- Ward List -->
-                            <div class="p-6 space-y-4 bg-gray-50">
-                                <!-- Add Ward -->
-                                <div class="grid gap-4 md:grid-cols-3">
-                                    <input
-                                        type="text"
-                                        placeholder="Ward Code (vd: Q1_PBN)"
-                                        class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                                    />
+                            <div class="relative z-10 flex flex-col justify-center h-full px-8 text-white">
+                                <h4 class="mb-2 text-sm uppercase opacity-80">Khám phá</h4>
 
-                                    <input
-                                        type="text"
-                                        placeholder="Ward Name"
-                                        class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                                    />
+                                <h2 class="mb-4 text-3xl font-bold">Câu Chuyện & Sứ Mệnh</h2>
 
-                                    <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Phường</button>
-                                </div>
+                                <p class="max-w-2xl text-sm leading-relaxed">Tại Tea Station, chúng tôi tận tâm tạo ra những loại trà đặc biệt...</p>
 
-                                <!-- Ward Items -->
-                                <div class="grid gap-4 md:grid-cols-2">
-                                    <div class="flex items-center justify-between p-4 bg-white border rounded-lg">
-                                        <div>
-                                            <p class="text-sm font-medium">Phường Bến Nghé</p>
-                                            <p class="text-xs text-gray-500">Code: Q1_PBN</p>
-                                        </div>
-
-                                        <button class="text-sm text-red-500 hover:underline">Xóa</button>
-                                    </div>
-
-                                    <div class="flex items-center justify-between p-4 bg-white border rounded-lg">
-                                        <div>
-                                            <p class="text-sm font-medium">Phường Bến Thành</p>
-                                            <p class="text-xs text-gray-500">Code: Q1_PBT</p>
-                                        </div>
-
-                                        <button class="text-sm text-red-500 hover:underline">Xóa</button>
-                                    </div>
-                                </div>
+                                <div class="absolute text-6xl right-8 bottom-8 font-lobster opacity-10">TEA STATION</div>
                             </div>
                         </div>
                     </div>
@@ -170,11 +173,11 @@
                         <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
 
                         <ul class="space-y-1 text-sm text-gray-600">
-                            <li>• Code tỉnh/quận/phường phải unique</li>
-                            <li>• Không được xóa quận nếu còn phường</li>
-                            <li>• Không được trùng code ward</li>
-                            <li>• Dữ liệu hiển thị dạng nested</li>
-                            <li>• Frontend select phụ thuộc theo district → ward</li>
+                            <li>• Background phải tối ưu kích thước</li>
+                            <li>• Overlay phải là class Tailwind hợp lệ</li>
+                            <li>• Watermark cho phép HTML</li>
+                            <li>• Có thể thêm nhiều đoạn content</li>
+                            <li>• Nội dung hiển thị theo thứ tự mảng</li>
                         </ul>
                     </div>
                 </main>

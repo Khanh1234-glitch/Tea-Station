@@ -59,107 +59,105 @@
                 <main class="p-8 space-y-8">
                     <!-- Page Title -->
                     <div class="flex items-center justify-between">
-                        <h2 class="text-2xl font-bold text-p-900">Address Manager</h2>
+                        <h2 class="text-2xl font-bold text-p-900">Features Section</h2>
                     </div>
 
-                    <!-- City Config -->
+                    <!-- Heading Config -->
                     <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
-                        <h3 class="text-lg font-semibold text-p-900">Thành phố / Tỉnh</h3>
+                        <h3 class="text-lg font-semibold text-p-900">Heading</h3>
 
                         <div class="grid gap-4 md:grid-cols-2">
                             <input
                                 type="text"
-                                value="HCM"
+                                value="Why Us?"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
-                            <input
-                                type="text"
-                                value="TP Hồ Chí Minh"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                            />
+                            <textarea class="h-24 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+Sự <span class='text-gradient'>độc đáo</span> từ<br/>Tea Station
+            </textarea
+                            >
                         </div>
 
-                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu Thành Phố</button>
+                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu Heading</button>
                     </div>
 
-                    <!-- Add District -->
+                    <!-- Add Feature -->
                     <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
-                        <h3 class="text-lg font-semibold text-p-900">Thêm Quận / Huyện</h3>
+                        <h3 class="text-lg font-semibold text-p-900">Thêm Feature</h3>
 
                         <div class="grid gap-4 md:grid-cols-3">
                             <input
                                 type="text"
-                                placeholder="District Code (vd: Q8)"
+                                placeholder="Feature ID (feature-5)"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
                             <input
                                 type="text"
-                                placeholder="District Name"
+                                placeholder="Title"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
-                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm</button>
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                                <option>Animation</option>
+                                <option>zoom-in</option>
+                                <option>fade-up</option>
+                                <option>fade-right</option>
+                                <option>flip-left</option>
+                            </select>
+
+                            <input
+                                type="number"
+                                placeholder="Delay (ms)"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                                <option>Position</option>
+                                <option>left-top</option>
+                                <option>right-top</option>
+                                <option>left-bottom</option>
+                                <option>right-bottom</option>
+                            </select>
+
+                            <input
+                                type="file"
+                                accept="image/*"
+                                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-p-900 file:text-white hover:file:bg-p-800"
+                            />
                         </div>
+
+                        <textarea
+                            placeholder="Description"
+                            class="w-full h-24 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                        ></textarea>
+
+                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Feature</button>
                     </div>
 
-                    <!-- District List -->
+                    <!-- Feature List -->
                     <div class="space-y-6">
-                        <!-- District Item -->
-                        <div class="bg-white shadow rounded-2xl">
-                            <!-- District Header -->
-                            <div class="flex items-center justify-between p-6 border-b">
-                                <div>
-                                    <h4 class="font-semibold text-p-900">Quận 1</h4>
-                                    <p class="text-xs text-gray-500">Code: Q1</p>
+                        <!-- Feature Item -->
+                        <div class="flex items-start gap-6 p-6 bg-white shadow rounded-2xl">
+                            <img src="../../public/assets/benefit_1.jpg" class="object-cover w-32 h-32 border shadow rounded-xl" />
+
+                            <div class="flex-1 space-y-3">
+                                <div class="flex justify-between">
+                                    <h4 class="font-semibold text-p-900">Nguồn cung cao cấp</h4>
+                                    <button class="text-sm text-red-500 hover:underline">Xóa</button>
                                 </div>
 
-                                <div class="space-x-4">
-                                    <button class="text-sm text-blue-600 hover:underline">Thêm Phường</button>
+                                <p class="text-sm text-gray-600">Chúng tôi tự hào sản xuất trà ngay tại Hoa Kỳ...</p>
 
-                                    <button class="text-sm text-red-500 hover:underline">Xóa Quận</button>
-                                </div>
-                            </div>
-
-                            <!-- Ward List -->
-                            <div class="p-6 space-y-4 bg-gray-50">
-                                <!-- Add Ward -->
-                                <div class="grid gap-4 md:grid-cols-3">
-                                    <input
-                                        type="text"
-                                        placeholder="Ward Code (vd: Q1_PBN)"
-                                        class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                                    />
-
-                                    <input
-                                        type="text"
-                                        placeholder="Ward Name"
-                                        class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                                    />
-
-                                    <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Phường</button>
+                                <div class="flex gap-4 text-xs text-gray-500">
+                                    <span>Animation: zoom-in</span>
+                                    <span>Delay: 0ms</span>
+                                    <span>Position: left-top</span>
                                 </div>
 
-                                <!-- Ward Items -->
-                                <div class="grid gap-4 md:grid-cols-2">
-                                    <div class="flex items-center justify-between p-4 bg-white border rounded-lg">
-                                        <div>
-                                            <p class="text-sm font-medium">Phường Bến Nghé</p>
-                                            <p class="text-xs text-gray-500">Code: Q1_PBN</p>
-                                        </div>
-
-                                        <button class="text-sm text-red-500 hover:underline">Xóa</button>
-                                    </div>
-
-                                    <div class="flex items-center justify-between p-4 bg-white border rounded-lg">
-                                        <div>
-                                            <p class="text-sm font-medium">Phường Bến Thành</p>
-                                            <p class="text-xs text-gray-500">Code: Q1_PBT</p>
-                                        </div>
-
-                                        <button class="text-sm text-red-500 hover:underline">Xóa</button>
-                                    </div>
+                                <div class="flex gap-4">
+                                    <button class="text-sm text-blue-600 hover:underline">Chỉnh sửa</button>
                                 </div>
                             </div>
                         </div>
@@ -168,13 +166,12 @@
                     <!-- Business Rules -->
                     <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
                         <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
-
                         <ul class="space-y-1 text-sm text-gray-600">
-                            <li>• Code tỉnh/quận/phường phải unique</li>
-                            <li>• Không được xóa quận nếu còn phường</li>
-                            <li>• Không được trùng code ward</li>
-                            <li>• Dữ liệu hiển thị dạng nested</li>
-                            <li>• Frontend select phụ thuộc theo district → ward</li>
+                            <li>• ID feature phải unique</li>
+                            <li>• Position phải đúng layout grid frontend</li>
+                            <li>• Delay dùng cho AOS animation</li>
+                            <li>• Image phải tối ưu kích thước</li>
+                            <li>• Có thể thêm không giới hạn feature</li>
                         </ul>
                     </div>
                 </main>

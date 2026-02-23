@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tea Admin</title>
+        <link href="../../dist/output.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lobster&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+
+    <body class="bg-gray-50 font-inter">
+        <div class="flex min-h-screen">
+            <!-- SIDEBAR -->
+            <aside class="w-64 p-6 overflow-y-auto text-white bg-p-950">
+                <h2 class="mb-6 text-2xl font-lobster">Tea Admin</h2>
+
+                <nav class="space-y-2 text-sm">
+                    <p class="mt-4 text-xs uppercase text-white/40">Dashboard</p>
+                    <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-p-900">Dashboard</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Users</p>
+                    <a href="users.html" class="block px-3 py-2 rounded hover:bg-p-900">Users</a>
+                    <a href="roles.html" class="block px-3 py-2 rounded hover:bg-p-900">Roles</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Product</p>
+                    <a href="categories.html" class="block px-3 py-2 rounded hover:bg-p-900">Categories</a>
+                    <a href="products.html" class="block px-3 py-2 rounded hover:bg-p-900">Products</a>
+                    <a href="product-images.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Images</a>
+                    <a href="product-variants.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Variants</a>
+                    <a href="product-attributes.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Attributes</a>
+                    <a href="products-list.html" class="block px-3 py-2 rounded hover:bg-p-900">Products List</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Orders</p>
+                    <a href="orders.html" class="block px-3 py-2 rounded hover:bg-p-900">Orders</a>
+                    <a href="order-detail.html" class="block px-3 py-2 rounded hover:bg-p-900">Order Detail</a>
+                    <a href="payments.html" class="block px-3 py-2 rounded hover:bg-p-900">Payments</a>
+                    <a href="cart.html" class="block px-3 py-2 rounded hover:bg-p-900">Cart</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">CMS</p>
+                    <a href="cms-hero.html" class="block px-3 py-2 rounded hover:bg-p-900">Hero</a>
+                    <a href="cms-features.html" class="block px-3 py-2 rounded hover:bg-p-900">Features</a>
+                    <a href="cms-best-sellers.html" class="block px-3 py-2 rounded hover:bg-p-900">Best Sellers</a>
+                    <a href="cms-about.html" class="block px-3 py-2 rounded hover:bg-p-900">About</a>
+                    <a href="cms-partners.html" class="block px-3 py-2 rounded hover:bg-p-900">Partners</a>
+                    <a href="cms-site-stats.html" class="block px-3 py-2 rounded hover:bg-p-900">Site Stats</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Address</p>
+                    <a href="address.html" class="block px-3 py-2 rounded hover:bg-p-900">Address</a>
+                </nav>
+            </aside>
+
+            <div class="flex-1">
+                <header class="flex justify-between px-8 py-4 bg-white shadow">
+                    <h1 class="text-xl font-semibold text-p-900">Admin Panel</h1>
+                    <span class="text-sm text-gray-500">Tea Station</span>
+                </header>
+
+                <main class="p-8 space-y-8">
+                    <!-- Page Title -->
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-bold text-p-900">Hero Section</h2>
+                    </div>
+
+                    <!-- Hero Form -->
+                    <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
+                        <!-- Type -->
+                        <div>
+                            <label class="block mb-2 text-sm font-medium">Hero Type</label>
+
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                                <option selected>video</option>
+                                <option>image</option>
+                            </select>
+                        </div>
+
+                        <!-- Video Upload -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium">Upload Video</label>
+
+                            <input
+                                type="file"
+                                accept="video/*"
+                                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-p-900 file:text-white hover:file:bg-p-800"
+                            />
+
+                            <!-- Preview -->
+                            <video controls class="w-full mt-3 shadow rounded-xl">
+                                <source src="../../public/assets/video.mp4" type="video/mp4" />
+                            </video>
+                        </div>
+
+                        <!-- Fallback Image -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium">Fallback Image</label>
+
+                            <input
+                                type="file"
+                                accept="image/*"
+                                class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-p-900 file:text-white hover:file:bg-p-800"
+                            />
+
+                            <img src="../../public/assets/hero_img.png" class="object-cover w-full h-64 mt-3 shadow rounded-xl" />
+                        </div>
+
+                        <!-- Hero Text -->
+                        <div>
+                            <label class="block mb-2 text-sm font-medium"> Hero Text (HTML allowed) </label>
+
+                            <textarea class="w-full h-32 px-4 py-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+Chỉ những lá trà ngon nhất mới được đưa vào sản phẩm của chúng tôi,<br class='hidden lg:block'/> đảm bảo mỗi ngụm trà đều mang hương vị tinh khiết và tuyệt hảo.
+            </textarea
+                            >
+                        </div>
+
+                        <!-- Save -->
+                        <div>
+                            <button class="px-6 py-3 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu Hero</button>
+                        </div>
+                    </div>
+
+                    <!-- Preview Section -->
+                    <div class="p-8 bg-white shadow rounded-2xl">
+                        <h3 class="mb-4 text-lg font-semibold text-p-900">Live Preview</h3>
+
+                        <div class="relative overflow-hidden shadow rounded-xl">
+                            <video autoplay muted loop class="w-full h-[400px] object-cover">
+                                <source src="../../public/assets/video.mp4" type="video/mp4" />
+                            </video>
+
+                            <div class="absolute inset-0 flex items-center justify-center px-6 text-center bg-black/50">
+                                <h1 class="text-2xl font-semibold leading-relaxed text-white md:text-4xl">
+                                    Chỉ những lá trà ngon nhất mới được đưa vào sản phẩm của chúng tôi
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Rules -->
+                    <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
+                        <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li>• Chỉ có 1 Hero duy nhất</li>
+                            <li>• Nếu type = image → không hiển thị video</li>
+                            <li>• Nếu type = video → cần có fallback image</li>
+                            <li>• Text cho phép HTML (br, span, gradient...)</li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

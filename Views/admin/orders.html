@@ -1,32 +1,176 @@
-<h2 class="mb-6 text-2xl font-bold text-p-900">Orders</h2>
+<!doctype html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tea Admin</title>
+        <link href="../../dist/output.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lobster&display=swap" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
 
-<div class="overflow-x-auto bg-white shadow rounded-2xl">
-    <table class="w-full text-sm">
-        <thead class="bg-gray-100">
-            <tr>
-                <th class="p-3 text-left">Order ID</th>
-                <th>Customer</th>
-                <th>Total</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="border-b">
-                <td class="p-3">#1</td>
-                <td>Nguyễn Văn A</td>
-                <td>277.000đ</td>
-                <td>
-                    <select class="px-2 py-1 border rounded">
-                        <option>pending</option>
-                        <option>completed</option>
-                        <option>cancelled</option>
-                    </select>
-                </td>
-                <td>
-                    <a href="order-detail.html" class="font-semibold text-p-900"> View </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <body class="bg-gray-50 font-inter">
+        <div class="flex min-h-screen">
+            <!-- SIDEBAR -->
+            <aside class="w-64 p-6 overflow-y-auto text-white bg-p-950">
+                <h2 class="mb-6 text-2xl font-lobster">Tea Admin</h2>
+
+                <nav class="space-y-2 text-sm">
+                    <p class="mt-4 text-xs uppercase text-white/40">Dashboard</p>
+                    <a href="dashboard.html" class="block px-3 py-2 rounded hover:bg-p-900">Dashboard</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Users</p>
+                    <a href="users.html" class="block px-3 py-2 rounded hover:bg-p-900">Users</a>
+                    <a href="roles.html" class="block px-3 py-2 rounded hover:bg-p-900">Roles</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Product</p>
+                    <a href="categories.html" class="block px-3 py-2 rounded hover:bg-p-900">Categories</a>
+                    <a href="products.html" class="block px-3 py-2 rounded hover:bg-p-900">Products</a>
+                    <a href="product-images.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Images</a>
+                    <a href="product-variants.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Variants</a>
+                    <a href="product-attributes.html" class="block px-3 py-2 rounded hover:bg-p-900">Product Attributes</a>
+                    <a href="products-list.html" class="block px-3 py-2 rounded hover:bg-p-900">Products List</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Orders</p>
+                    <a href="orders.html" class="block px-3 py-2 rounded hover:bg-p-900">Orders</a>
+                    <a href="order-detail.html" class="block px-3 py-2 rounded hover:bg-p-900">Order Detail</a>
+                    <a href="payments.html" class="block px-3 py-2 rounded hover:bg-p-900">Payments</a>
+                    <a href="cart.html" class="block px-3 py-2 rounded hover:bg-p-900">Cart</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">CMS</p>
+                    <a href="cms-hero.html" class="block px-3 py-2 rounded hover:bg-p-900">Hero</a>
+                    <a href="cms-features.html" class="block px-3 py-2 rounded hover:bg-p-900">Features</a>
+                    <a href="cms-best-sellers.html" class="block px-3 py-2 rounded hover:bg-p-900">Best Sellers</a>
+                    <a href="cms-about.html" class="block px-3 py-2 rounded hover:bg-p-900">About</a>
+                    <a href="cms-partners.html" class="block px-3 py-2 rounded hover:bg-p-900">Partners</a>
+                    <a href="cms-site-stats.html" class="block px-3 py-2 rounded hover:bg-p-900">Site Stats</a>
+
+                    <p class="mt-4 text-xs uppercase text-white/40">Address</p>
+                    <a href="address.html" class="block px-3 py-2 rounded hover:bg-p-900">Address</a>
+                </nav>
+            </aside>
+
+            <div class="flex-1">
+                <header class="flex justify-between px-8 py-4 bg-white shadow">
+                    <h1 class="text-xl font-semibold text-p-900">Admin Panel</h1>
+                    <span class="text-sm text-gray-500">Tea Station</span>
+                </header>
+
+                <main class="p-8 space-y-8">
+                    <!-- Page Title -->
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-bold text-p-900">Orders Management</h2>
+
+                        <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                            <option>Tất cả trạng thái</option>
+                            <option>pending</option>
+                            <option>confirmed</option>
+                            <option>shipping</option>
+                            <option>completed</option>
+                            <option>cancelled</option>
+                        </select>
+                    </div>
+
+                    <!-- Orders Table -->
+                    <div class="overflow-x-auto bg-white shadow rounded-2xl">
+                        <table class="w-full text-sm">
+                            <thead class="text-xs text-gray-600 uppercase bg-gray-100">
+                                <tr>
+                                    <th class="p-4 text-left">Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Phone</th>
+                                    <th>Total</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                    <th class="text-center">Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <!-- Order 1 -->
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-4 font-semibold text-p-900">#1</td>
+
+                                    <td>
+                                        <div class="font-medium">Nguyễn Văn A</div>
+                                        <div class="text-xs text-gray-500">abc@gmail.com</div>
+                                    </td>
+
+                                    <td>0123456789</td>
+
+                                    <td class="font-semibold text-p-900">277.000đ</td>
+
+                                    <td>
+                                        <span class="px-2 py-1 text-yellow-700 bg-yellow-100 rounded"> COD </span>
+                                    </td>
+
+                                    <td>
+                                        <select class="px-2 py-1 text-sm border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900">
+                                            <option selected>pending</option>
+                                            <option>confirmed</option>
+                                            <option>shipping</option>
+                                            <option>completed</option>
+                                            <option>cancelled</option>
+                                        </select>
+                                    </td>
+
+                                    <td>2026-01-26</td>
+
+                                    <td class="space-x-2 text-center">
+                                        <a href="order-detail.html" class="text-blue-600 hover:underline"> Chi tiết </a>
+                                    </td>
+                                </tr>
+
+                                <!-- Order 2 -->
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-4 font-semibold text-p-900">#9db0</td>
+
+                                    <td>
+                                        <div class="font-medium">Trương Nguyễn Bảo Khánh</div>
+                                        <div class="text-xs text-gray-500">khanhtnb220@gmail.com</div>
+                                    </td>
+
+                                    <td>0916022815</td>
+
+                                    <td class="font-semibold text-p-900">89.000đ</td>
+
+                                    <td>
+                                        <span class="px-2 py-1 text-yellow-700 bg-yellow-100 rounded"> COD </span>
+                                    </td>
+
+                                    <td>
+                                        <select class="px-2 py-1 text-sm border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900">
+                                            <option selected>pending</option>
+                                            <option>confirmed</option>
+                                            <option>shipping</option>
+                                            <option>completed</option>
+                                            <option>cancelled</option>
+                                        </select>
+                                    </td>
+
+                                    <td>2026-02-22</td>
+
+                                    <td class="space-x-2 text-center">
+                                        <a href="order-detail.html" class="text-blue-600 hover:underline"> Chi tiết </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Business Rules -->
+                    <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
+                        <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li>• Không thể xóa đơn hàng</li>
+                            <li>• Trạng thái phải theo workflow: pending → confirmed → shipping → completed</li>
+                            <li>• Khi status = cancelled → không thể chuyển lại</li>
+                            <li>• Total = tổng order_items + shipping_fee</li>
+                        </ul>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
