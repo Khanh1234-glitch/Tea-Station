@@ -22,14 +22,12 @@ export class ProductVariantAdminController {
         document.addEventListener("click", async (e) => {
             const target = e.target as HTMLElement;
 
-            // 🔥 Lấy id từ button
             const id = target.dataset.id;
             if (!id) return;
 
             const variant = this.variants.find((v) => v.id === id);
             if (!variant) return;
 
-            // ================= SAVE =================
             if (target.classList.contains("save-btn")) {
                 const sizeInput = document.querySelector(`.variant-size[data-id="${id}"]`) as HTMLInputElement;
 
@@ -52,7 +50,6 @@ export class ProductVariantAdminController {
                 return;
             }
 
-            // ================= TOGGLE =================
             if (target.classList.contains("toggle-btn")) {
                 const newStatus = variant.status === "inactive" ? "active" : "inactive";
 
@@ -105,7 +102,7 @@ export class ProductVariantAdminController {
             }
 
             await this.service.create({
-                product_id, // 🔥 GIỜ SẼ TRÙNG productsList.id
+                product_id,
                 size,
                 extra_price,
                 price,

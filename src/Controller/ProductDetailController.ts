@@ -6,15 +6,18 @@ import { ProductDetailService } from "../service/ProductDetailService.js";
 import { ProductVariantService } from "../service/ProductVariantService.js";
 import { ProductDetailViews } from "../Views/ProductDetailViews.js";
 import { CartService } from "../service/CartService.js";
+import { ProductAttributeAdminService } from "../admin/Services/ProductAttributeAdminService.js";
+import type { ProductAttributeAdmin } from "../admin/Model/ProductAttributeAdmin.js";
 
 export class ProductDetailController {
     private productService = new ProductDetailService();
     private variantService = new ProductVariantService();
     private view = new ProductDetailViews();
     private cartService = new CartService();
-
+    private productAttributeService = new ProductAttributeAdminService();
     private currentProduct!: ProductList;
     private currentVariants: ProductVariant[] = [];
+    private currentAttributes: ProductAttributeAdmin[] = [];
 
     public async init(): Promise<void> {
         const params = new URLSearchParams(window.location.search);
@@ -22,20 +25,21 @@ export class ProductDetailController {
         if (!id) return;
 
         try {
-            // 🔥 Lấy product từ productsList
             const product = await this.productService.getById(id);
-
-            // 🔥 Lấy tất cả variants
+            if (!product || product.status !== "active") {
+                window.location.href = "404.html";
+                return;
+            }
             const allVariants = await this.variantService.getAll();
-
-            // 🔥 LỌC đúng variant của product này + active
+            const allAtrributes = await this.productAttributeService.getAll();
+            const attributesOfProduct = allAtrributes.filter((a) => a.product_id.trim() === product.id.trim());
             const variantsOfProduct = allVariants.filter(
                 (v) => String(v.product_id).trim() === String(product.id).trim() && (v.status ?? "active") === "active",
             );
 
             this.currentProduct = product;
             this.currentVariants = variantsOfProduct;
-
+            this.currentAttributes = attributesOfProduct;
             this.render();
             this.initThumbnailChange();
             this.initOptionToggle();
@@ -49,7 +53,7 @@ export class ProductDetailController {
         const container = document.querySelector("#productDetail");
         if (!container) return;
 
-        container.innerHTML = this.view.renderProductDetail(this.currentProduct, this.currentVariants);
+        container.innerHTML = this.view.renderProductDetail(this.currentProduct, this.currentVariants, this.currentAttributes);
     }
 
     // ================= IMAGE =================

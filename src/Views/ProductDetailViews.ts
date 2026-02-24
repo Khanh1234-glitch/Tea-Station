@@ -1,8 +1,9 @@
+import type { ProductAttributeAdmin } from "../admin/Model/ProductAttributeAdmin.js";
 import type { ProductList } from "../Model/ProductList.js";
 import type { ProductVariant } from "../Model/ProductVariant.js";
 
 export class ProductDetailViews {
-    renderProductDetail(product: ProductList, productVariant: ProductVariant[]): string {
+    renderProductDetail(product: ProductList, productVariant: ProductVariant[], productAttribute: ProductAttributeAdmin[]): string {
         return `
                         <div class="grid items-start grid-cols-1 lg:grid-cols-12 gap-14">
                     <!-- ================= LEFT: IMAGES ================= -->
@@ -90,27 +91,35 @@ export class ProductDetailViews {
                         </div>
 
                         <!-- Details -->
-                        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                        ${productAttribute
+                            .map(
+                                (a) => `
+                            
+                            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
                             <div class="p-6 shadow-lg bg-white/70 rounded-2xl">
                                 <h4 class="mb-2 font-semibold">Xuất xứ</h4>
-                                <p class="text-sm text-n-500">${product.origin}</p>
+                                <p class="text-sm text-n-500">${a.origin}</p>
                             </div>
 
                             <div class="p-6 shadow-lg bg-white/70 rounded-2xl">
                                 <h4 class="mb-2 font-semibold">Hướng dẫn pha</h4>
-                                <p class="text-sm text-n-500">${product.brewGuide.tea} · ${product.brewGuide.water} nước · ${product.brewGuide.temperature}</p>
+                                <p class="text-sm text-n-500">${a.brew_guide}</p>
                             </div>
 
                             <div class="p-6 shadow-lg bg-white/70 rounded-2xl">
                                 <h4 class="mb-2 font-semibold">Hạn sử dụng</h4>
-                                <p class="text-sm text-n-500">${product.expiry}</p>
+                                <p class="text-sm text-n-500">${a.shelf_life}</p>
                             </div>
 
                             <div class="p-6 shadow-lg bg-white/70 rounded-2xl">
                                 <h4 class="mb-2 font-semibold">Bảo quản</h4>
-                                <p class="text-sm text-n-500">${product.storage}</p>
+                                <p class="text-sm text-n-500">${a.storage}</p>
                             </div>
                         </div>
+                            `,
+                            )
+                            .join(``)}
+                        
                     </section>
                 </div>
     `;

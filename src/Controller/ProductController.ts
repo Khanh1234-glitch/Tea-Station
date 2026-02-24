@@ -20,6 +20,7 @@ export class ProductController {
                 this.productService.getAll(),
                 this.categoryService.getAll(),
             ]);
+
             this.renderPageProduct(pageProduct);
             this.handleFilter(products);
             this.renderFilters(categories);
@@ -27,8 +28,6 @@ export class ProductController {
             console.error("Product page error:", error);
         }
     }
-
-    /* ================= FILTER LOGIC ================= */
 
     private handleFilter(products: ProductList[]): void {
         const params = new URLSearchParams(window.location.search);
@@ -46,13 +45,11 @@ export class ProductController {
         this.setActiveFilter(category);
     }
 
-    /* ================= RENDER PRODUCTS ================= */
-
     private render(products: ProductList[]): void {
         const container = document.querySelector("#product-items--container");
         if (!container) return;
-
-        container.innerHTML = this.productView.renderProducts(products);
+        const activeProduct = products.filter((p) => p.status === "active");
+        container.innerHTML = this.productView.renderProducts(activeProduct);
     }
 
     /* ================= RENDER FILTER TABS ================= */

@@ -68,16 +68,14 @@
 
                         <div class="grid gap-4 md:grid-cols-2">
                             <!-- Product -->
-                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
-                                <option>Chọn sản phẩm</option>
-                                <option>Trà Matcha</option>
-                                <option>Trà Oolong</option>
-                                <option>Trà Đen</option>
-                                <option>Trà Trắng</option>
-                            </select>
+                            <select
+                                id="attribute-product"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            ></select>
 
                             <!-- Origin -->
                             <input
+                                id="attribute-origin"
                                 type="text"
                                 placeholder="Origin (Uji, Kyoto – Nhật Bản)"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
@@ -86,6 +84,7 @@
                             <!-- Brew Guide -->
                             <input
                                 type="text"
+                                id="attribute-brew"
                                 placeholder="Brew Guide (2g – 70ml – 75°C)"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
@@ -93,6 +92,7 @@
                             <!-- Shelf Life -->
                             <input
                                 type="text"
+                                id="attribute-shelf"
                                 placeholder="Shelf Life (12 tháng)"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
@@ -100,12 +100,15 @@
                             <!-- Storage -->
                             <input
                                 type="text"
+                                id="attribute-storage"
                                 placeholder="Storage (Bảo quản nơi khô ráo...)"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
                         </div>
 
-                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu Attribute</button>
+                        <button type="button" id="save-attribute-btn" class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">
+                            Lưu Attribute
+                        </button>
                     </div>
 
                     <!-- Attributes Table -->
@@ -122,89 +125,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody>
-                                <!-- Matcha -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">Trà Matcha</td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Uji, Kyoto – Nhật Bản"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-44 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="2g matcha – 70ml nước – 75°C"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-52 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="12 tháng"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-28 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Nơi khô ráo, tránh ánh nắng"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-52 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td class="text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Oolong -->
-                                <tr class="hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">Trà Oolong</td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Đài Loan"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-44 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="5g trà – 150ml nước – 90°C"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-52 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="18 tháng"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-28 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Nơi thoáng mát"
-                                            class="px-2 py-1 border border-gray-200 rounded outline-none w-52 focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td class="text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody id="attribute-table-body"></tbody>
                         </table>
                     </div>
 
@@ -221,5 +142,6 @@
                 </main>
             </div>
         </div>
+        <script type="module" src="../../dist/jsCompile/admin/adminApp.js"></script>
     </body>
 </html>

@@ -28,7 +28,7 @@
       "phone": "123213",
       "address": "1231232",
       "roleId": "1",
-      "status": "inactive"
+      "status": "active"
     },
     {
       "id": "e104",
@@ -38,17 +38,18 @@
       "phone": "qưdqwdq",
       "address": "ưdqwdqwd",
       "roleId": "2",
-      "status": "inactive"
+      "status": "active"
     },
     {
-      "id": "f789",
-      "name": "Bảo Khánh",
+      "id": "d85b",
+      "createdAt": "2026-02-24T17:10:11.424Z",
+      "roleId": "1",
+      "name": "Trương Nguyễn Bảo Khánh",
       "email": "khanhtnb220@gmail.com",
       "password": "123456",
-      "phone": "0916022815",
-      "address": "An Dương Vương",
-      "roleId": "1",
-      "status": "active"
+      "address": "",
+      "status": "active",
+      "phone": "0916022815"
     }
   ],
   "categories": [
@@ -56,22 +57,25 @@
       "name": "Trà Matcha",
       "id": "1",
       "slug": "matcha",
-      "status": "active"
+      "status": "inactive"
     },
     {
       "id": "2",
       "name": "Trà Đen",
-      "slug": "blackTea"
+      "slug": "blackTea",
+      "status": "inactive"
     },
     {
       "id": "3",
       "name": "Trà Oolong",
-      "slug": "oolongTea"
+      "slug": "oolongTea",
+      "status": "active"
     },
     {
       "id": "4",
       "name": "Trà Trắng",
-      "slug": "whiteTea"
+      "slug": "whiteTea",
+      "status": "active"
     }
   ],
   "products": [
@@ -433,22 +437,49 @@
       "price": 312312,
       "stock": 32,
       "status": "inactive"
+    },
+    {
+      "id": "4856",
+      "product_id": "5e50",
+      "size": "2131",
+      "extra_price": 123123,
+      "price": 23,
+      "stock": 12312,
+      "status": "active"
     }
   ],
   "product_attributes": [
     {
-      "product_id": "1",
-      "origin": "Uji, Kyoto – Nhật Bản",
+      "id": "1",
+      "product_id": "2",
+      "origin": "Uji, Kyoto",
       "brew_guide": "2g matcha – 70ml nước – 75°C",
       "shelf_life": "12 tháng",
       "storage": "Nơi khô ráo, tránh ánh nắng"
     },
     {
-      "product_id": "2",
-      "origin": "Đài Loan",
-      "brew_guide": "5g trà – 150ml nước – 90°C",
-      "shelf_life": "18 tháng",
-      "storage": "Nơi thoáng mát"
+      "id": "3e02",
+      "product_id": "3",
+      "origin": "Việt Nam",
+      "brew_guide": "15g Trà đen– 150ml nước – 35°C",
+      "shelf_life": "3 tháng",
+      "storage": "Nơi khô ráo"
+    },
+    {
+      "id": "4b08",
+      "product_id": "4",
+      "origin": "Hải phòng, Việt Nam",
+      "brew_guide": "10g Trà trắng– 150ml nước – 75°C",
+      "shelf_life": "10 tháng",
+      "storage": "Xa tầm tay trẻ em"
+    },
+    {
+      "id": "b91f",
+      "product_id": "1",
+      "origin": "Không rõ nguồn gốc",
+      "brew_guide": "150g Trà ô long– 30ml nước – 200°C",
+      "shelf_life": "1 tháng",
+      "storage": "Phơi dưới nhiệt độ cao"
     }
   ],
   "cart": [
@@ -996,6 +1027,33 @@
       "storage": "Bảo quản kín, tránh độ ẩm cao",
       "stock": 70,
       "status": "active"
+    },
+    {
+      "id": "5e50",
+      "name": "Trà trắng tinh",
+      "slug": "tra-trang-tinh",
+      "categoryId": "whiteTea",
+      "basePrice": 1321321,
+      "unit": "12",
+      "stock": 123,
+      "description": "ádqwdqdqwd",
+      "image": "products/whitetea5.jpg",
+      "images": [
+        "products/whitetea6.jpg",
+        "products/whitetea7.jpg",
+        "products/whitetea8.jpg"
+      ],
+      "sizes": [],
+      "variants": [],
+      "origin": "",
+      "brewGuide": {
+        "tea": "",
+        "water": "",
+        "temperature": ""
+      },
+      "expiry": "",
+      "storage": "",
+      "status": "inactive"
     }
   ],
   "pageProducts": [

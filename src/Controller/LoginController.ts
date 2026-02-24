@@ -31,6 +31,14 @@ export class LoginController {
                 alert("Email hoặc mật khẩu không đúng");
                 return;
             }
+            if (user.status === "inactive") {
+                alert("Tài khoản này đã bị khóa");
+                return;
+            }
+            this.userService.saveLoginState(user);
+            if (user.roleId === "1") {
+                return (window.location.href = "/Views/admin/dashboard.html");
+            }
             alert("Đăng nhập thành công");
             this.userService.saveLoginState(user);
             location.href = "index.html";

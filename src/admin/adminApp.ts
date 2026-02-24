@@ -1,5 +1,7 @@
 import { CategoriesAdminController } from "./Controller/CategoriesAdminController.js";
 import { ProductAdminController } from "./Controller/ProductAdminController.js";
+import { ProductAttributeAdminController } from "./Controller/ProductAttributeAdminController.js";
+import { ProductListAdminController } from "./Controller/ProductListAdminController.js";
 import { ProductVariantAdminController } from "./Controller/ProductVariantAdminController.js";
 import { RolesAdminController } from "./Controller/RoleAdminController.js";
 import { UsersAdminController } from "./Controller/UserAdminController.js";
@@ -20,5 +22,11 @@ if (page.includes("products.html")) {
 }
 if (page.includes("product-variants.html")) {
     controller = new ProductVariantAdminController();
+}
+if (page.includes("product-attributes.html")) {
+    controller = new ProductAttributeAdminController();
+}
+if (page.includes("products-list.html")) {
+    controller = new ProductListAdminController();
 }
 controller?.init();

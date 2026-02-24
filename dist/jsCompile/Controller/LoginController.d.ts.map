@@ -1,1 +1,1 @@
-{"version":3,"file":"LoginController.d.ts","sourceRoot":"","sources":["../../../src/Controller/LoginController.ts"],"names":[],"mappings":"AAGA,qBAAa,eAAe;IACxB,OAAO,CAAC,WAAW,CAA4B;IAC/C,IAAI;IAGJ,OAAO,CAAC,YAAY;IAUpB,OAAO,CAAC,YAAY;CAoBvB"}
+{"version":3,"file":"LoginController.d.ts","sourceRoot":"","sources":["../../../src/Controller/LoginController.ts"],"names":[],"mappings":"AAGA,qBAAa,eAAe;IACxB,OAAO,CAAC,WAAW,CAA4B;IAC/C,IAAI;IAGJ,OAAO,CAAC,YAAY;IAUpB,OAAO,CAAC,YAAY;CA4BvB"}

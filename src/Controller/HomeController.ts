@@ -88,6 +88,7 @@ export class HomeController {
     private renderTabs(products: Product[], categories: Category[]): void {
         const container = document.querySelector("#products-tabs");
         if (!container) return;
+
         container.innerHTML = this.homeView.render(products, categories);
     }
     private renderPartner(partner: PartnerLogo[]) {

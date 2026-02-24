@@ -3,8 +3,10 @@ export declare class ProductDetailController {
     private variantService;
     private view;
     private cartService;
+    private productAttributeService;
     private currentProduct;
     private currentVariants;
+    private currentAttributes;
     init(): Promise<void>;
     private render;
     private initThumbnailChange;
