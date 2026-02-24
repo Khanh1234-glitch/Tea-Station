@@ -1,1217 +1,1233 @@
 {
-    "roles": [
-        {
-            "id": "1",
-            "name": "admin"
-        },
-        {
-            "id": "2",
-            "name": "customer"
-        }
-    ],
-    "hero": {
-        "type": "video",
-        "src": "video.mp4",
-        "text": "Chỉ những lá trà ngon nhất mới được đưa vào sản phẩm của chúng tôi,<br class='hidden lg:block'/> đảm bảo mỗi ngụm trà đều mang hương vị tinh khiết và tuyệt hảo.",
-        "image": "hero_img.png"
+  "roles": [
+    {
+      "id": "1",
+      "name": "admin"
     },
-    "users": [
-        {
-            "createdAt": "",
-            "id": "7c03",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "khanhtnb220@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "1231241412"
-        },
-        {
-            "createdAt": "2026-02-23T04:16:25.284Z",
-            "id": "4f8f",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "123@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "7b74",
-            "createdAt": "2026-02-23T06:28:19.663Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "khanh123@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "17dd",
-            "createdAt": "2026-02-23T06:32:04.747Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "123412123@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "79b5",
-            "createdAt": "2026-02-23T06:33:08.090Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "12321421412@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "0b16",
-            "createdAt": "2026-02-23T06:33:23.995Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "123141234213@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "30ee",
-            "createdAt": "2026-02-23T06:39:11.186Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "123123214124123@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "5fa2",
-            "createdAt": "2026-02-23T06:40:32.184Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "1232141231@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "0427",
-            "createdAt": "2026-02-23T06:45:13.491Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "1234141edsdad@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        },
-        {
-            "id": "3f57",
-            "createdAt": "2026-02-23T06:46:43.365Z",
-            "role": "customer",
-            "name": "Trương Nguyễn Bảo Khánh",
-            "email": "12311aqeqad0@gmail.com",
-            "password": "123456",
-            "address": "",
-            "phone": "0916022815"
-        }
-    ],
-    "categories": [
-        {
-            "id": "1",
-            "name": "Trà Matcha",
-            "slug": "matcha"
-        },
-        {
-            "id": "2",
-            "name": "Trà Đen",
-            "slug": "blackTea"
-        },
-        {
-            "id": "3",
-            "name": "Trà Oolong",
-            "slug": "oolongTea"
-        },
-        {
-            "id": "4",
-            "name": "Trà Trắng",
-            "slug": "whiteTea"
-        }
-    ],
-    "products": [
-        {
-            "id": "1",
-            "category_id": "1",
-            "name": "Trà Matcha",
-            "slug": "Matcha Magic",
-            "short_desc": "Khám phá những lợi ích tiềm năng của 'vàng xanh' từ Nhật Bản",
-            "description": "Sẵn sàng nâng cao sức khỏe của bạn? Hãy làm quen với matcha, loại bột màu xanh lá cây rực rỡ đang làm khuynh đảo thế giới chăm sóc sức khỏe. Chứa đầy chất chống oxy hóa và chất dinh dưỡng, matcha cung cấp nguồn năng lượng mạnh mẽ mà không gây bồn chồn, nhờ sự kết hợp độc đáo giữa caffeine và L-theanine.<br/> Loại trà này không chỉ tăng cường sự tập trung và trao đổi chất mà còn thêm hương vị thơm ngon cho sinh tố, đồ nướng và cà phê latte. Hãy đắm mình vào thế giới matcha và trải nghiệm cách siêu thực phẩm cổ xưa này có thể tiếp thêm sinh lực cho cơ thể và trí óc của bạn!",
-            "base_price": 89000,
-            "featured": true,
-            "idName": "matcha",
-            "image": "product_1.jpg"
-        },
-        {
-            "id": "2",
-            "category_id": "3",
-            "name": "Trà Olong",
-            "slug": "Cuộc cách mạng trà ô long",
-            "short_desc": "Mở khóa bí mật của loại trà lành mạnh nhất từ ​​thiên nhiên",
-            "description": "Bạn có tò mò về bí quyết trường thọ và sống lâu không? Không cần tìm đâu xa, hãy tìm đến trà xanh! Thức uống cổ xưa này, được tôn sùng trong nhiều nền văn hóa trên thế giới, chứa đầy chất chống oxy hóa mạnh mẽ có thể thúc đẩy quá trình trao đổi chất, tăng cường chức năng não và thúc đẩy sức khỏe tim mạch. Với hương vị tinh tế và vô số lợi ích cho sức khỏe, trà xanh không chỉ là một thức uống mà còn là một lựa chọn về lối sống. Hãy tham gia cuộc cách mạng trà xanh và khám phá cách thức pha chế đơn giản này có thể biến đổi sức khỏe của bạn từng ngụm một!",
-            "base_price": 99000,
-            "featured": true,
-            "idName": "oolongTea",
-            "image": "product_2.jpg"
-        },
-        {
-            "id": "3",
-            "category_id": "4",
-            "name": "Trà Trắng",
-            "slug": "Tinh chất tinh tế từ trà trắng",
-            "short_desc": "Hành trình khám phá hương vị tinh khiết nhất từ thiên nhiên",
-            "description": "Trà trắng, được tôn sùng vì sự nhẹ nhàng và tinh tế của nó, được chế biến từ lá non và nụ của cây Camellia sinensis. Với hương hoa nhẹ nhàng và vị ngọt tự nhiên, loại trà này mang đến trải nghiệm nhẹ nhàng nhưng sảng khoái. Giàu chất chống oxy hóa và ít caffeine, trà trắng không chỉ làm hài lòng khẩu vị mà còn hỗ trợ sức khỏe, khiến nó trở thành lựa chọn hoàn hảo cho những khoảnh khắc thư giãn hoặc trẻ hóa. Khám phá vẻ đẹp thanh bình của trà trắng và nâng tầm nghi thức uống trà của bạn lên một tầm cao mới.",
-            "base_price": 99000,
-            "featured": true,
-            "idName": "whiteTea",
-            "image": "product_3.jpg"
-        },
-        {
-            "id": "4",
-            "category_id": "2",
-            "name": "Trà Đen",
-            "slug": "Đánh thức các giác quan của bạn cùng trà đen",
-            "short_desc": "Hương vị đậm đà truyền thống vượt thời gian",
-            "description": "Hãy thưởng thức hương vị đậm đà, mạnh mẽ của trà đen, được chế tác hoàn hảo cho khẩu vị sành điệu. Mỗi ngụm trà mang đến sự pha trộn hài hòa giữa hương vị sâu lắng và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ trưa. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
-            "base_price": 99000,
-            "featured": true,
-            "idName": "blackTea",
-            "image": "product_4.png"
-        }
-    ],
-    "product_images": [
-        {
-            "id": "1",
-            "product_id": "1",
-            "url": "matcha1.jpg",
-            "is_main": true
-        },
-        {
-            "id": "2",
-            "product_id": "1",
-            "url": "matcha2.jpg",
-            "is_main": false
-        },
-        {
-            "id": "3",
-            "product_id": "1",
-            "url": "matcha3.jpg",
-            "is_main": false
-        },
-        {
-            "id": "4",
-            "product_id": "1",
-            "url": "matcha4.jpg",
-            "is_main": false
-        },
-        {
-            "id": "5",
-            "product_id": "1",
-            "url": "matcha5.jpg",
-            "is_main": false
-        },
-        {
-            "id": "6",
-            "product_id": "1",
-            "url": "matcha6.jpg",
-            "is_main": false
-        },
-        {
-            "id": "7",
-            "product_id": "1",
-            "url": "matcha7.jpg",
-            "is_main": false
-        },
-        {
-            "id": "8",
-            "product_id": "1",
-            "url": "matcha8.jpg",
-            "is_main": false
-        },
-        {
-            "id": "9",
-            "product_id": "1",
-            "url": "matcha9.jpg",
-            "is_main": false
-        },
-        {
-            "id": "10",
-            "product_id": "1",
-            "url": "matcha10.jpg",
-            "is_main": false
-        },
-        {
-            "id": "11",
-            "product_id": "1",
-            "url": "matcha11.jpg",
-            "is_main": false
-        },
-        {
-            "id": "12",
-            "product_id": "1",
-            "url": "matcha12.jpg",
-            "is_main": false
-        },
-        {
-            "id": "13",
-            "product_id": "1",
-            "url": "matcha13.jpg",
-            "is_main": false
-        },
-        {
-            "id": "14",
-            "product_id": "1",
-            "url": "matcha14.jpg",
-            "is_main": false
-        },
-        {
-            "id": "15",
-            "product_id": "1",
-            "url": "matcha15.jpg",
-            "is_main": false
-        },
-        {
-            "id": "16",
-            "product_id": "2",
-            "url": "oolong1.jpg",
-            "is_main": true
-        },
-        {
-            "id": "17",
-            "product_id": "2",
-            "url": "oolong2.jpg",
-            "is_main": false
-        },
-        {
-            "id": "18",
-            "product_id": "2",
-            "url": "oolong3.jpg",
-            "is_main": false
-        },
-        {
-            "id": "19",
-            "product_id": "2",
-            "url": "oolong4.jpg",
-            "is_main": false
-        },
-        {
-            "id": "20",
-            "product_id": "2",
-            "url": "oolong5.jpg",
-            "is_main": false
-        },
-        {
-            "id": "21",
-            "product_id": "2",
-            "url": "oolong6.jpg",
-            "is_main": false
-        },
-        {
-            "id": "22",
-            "product_id": "2",
-            "url": "oolong7.jpg",
-            "is_main": false
-        },
-        {
-            "id": "23",
-            "product_id": "2",
-            "url": "oolong8.jpg",
-            "is_main": false
-        },
-        {
-            "id": "24",
-            "product_id": "4",
-            "url": "blacktea1.jpg",
-            "is_main": true
-        },
-        {
-            "id": "25",
-            "product_id": "4",
-            "url": "blacktea2.jpg",
-            "is_main": false
-        },
-        {
-            "id": "26",
-            "product_id": "4",
-            "url": "blacktea3.jpg",
-            "is_main": false
-        },
-        {
-            "id": "27",
-            "product_id": "4",
-            "url": "blacktea4.jpg",
-            "is_main": false
-        },
-        {
-            "id": "28",
-            "product_id": "3",
-            "url": "whitetea1.jpg",
-            "is_main": true
-        },
-        {
-            "id": "29",
-            "product_id": "3",
-            "url": "whitetea2.jpg",
-            "is_main": false
-        },
-        {
-            "id": "30",
-            "product_id": "3",
-            "url": "whitetea3.jpg",
-            "is_main": false
-        },
-        {
-            "id": "31",
-            "product_id": "3",
-            "url": "whitetea4.jpg",
-            "is_main": false
-        },
-        {
-            "id": "32",
-            "product_id": "3",
-            "url": "whitetea5.jpg",
-            "is_main": false
-        },
-        {
-            "id": "33",
-            "product_id": "3",
-            "url": "whitetea6.jpg",
-            "is_main": false
-        },
-        {
-            "id": "34",
-            "product_id": "3",
-            "url": "whitetea7.jpg",
-            "is_main": false
-        },
-        {
-            "id": "35",
-            "product_id": "3",
-            "url": "whitetea8.jpg",
-            "is_main": false
-        }
-    ],
-    "product_variants": [
-        {
-            "id": "1",
-            "product_id": "1",
-            "size": "50g",
-            "extra_price": 0,
-            "price": 89000,
-            "stock": 100
-        },
-        {
-            "id": "2",
-            "product_id": "1",
-            "size": "100g",
-            "extra_price": 40000,
-            "price": 129000,
-            "stock": 60
-        },
-        {
-            "id": "3",
-            "product_id": "1",
-            "size": "200g",
-            "extra_price": 90000,
-            "price": 179000,
-            "stock": 30
-        },
-        {
-            "id": "4",
-            "product_id": "2",
-            "size": "50g",
-            "extra_price": 0,
-            "price": 99000,
-            "stock": 80
-        }
-    ],
-    "product_attributes": [
-        {
-            "product_id": "1",
-            "origin": "Uji, Kyoto – Nhật Bản",
-            "brew_guide": "2g matcha – 70ml nước – 75°C",
-            "shelf_life": "12 tháng",
-            "storage": "Nơi khô ráo, tránh ánh nắng"
-        },
-        {
-            "product_id": "2",
-            "origin": "Đài Loan",
-            "brew_guide": "5g trà – 150ml nước – 90°C",
-            "shelf_life": "18 tháng",
-            "storage": "Nơi thoáng mát"
-        }
-    ],
-    "cart": [
-        {
-            "id": "1",
-            "user_id": "2",
-            "product_id": "1",
-            "variant_id": "1",
-            "quantity": 2
-        },
-        {
-            "id": "2",
-            "user_id": "2",
-            "product_id": "2",
-            "variant_id": "4",
-            "quantity": 1
-        }
-    ],
-    "orders": [
-        {
-            "id": "1",
-            "user_id": "2",
-            "customer_name": "Nguyễn Văn A",
-            "phone": "0123456789",
-            "email": "abc@gmail.com",
-            "address": "123 Nguyễn Trãi, Q1, HCM",
-            "note": "",
-            "payment_method": "cod",
-            "status": "pending",
-            "total": 277000,
-            "shipping_fee": 0,
-            "created_at": "2026-01-26"
-        },
-        {
-            "id": "9db0",
-            "user_id": "2",
-            "customer_name": "Trương Nguyễn Bảo Khánh",
-            "phone": "0916022815",
-            "email": "khanhtnb220@gmail.com",
-            "address": "324 Phạm Văn Chí, Quận 1, TP Hồ Chí Minh",
-            "note": "ádassd",
-            "payment_method": "cod",
-            "status": "pending",
-            "total": 89000,
-            "shipping_fee": 0,
-            "created_at": "2026-02-22"
-        },
-        {
-            "id": "1e59",
-            "user_id": "2",
-            "customer_name": "Trương Nguyễn Bảo Khánh",
-            "phone": "0916022815",
-            "email": "khanhtnb220@gmail.com",
-            "address": "324 Phạm Văn Chí, Phường 3, Quận 3, TP Hồ Chí Minh",
-            "note": "âsdasdqwd",
-            "payment_method": "cod",
-            "status": "pending",
-            "total": 89000,
-            "shipping_fee": 0,
-            "created_at": "2026-02-23"
-        },
-        {
-            "id": "8171",
-            "user_id": "2",
-            "customer_name": "Trương Nguyễn Bảo Khánh",
-            "phone": "0916022815",
-            "email": "khanhtnb220@gmail.com",
-            "address": "324 Phạm Văn Chí, Phường 1, Quận 3, TP Hồ Chí Minh",
-            "note": "",
-            "payment_method": "cod",
-            "status": "pending",
-            "total": 89000,
-            "shipping_fee": 0,
-            "created_at": "2026-02-23"
-        },
-        {
-            "id": "5453",
-            "user_id": "4f8f",
-            "customer_name": "Trương Nguyễn Bảo Khánh",
-            "phone": "0916022815",
-            "email": "khanhtnb220@gmail.com",
-            "address": "324 Phạm Văn Chí, Phường 3, Quận 3, TP Hồ Chí Minh",
-            "note": "asfsadqfqfdqwedq",
-            "payment_method": "cod",
-            "status": "pending",
-            "total": 89000,
-            "shipping_fee": 0,
-            "created_at": "2026-02-23"
-        }
-    ],
-    "order_items": [
-        {
-            "id": "1",
-            "order_id": "1",
-            "product_id": "1",
-            "variant_id": "1",
-            "price": 89000,
-            "quantity": 2,
-            "total": 178000
-        },
-        {
-            "id": "2",
-            "order_id": "1",
-            "product_id": "2",
-            "variant_id": "4",
-            "price": 99000,
-            "quantity": 1,
-            "total": 99000
-        },
-        {
-            "id": "c147",
-            "order_id": "587d",
-            "product_id": "matcha-zen-garden-1",
-            "price": 89000,
-            "quantity": 2,
-            "total": 178000
-        },
-        {
-            "id": "4fef",
-            "order_id": "9db0",
-            "product_id": "matcha-zen-garden-1",
-            "price": 89000,
-            "quantity": 1,
-            "total": 89000
-        },
-        {
-            "id": "9494",
-            "order_id": "1e59",
-            "product_id": "matcha-zen-garden-1",
-            "price": 89000,
-            "quantity": 1,
-            "total": 89000
-        },
-        {
-            "id": "b889",
-            "order_id": "8171",
-            "product_id": "matcha-zen-garden-1",
-            "price": 89000,
-            "quantity": 1,
-            "total": 89000
-        },
-        {
-            "id": "9e5b",
-            "order_id": "5453",
-            "product_id": "matcha-zen-garden-1",
-            "price": 89000,
-            "quantity": 1,
-            "total": 89000
-        }
-    ],
-    "payments": [
-        {
-            "order_id": "1",
-            "method": "COD",
-            "status": "unpaid"
-        }
-    ],
-    "features": {
-        "id": "features",
-        "type": "feature-grid",
-        "heading": {
-            "subTitle": "Why Us?",
-            "title": "Sự <span class='text-gradient'>độc đáo</span> từ<br/>Tea Station"
-        },
-        "items": [
-            {
-                "id": "feature-1",
-                "title": "Nguồn cung cao cấp",
-                "description": "Chúng tôi tự hào sản xuất trà ngay tại Hoa Kỳ, sử dụng nguyên liệu chất lượng cao từ các trang trại địa phương.",
-                "image": "benefit_1.jpg",
-                "aos": {
-                    "animation": "zoom-in",
-                    "delay": 0
-                },
-                "position": "left-top"
-            },
-            {
-                "id": "feature-2",
-                "title": "Hương vị và pha chế độc đáo",
-                "description": "Sản phẩm độc quyền của chúng tôi gồm các loại trà với hương vị độc đáo, được chế tác để làm hài lòng mọi khẩu vị.",
-                "image": "pic1.jpg",
-                "aos": {
-                    "animation": "zoom-in",
-                    "delay": 100
-                },
-                "position": "right-top"
-            },
-            {
-                "id": "feature-3",
-                "title": "Tập trung vào sức khỏe",
-                "description": "Hãy thưởng thức các loại trà tốt cho sức khỏe của chúng tôi, được pha chế cẩn thận để hỗ trợ trí óc, cơ thể và tâm hồn của bạn.",
-                "image": "benefit_3.jpg",
-                "aos": {
-                    "animation": "zoom-in",
-                    "delay": 200
-                },
-                "position": "left-bottom"
-            },
-            {
-                "id": "feature-4",
-                "title": "Trải Nghiệm Cá Nhân Hoá",
-                "description": "Trải nghiệm dịch vụ được cá nhân hóa với mọi đơn hàng, phù hợp với sở thích và nhu cầu trà riêng của bạn.",
-                "image": "benefit_4.jpg",
-                "aos": {
-                    "animation": "zoom-in",
-                    "delay": 300
-                },
-                "position": "right-bottom"
-            }
-        ]
+    {
+      "id": "2",
+      "name": "customer"
     },
-    "bestSellers": {
-        "id": "best-sellers",
-        "type": "product-slider",
-        "heading": {
-            "subTitle": "Khách hàng yêu thích",
-            "title": "Những Sản Phẩm <span class='text-gradient'>Bán Chạy Nhất</span>"
-        },
-        "description": "Khám phá những sản phẩm bán chạy nhất của chúng tôi, nơi chất lượng kết hợp hương vị trong mỗi tách trà. Hãy tham gia cùng hàng ngàn khách hàng hài lòng đã biến những hỗn hợp này thành sở thích của họ và nâng tầm thời gian uống trà của bạn ngay hôm nay!",
-        "products": [
-            {
-                "id": "best-1",
-                "name": "Peppermint Velvet",
-                "image": "products/matcha1.jpg",
-                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
-                "benefits": [
-                    {
-                        "title": "Tăng cường năng lượng và tập trung",
-                        "percentage": 94,
-                        "position": "top"
-                    },
-                    {
-                        "title": "Giàu chất chống oxy hoá",
-                        "percentage": 93,
-                        "position": "top"
-                    },
-                    {
-                        "title": "Tăng cường trao đổi chất",
-                        "percentage": 90,
-                        "position": "bot"
-                    },
-                    {
-                        "title": "Thúc đẩy sự bình tĩnh và thư giãn",
-                        "percentage": 95,
-                        "position": "bot"
-                    }
-                ]
-            },
-            {
-                "id": "best-2",
-                "name": "Chamomile Bliss",
-                "image": "products/blacktea1.jpg",
-                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
-                "benefits": [
-                    {
-                        "title": "Tăng cường năng lượng và tập trung",
-                        "percentage": 96
-                    },
-                    {
-                        "title": "Giàu chất chống oxy hoá",
-                        "percentage": 97
-                    },
-                    {
-                        "title": "Tăng cường trao đổi chất",
-                        "percentage": 90
-                    },
-                    {
-                        "title": "Thúc đẩy sự bình tĩnh và thư giãn",
-                        "percentage": 89
-                    }
-                ]
-            },
-            {
-                "id": "best-3",
-                "name": "Lemon Ginger Zest",
-                "image": "products/whitetea1.jpg",
-                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
-                "benefits": [
-                    {
-                        "title": "Tăng cường năng lượng và tập trung",
-                        "percentage": 85
-                    },
-                    {
-                        "title": "Giàu chất chống oxy hoá",
-                        "percentage": 95
-                    },
-                    {
-                        "title": "Tăng cường trao đổi chất",
-                        "percentage": 88
-                    },
-                    {
-                        "title": "Thúc đẩy sự bình tĩnh và thư giãn",
-                        "percentage": 99
-                    }
-                ]
-            },
-            {
-                "id": "best-4",
-                "name": "Mystic Earl Grey",
-                "image": "products/oolong1.jpg",
-                "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
-                "benefits": [
-                    {
-                        "title": "Tăng cường năng lượng và tập trung",
-                        "percentage": 83
-                    },
-                    {
-                        "title": "Giàu chất chống oxy hoá",
-                        "percentage": 89
-                    },
-                    {
-                        "title": "Tăng cường trao đổi chất",
-                        "percentage": 97
-                    },
-                    {
-                        "title": "Thúc đẩy sự bình tĩnh và thư giãn",
-                        "percentage": 99
-                    }
-                ]
-            }
-        ]
+    {
+      "id": "740c",
+      "name": "ádaqdqfwqw"
+    }
+  ],
+  "hero": {
+    "type": "video",
+    "src": "video.mp4",
+    "text": "Chỉ những lá trà ngon nhất mới được đưa vào sản phẩm của chúng tôi,<br class='hidden lg:block'/> đảm bảo mỗi ngụm trà đều mang hương vị tinh khiết và tuyệt hảo.",
+    "image": "hero_img.png"
+  },
+  "users": [
+    {
+      "id": "907e",
+      "name": "ádad",
+      "email": "qwdqwdqw@gmail.com",
+      "password": "aqsdqdqw",
+      "phone": "123213",
+      "address": "1231232",
+      "roleId": "1",
+      "status": "inactive"
     },
-    "about": {
-        "id": "about",
-        "type": "hero-about",
-        "background": "aboutUsImg.jpg",
-        "overlay": "bg-p-950/80",
-        "watermark": "TEA <br />STATION",
-        "heading": {
-            "subTitle": "Khám phá",
-            "title": "Câu Chuyện & Sứ Mệnh"
-        },
-        "content": [
-            "Tại Tea Station, chúng tôi tận tâm tạo ra những loại trà đặc biệt tôn vinh hương vị và sức khỏe. Có nguồn gốc từ những thành phần tốt nhất, các hỗn hợp của chúng tôi được chế tác bằng sự chăm chút và đam mê, đảm bảo mỗi tách trà đều mang đến trải nghiệm thú vị. <br />Cam kết về tính bền vững và hỗ trợ cộng đồng địa phương, chúng tôi mong muốn mang đến cho bạn không chỉ là trà, mà còn là sự kết nối với thiên nhiên và truyền thống trong từng ngụm trà. Hãy cùng chúng tôi thưởng thức hành trình của trà."
-        ]
+    {
+      "id": "e104",
+      "name": "ádqw",
+      "email": "dqwdqwdqw@gmail.com",
+      "password": "dqwdqwd",
+      "phone": "qưdqwdq",
+      "address": "ưdqwdqwd",
+      "roleId": "2",
+      "status": "inactive"
     },
-    "productsList": [
-        {
-            "id": "blacktea-midnight-spice-1",
-            "name": "Midnight Spice",
-            "image": "products/blacktea1.jpg",
-            "description": "Một sự pha trộn đậm đà với quế, bạch đậu khấu và chút hương đinh hương.",
-            "categoryId": "blackTea",
-            "slug": "midnight-spice",
-            "images": ["products/blacktea3.jpg", "products/blacktea2.jpg", "products/blacktea4.jpg"],
-            "basePrice": 69000,
-            "unit": "gói",
-            "sizes": [
-                {
-                    "id": "1",
-                    "label": "50g",
-                    "price": 0
-                },
-                {
-                    "id": "2",
-                    "label": "100g",
-                    "price": 99000
-                },
-                {
-                    "id": "3",
-                    "label": "200g",
-                    "price": 149000
-                }
-            ],
-            "variants": [
-                {
-                    "id": "1",
-                    "label": "Nguyên chất"
-                },
-                {
-                    "id": "2",
-                    "label": "Black tea + Mật ong"
-                },
-                {
-                    "id": "3",
-                    "label": "Black tea + Quế"
-                }
-            ],
-            "origin": "Assam – Ấn Độ",
-            "brewGuide": {
-                "tea": "3g trà đen",
-                "water": "200ml",
-                "temperature": "95°C"
-            },
-            "expiry": "24 tháng kể từ ngày sản xuất",
-            "storage": "Bảo quản nơi khô ráo, tránh ánh nắng",
-            "stock": 150,
-            "status": "active"
-        },
-        {
-            "id": "matcha-zen-garden-1",
-            "name": "Zen Garden",
-            "image": "products/matcha1.jpg",
-            "description": "Sự kết hợp dịu nhẹ của matcha với chút hương hoa nhài và hoa hồng.",
-            "categoryId": "matcha",
-            "slug": "zen-garden",
-            "images": ["products/matcha2.jpg", "products/matcha3.jpg", "products/matcha4.jpg"],
-            "basePrice": 89000,
-            "unit": "gói",
-            "sizes": [
-                {
-                    "id": "1",
-                    "label": "50g",
-                    "price": 0
-                },
-                {
-                    "id": "2",
-                    "label": "100g",
-                    "price": 178000
-                },
-                {
-                    "id": "3",
-                    "label": "200g",
-                    "price": 267000
-                }
-            ],
-            "variants": [
-                {
-                    "id": "1",
-                    "label": "Nguyên chất"
-                },
-                {
-                    "id": "2",
-                    "label": "Matcha + Hoa nhài"
-                },
-                {
-                    "id": "3",
-                    "label": "Matcha + Mật ong"
-                }
-            ],
-            "origin": "Uji, Kyoto – Nhật Bản",
-            "brewGuide": {
-                "tea": "2g matcha",
-                "water": "70ml",
-                "temperature": "75°C"
-            },
-            "expiry": "12 tháng kể từ ngày sản xuất",
-            "storage": "Bảo quản kín, tránh ánh nắng và độ ẩm",
-            "stock": 120,
-            "status": "active"
-        },
-        {
-            "id": "oolong-jade-orchid-1",
-            "name": "Jade Orchid",
-            "image": "products/oolong1.jpg",
-            "description": "Trà ô long thơm ngát với hương hoa lan và hoa nhài tinh tế.",
-            "categoryId": "oolongTea",
-            "slug": "jade-orchid",
-            "images": ["products/oolong4.jpg", "products/oolong2.jpg", "products/oolong3.jpg"],
-            "basePrice": 79000,
-            "unit": "gói",
-            "sizes": [
-                {
-                    "id": "1",
-                    "label": "50g",
-                    "price": 0
-                },
-                {
-                    "id": "2",
-                    "label": "100g",
-                    "price": 119000
-                },
-                {
-                    "id": "3",
-                    "label": "200g",
-                    "price": 169000
-                }
-            ],
-            "variants": [
-                {
-                    "id": "1",
-                    "label": "Nguyên chất"
-                },
-                {
-                    "id": "2",
-                    "label": "Ô long + Hoa nhài"
-                }
-            ],
-            "origin": "Nantou – Đài Loan",
-            "brewGuide": {
-                "tea": "5g trà oolong",
-                "water": "150ml",
-                "temperature": "90°C"
-            },
-            "expiry": "18 tháng kể từ ngày sản xuất",
-            "storage": "Đậy kín, tránh mùi mạnh",
-            "stock": 90,
-            "status": "active"
-        },
-        {
-            "id": "whitetea-silver-dew-1",
-            "name": "Silver Dew",
-            "image": "products/whitetea1.jpg",
-            "description": "Trà trắng nhẹ nhàng với hương lê tươi mát và chút hoa nhài.",
-            "categoryId": "whiteTea",
-            "slug": "silver-dew",
-            "images": ["products/whitetea3.jpg", "products/whitetea2.jpg", "products/whitetea4.jpg"],
-            "basePrice": 85000,
-            "unit": "gói",
-            "sizes": [
-                {
-                    "id": "1",
-                    "label": "50g",
-                    "price": 0
-                },
-                {
-                    "id": "2",
-                    "label": "100g",
-                    "price": 125000
-                }
-            ],
-            "variants": [
-                {
-                    "id": "1",
-                    "label": "Nguyên chất"
-                },
-                {
-                    "id": "2",
-                    "label": "White tea + Hoa nhài"
-                }
-            ],
-            "origin": "Phúc Đỉnh – Phúc Kiến, Trung Quốc",
-            "brewGuide": {
-                "tea": "4g trà trắng",
-                "water": "200ml",
-                "temperature": "80°C"
-            },
-            "expiry": "18 tháng kể từ ngày sản xuất",
-            "storage": "Bảo quản kín, tránh độ ẩm cao",
-            "stock": 70,
-            "status": "active"
-        }
-    ],
-    "pageProducts": [
-        {
-            "id": 1,
-            "slug": "products",
-            "banner": "banner1.jpg",
-            "subtitle": "Shop with us",
-            "title": "Tất cả sản phẩm",
-            "description": "Cho dù bạn là người đam mê trà lâu năm hay mới bước chân vào thế giới trà, chúng tôi ở đây để giúp bạn khám phá loại trà pha trộn yêu thích tiếp theo của mình. Khám phá bộ sưu tập của chúng tôi và trải nghiệm nghệ thuật pha trà trong từng ngụm."
-        }
-    ],
-    "site_stats": {
-        "products": 100,
-        "customers": "500k+",
-        "rating": 4.9
+    {
+      "id": "f789",
+      "name": "Bảo Khánh",
+      "email": "khanhtnb220@gmail.com",
+      "password": "123456",
+      "phone": "0916022815",
+      "address": "An Dương Vương",
+      "roleId": "1",
+      "status": "active"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Trà Matcha",
+      "id": "1",
+      "slug": "matcha",
+      "status": "active"
     },
-    "address": {
-        "code": "HCM",
-        "name": "TP Hồ Chí Minh",
-        "districts": [
-            {
-                "code": "Q1",
-                "name": "Quận 1",
-                "wards": [
-                    {
-                        "code": "Q1_PBN",
-                        "name": "Phường Bến Nghé"
-                    },
-                    {
-                        "code": "Q1_PBT",
-                        "name": "Phường Bến Thành"
-                    },
-                    {
-                        "code": "Q1_PDK",
-                        "name": "Phường Đa Kao"
-                    },
-                    {
-                        "code": "Q1_PNTB",
-                        "name": "Phường Nguyễn Thái Bình"
-                    },
-                    {
-                        "code": "Q1_PNCT",
-                        "name": "Phường Nguyễn Cư Trinh"
-                    }
-                ]
-            },
-            {
-                "code": "Q3",
-                "name": "Quận 3",
-                "wards": [
-                    {
-                        "code": "Q3_P1",
-                        "name": "Phường 1"
-                    },
-                    {
-                        "code": "Q3_P3",
-                        "name": "Phường 3"
-                    },
-                    {
-                        "code": "Q3_P7",
-                        "name": "Phường 7"
-                    },
-                    {
-                        "code": "Q3_P10",
-                        "name": "Phường 10"
-                    }
-                ]
-            },
-            {
-                "code": "Q4",
-                "name": "Quận 4",
-                "wards": [
-                    {
-                        "code": "Q4_P1",
-                        "name": "Phường 1"
-                    },
-                    {
-                        "code": "Q4_P2",
-                        "name": "Phường 2"
-                    },
-                    {
-                        "code": "Q4_P8",
-                        "name": "Phường 8"
-                    },
-                    {
-                        "code": "Q4_P9",
-                        "name": "Phường 9"
-                    }
-                ]
-            },
-            {
-                "code": "Q5",
-                "name": "Quận 5",
-                "wards": [
-                    {
-                        "code": "Q5_P1",
-                        "name": "Phường 1"
-                    },
-                    {
-                        "code": "Q5_P4",
-                        "name": "Phường 4"
-                    },
-                    {
-                        "code": "Q5_P7",
-                        "name": "Phường 7"
-                    }
-                ]
-            },
-            {
-                "code": "Q7",
-                "name": "Quận 7",
-                "wards": [
-                    {
-                        "code": "Q7_TP",
-                        "name": "Phường Tân Phú"
-                    },
-                    {
-                        "code": "Q7_TQ",
-                        "name": "Phường Tân Quy"
-                    },
-                    {
-                        "code": "Q7_PM",
-                        "name": "Phường Phú Mỹ"
-                    },
-                    {
-                        "code": "Q7_PTH",
-                        "name": "Phường Phú Thuận"
-                    }
-                ]
-            },
-            {
-                "code": "TPD",
-                "name": "TP Thủ Đức",
-                "wards": [
-                    {
-                        "code": "TD_LX",
-                        "name": "Phường Linh Xuân"
-                    },
-                    {
-                        "code": "TD_LT",
-                        "name": "Phường Linh Trung"
-                    },
-                    {
-                        "code": "TD_TP",
-                        "name": "Phường Tăng Nhơn Phú"
-                    },
-                    {
-                        "code": "TD_HT",
-                        "name": "Phường Hiệp Bình Chánh"
-                    }
-                ]
-            },
-            {
-                "code": "BC",
-                "name": "Huyện Bình Chánh",
-                "wards": [
-                    {
-                        "code": "BC_TK",
-                        "name": "Xã Tân Kiên"
-                    },
-                    {
-                        "code": "BC_VL",
-                        "name": "Xã Vĩnh Lộc A"
-                    },
-                    {
-                        "code": "BC_PL",
-                        "name": "Xã Phong Phú"
-                    }
-                ]
-            },
-            {
-                "code": "HM",
-                "name": "Huyện Hóc Môn",
-                "wards": [
-                    {
-                        "code": "HM_TM",
-                        "name": "Xã Tân Xuân"
-                    },
-                    {
-                        "code": "HM_BA",
-                        "name": "Xã Bà Điểm"
-                    }
-                ]
-            }
-        ]
+    {
+      "id": "2",
+      "name": "Trà Đen",
+      "slug": "blackTea"
     },
-    "partnerLogos": [
-        {
-            "id": "1",
-            "fileName": "costco.png",
-            "alt": "Costco Logo"
+    {
+      "id": "3",
+      "name": "Trà Oolong",
+      "slug": "oolongTea"
+    },
+    {
+      "id": "4",
+      "name": "Trà Trắng",
+      "slug": "whiteTea"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "category_id": "1",
+      "name": "Trà Matcha",
+      "slug": "Matcha Magic",
+      "short_desc": "Khám phá những lợi ích tiềm năng của 'vàng xanh' từ Nhật Bản",
+      "description": "Sẵn sàng nâng cao sức khỏe của bạn? Hãy làm quen với matcha, loại bột màu xanh lá cây rực rỡ đang làm khuynh đảo thế giới chăm sóc sức khỏe. Chứa đầy chất chống oxy hóa và chất dinh dưỡng, matcha cung cấp nguồn năng lượng mạnh mẽ mà không gây bồn chồn, nhờ sự kết hợp độc đáo giữa caffeine và L-theanine.<br/> Loại trà này không chỉ tăng cường sự tập trung và trao đổi chất mà còn thêm hương vị thơm ngon cho sinh tố, đồ nướng và cà phê latte. Hãy đắm mình vào thế giới matcha và trải nghiệm cách siêu thực phẩm cổ xưa này có thể tiếp thêm sinh lực cho cơ thể và trí óc của bạn!",
+      "base_price": 89000,
+      "featured": true,
+      "idName": "matcha",
+      "image": "product_1.jpg"
+    },
+    {
+      "id": "2",
+      "category_id": "3",
+      "name": "Trà Olong",
+      "slug": "Cuộc cách mạng trà ô long",
+      "short_desc": "Mở khóa bí mật của loại trà lành mạnh nhất từ ​​thiên nhiên",
+      "description": "Bạn có tò mò về bí quyết trường thọ và sống lâu không? Không cần tìm đâu xa, hãy tìm đến trà xanh! Thức uống cổ xưa này, được tôn sùng trong nhiều nền văn hóa trên thế giới, chứa đầy chất chống oxy hóa mạnh mẽ có thể thúc đẩy quá trình trao đổi chất, tăng cường chức năng não và thúc đẩy sức khỏe tim mạch. Với hương vị tinh tế và vô số lợi ích cho sức khỏe, trà xanh không chỉ là một thức uống mà còn là một lựa chọn về lối sống. Hãy tham gia cuộc cách mạng trà xanh và khám phá cách thức pha chế đơn giản này có thể biến đổi sức khỏe của bạn từng ngụm một!",
+      "base_price": 99000,
+      "featured": true,
+      "idName": "oolongTea",
+      "image": "product_2.jpg"
+    },
+    {
+      "id": "3",
+      "category_id": "4",
+      "name": "Trà Trắng",
+      "slug": "Tinh chất tinh tế từ trà trắng",
+      "short_desc": "Hành trình khám phá hương vị tinh khiết nhất từ thiên nhiên",
+      "description": "Trà trắng, được tôn sùng vì sự nhẹ nhàng và tinh tế của nó, được chế biến từ lá non và nụ của cây Camellia sinensis. Với hương hoa nhẹ nhàng và vị ngọt tự nhiên, loại trà này mang đến trải nghiệm nhẹ nhàng nhưng sảng khoái. Giàu chất chống oxy hóa và ít caffeine, trà trắng không chỉ làm hài lòng khẩu vị mà còn hỗ trợ sức khỏe, khiến nó trở thành lựa chọn hoàn hảo cho những khoảnh khắc thư giãn hoặc trẻ hóa. Khám phá vẻ đẹp thanh bình của trà trắng và nâng tầm nghi thức uống trà của bạn lên một tầm cao mới.",
+      "base_price": 99000,
+      "featured": true,
+      "idName": "whiteTea",
+      "image": "product_3.jpg"
+    },
+    {
+      "id": "4",
+      "category_id": "2",
+      "name": "Trà Đen",
+      "slug": "Đánh thức các giác quan của bạn cùng trà đen",
+      "short_desc": "Hương vị đậm đà truyền thống vượt thời gian",
+      "description": "Hãy thưởng thức hương vị đậm đà, mạnh mẽ của trà đen, được chế tác hoàn hảo cho khẩu vị sành điệu. Mỗi ngụm trà mang đến sự pha trộn hài hòa giữa hương vị sâu lắng và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ trưa. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+      "base_price": 99000,
+      "featured": true,
+      "idName": "blackTea",
+      "image": "product_4.png"
+    }
+  ],
+  "product_images": [
+    {
+      "id": "1",
+      "product_id": "1",
+      "url": "matcha1.jpg",
+      "is_main": true
+    },
+    {
+      "id": "2",
+      "product_id": "1",
+      "url": "matcha2.jpg",
+      "is_main": false
+    },
+    {
+      "id": "3",
+      "product_id": "1",
+      "url": "matcha3.jpg",
+      "is_main": false
+    },
+    {
+      "id": "4",
+      "product_id": "1",
+      "url": "matcha4.jpg",
+      "is_main": false
+    },
+    {
+      "id": "5",
+      "product_id": "1",
+      "url": "matcha5.jpg",
+      "is_main": false
+    },
+    {
+      "id": "6",
+      "product_id": "1",
+      "url": "matcha6.jpg",
+      "is_main": false
+    },
+    {
+      "id": "7",
+      "product_id": "1",
+      "url": "matcha7.jpg",
+      "is_main": false
+    },
+    {
+      "id": "8",
+      "product_id": "1",
+      "url": "matcha8.jpg",
+      "is_main": false
+    },
+    {
+      "id": "9",
+      "product_id": "1",
+      "url": "matcha9.jpg",
+      "is_main": false
+    },
+    {
+      "id": "10",
+      "product_id": "1",
+      "url": "matcha10.jpg",
+      "is_main": false
+    },
+    {
+      "id": "11",
+      "product_id": "1",
+      "url": "matcha11.jpg",
+      "is_main": false
+    },
+    {
+      "id": "12",
+      "product_id": "1",
+      "url": "matcha12.jpg",
+      "is_main": false
+    },
+    {
+      "id": "13",
+      "product_id": "1",
+      "url": "matcha13.jpg",
+      "is_main": false
+    },
+    {
+      "id": "14",
+      "product_id": "1",
+      "url": "matcha14.jpg",
+      "is_main": false
+    },
+    {
+      "id": "15",
+      "product_id": "1",
+      "url": "matcha15.jpg",
+      "is_main": false
+    },
+    {
+      "id": "16",
+      "product_id": "2",
+      "url": "oolong1.jpg",
+      "is_main": true
+    },
+    {
+      "id": "17",
+      "product_id": "2",
+      "url": "oolong2.jpg",
+      "is_main": false
+    },
+    {
+      "id": "18",
+      "product_id": "2",
+      "url": "oolong3.jpg",
+      "is_main": false
+    },
+    {
+      "id": "19",
+      "product_id": "2",
+      "url": "oolong4.jpg",
+      "is_main": false
+    },
+    {
+      "id": "20",
+      "product_id": "2",
+      "url": "oolong5.jpg",
+      "is_main": false
+    },
+    {
+      "id": "21",
+      "product_id": "2",
+      "url": "oolong6.jpg",
+      "is_main": false
+    },
+    {
+      "id": "22",
+      "product_id": "2",
+      "url": "oolong7.jpg",
+      "is_main": false
+    },
+    {
+      "id": "23",
+      "product_id": "2",
+      "url": "oolong8.jpg",
+      "is_main": false
+    },
+    {
+      "id": "24",
+      "product_id": "4",
+      "url": "blacktea1.jpg",
+      "is_main": true
+    },
+    {
+      "id": "25",
+      "product_id": "4",
+      "url": "blacktea2.jpg",
+      "is_main": false
+    },
+    {
+      "id": "26",
+      "product_id": "4",
+      "url": "blacktea3.jpg",
+      "is_main": false
+    },
+    {
+      "id": "27",
+      "product_id": "4",
+      "url": "blacktea4.jpg",
+      "is_main": false
+    },
+    {
+      "id": "28",
+      "product_id": "3",
+      "url": "whitetea1.jpg",
+      "is_main": true
+    },
+    {
+      "id": "29",
+      "product_id": "3",
+      "url": "whitetea2.jpg",
+      "is_main": false
+    },
+    {
+      "id": "30",
+      "product_id": "3",
+      "url": "whitetea3.jpg",
+      "is_main": false
+    },
+    {
+      "id": "31",
+      "product_id": "3",
+      "url": "whitetea4.jpg",
+      "is_main": false
+    },
+    {
+      "id": "32",
+      "product_id": "3",
+      "url": "whitetea5.jpg",
+      "is_main": false
+    },
+    {
+      "id": "33",
+      "product_id": "3",
+      "url": "whitetea6.jpg",
+      "is_main": false
+    },
+    {
+      "id": "34",
+      "product_id": "3",
+      "url": "whitetea7.jpg",
+      "is_main": false
+    },
+    {
+      "id": "35",
+      "product_id": "3",
+      "url": "whitetea8.jpg",
+      "is_main": false
+    }
+  ],
+  "product_variants": [
+    {
+      "id": "1",
+      "product_id": "2",
+      "size": "50g",
+      "extra_price": 0,
+      "price": 89000,
+      "stock": 100,
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "product_id": "2",
+      "size": "100g",
+      "extra_price": 40000,
+      "price": 129000,
+      "stock": 60
+    },
+    {
+      "id": "3",
+      "product_id": "2",
+      "size": "200g",
+      "extra_price": 90000,
+      "price": 179000,
+      "stock": 30
+    },
+    {
+      "id": "4",
+      "product_id": "1",
+      "size": "50g",
+      "extra_price": 0,
+      "price": 99000,
+      "stock": 80,
+      "status": "inactive"
+    },
+    {
+      "id": "0065",
+      "product_id": "1",
+      "size": "2131",
+      "extra_price": 23123,
+      "price": 2313123,
+      "stock": 123,
+      "status": "active"
+    },
+    {
+      "id": "dd95",
+      "product_id": "4",
+      "size": "123",
+      "extra_price": 2,
+      "price": 1,
+      "stock": 2,
+      "status": "active"
+    },
+    {
+      "id": "3162",
+      "product_id": "4",
+      "size": "23",
+      "extra_price": 13213123,
+      "price": 13302123,
+      "stock": 31231,
+      "status": "active"
+    },
+    {
+      "id": "d358",
+      "product_id": "4",
+      "size": "2131",
+      "extra_price": 213123,
+      "price": 302123,
+      "stock": 3213,
+      "status": "active"
+    },
+    {
+      "id": "f6ce",
+      "product_id": "4",
+      "size": "1231",
+      "extra_price": 21312,
+      "price": 120312,
+      "stock": 3321321,
+      "status": "active"
+    },
+    {
+      "id": "222d",
+      "product_id": "3",
+      "size": "2131",
+      "extra_price": 3123123,
+      "price": 3222123,
+      "stock": 3123,
+      "status": "active"
+    },
+    {
+      "id": "4fdc",
+      "product_id": "2",
+      "size": "232",
+      "extra_price": 0,
+      "price": 312312,
+      "stock": 32,
+      "status": "inactive"
+    }
+  ],
+  "product_attributes": [
+    {
+      "product_id": "1",
+      "origin": "Uji, Kyoto – Nhật Bản",
+      "brew_guide": "2g matcha – 70ml nước – 75°C",
+      "shelf_life": "12 tháng",
+      "storage": "Nơi khô ráo, tránh ánh nắng"
+    },
+    {
+      "product_id": "2",
+      "origin": "Đài Loan",
+      "brew_guide": "5g trà – 150ml nước – 90°C",
+      "shelf_life": "18 tháng",
+      "storage": "Nơi thoáng mát"
+    }
+  ],
+  "cart": [
+    {
+      "id": "1",
+      "user_id": "2",
+      "product_id": "1",
+      "variant_id": "1",
+      "quantity": 2
+    },
+    {
+      "id": "2",
+      "user_id": "2",
+      "product_id": "2",
+      "variant_id": "4",
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "user_id": "2",
+      "customer_name": "Nguyễn Văn A",
+      "phone": "0123456789",
+      "email": "abc@gmail.com",
+      "address": "123 Nguyễn Trãi, Q1, HCM",
+      "note": "",
+      "payment_method": "cod",
+      "status": "pending",
+      "total": 277000,
+      "shipping_fee": 0,
+      "created_at": "2026-01-26"
+    },
+    {
+      "id": "9db0",
+      "user_id": "2",
+      "customer_name": "Trương Nguyễn Bảo Khánh",
+      "phone": "0916022815",
+      "email": "khanhtnb220@gmail.com",
+      "address": "324 Phạm Văn Chí, Quận 1, TP Hồ Chí Minh",
+      "note": "ádassd",
+      "payment_method": "cod",
+      "status": "pending",
+      "total": 89000,
+      "shipping_fee": 0,
+      "created_at": "2026-02-22"
+    },
+    {
+      "id": "1e59",
+      "user_id": "2",
+      "customer_name": "Trương Nguyễn Bảo Khánh",
+      "phone": "0916022815",
+      "email": "khanhtnb220@gmail.com",
+      "address": "324 Phạm Văn Chí, Phường 3, Quận 3, TP Hồ Chí Minh",
+      "note": "âsdasdqwd",
+      "payment_method": "cod",
+      "status": "pending",
+      "total": 89000,
+      "shipping_fee": 0,
+      "created_at": "2026-02-23"
+    },
+    {
+      "id": "8171",
+      "user_id": "2",
+      "customer_name": "Trương Nguyễn Bảo Khánh",
+      "phone": "0916022815",
+      "email": "khanhtnb220@gmail.com",
+      "address": "324 Phạm Văn Chí, Phường 1, Quận 3, TP Hồ Chí Minh",
+      "note": "",
+      "payment_method": "cod",
+      "status": "pending",
+      "total": 89000,
+      "shipping_fee": 0,
+      "created_at": "2026-02-23"
+    },
+    {
+      "id": "5453",
+      "user_id": "4f8f",
+      "customer_name": "Trương Nguyễn Bảo Khánh",
+      "phone": "0916022815",
+      "email": "khanhtnb220@gmail.com",
+      "address": "324 Phạm Văn Chí, Phường 3, Quận 3, TP Hồ Chí Minh",
+      "note": "asfsadqfqfdqwedq",
+      "payment_method": "cod",
+      "status": "pending",
+      "total": 89000,
+      "shipping_fee": 0,
+      "created_at": "2026-02-23"
+    }
+  ],
+  "order_items": [
+    {
+      "id": "1",
+      "order_id": "1",
+      "product_id": "1",
+      "variant_id": "1",
+      "price": 89000,
+      "quantity": 2,
+      "total": 178000
+    },
+    {
+      "id": "2",
+      "order_id": "1",
+      "product_id": "2",
+      "variant_id": "4",
+      "price": 99000,
+      "quantity": 1,
+      "total": 99000
+    },
+    {
+      "id": "c147",
+      "order_id": "587d",
+      "product_id": "matcha-zen-garden-1",
+      "price": 89000,
+      "quantity": 2,
+      "total": 178000
+    },
+    {
+      "id": "4fef",
+      "order_id": "9db0",
+      "product_id": "matcha-zen-garden-1",
+      "price": 89000,
+      "quantity": 1,
+      "total": 89000
+    },
+    {
+      "id": "9494",
+      "order_id": "1e59",
+      "product_id": "matcha-zen-garden-1",
+      "price": 89000,
+      "quantity": 1,
+      "total": 89000
+    },
+    {
+      "id": "b889",
+      "order_id": "8171",
+      "product_id": "matcha-zen-garden-1",
+      "price": 89000,
+      "quantity": 1,
+      "total": 89000
+    },
+    {
+      "id": "9e5b",
+      "order_id": "5453",
+      "product_id": "matcha-zen-garden-1",
+      "price": 89000,
+      "quantity": 1,
+      "total": 89000
+    }
+  ],
+  "payments": [
+    {
+      "order_id": "1",
+      "method": "COD",
+      "status": "unpaid"
+    }
+  ],
+  "features": {
+    "id": "features",
+    "type": "feature-grid",
+    "heading": {
+      "subTitle": "Why Us?",
+      "title": "Sự <span class='text-gradient'>độc đáo</span> từ<br/>Tea Station"
+    },
+    "items": [
+      {
+        "id": "feature-1",
+        "title": "Nguồn cung cao cấp",
+        "description": "Chúng tôi tự hào sản xuất trà ngay tại Hoa Kỳ, sử dụng nguyên liệu chất lượng cao từ các trang trại địa phương.",
+        "image": "benefit_1.jpg",
+        "aos": {
+          "animation": "zoom-in",
+          "delay": 0
         },
-        {
-            "id": "2",
-            "fileName": "kroger.png",
-            "alt": "Kroger Logo"
+        "position": "left-top"
+      },
+      {
+        "id": "feature-2",
+        "title": "Hương vị và pha chế độc đáo",
+        "description": "Sản phẩm độc quyền của chúng tôi gồm các loại trà với hương vị độc đáo, được chế tác để làm hài lòng mọi khẩu vị.",
+        "image": "pic1.jpg",
+        "aos": {
+          "animation": "zoom-in",
+          "delay": 100
         },
-        {
-            "id": "3",
-            "fileName": "meijer.png",
-            "alt": "Meijer Logo"
+        "position": "right-top"
+      },
+      {
+        "id": "feature-3",
+        "title": "Tập trung vào sức khỏe",
+        "description": "Hãy thưởng thức các loại trà tốt cho sức khỏe của chúng tôi, được pha chế cẩn thận để hỗ trợ trí óc, cơ thể và tâm hồn của bạn.",
+        "image": "benefit_3.jpg",
+        "aos": {
+          "animation": "zoom-in",
+          "delay": 200
         },
-        {
-            "id": "4",
-            "fileName": "publix.png",
-            "alt": "Publix Logo"
+        "position": "left-bottom"
+      },
+      {
+        "id": "feature-4",
+        "title": "Trải Nghiệm Cá Nhân Hoá",
+        "description": "Trải nghiệm dịch vụ được cá nhân hóa với mọi đơn hàng, phù hợp với sở thích và nhu cầu trà riêng của bạn.",
+        "image": "benefit_4.jpg",
+        "aos": {
+          "animation": "zoom-in",
+          "delay": 300
         },
-        {
-            "id": "5",
-            "fileName": "safeway.png",
-            "alt": "Safeway Logo"
-        },
-        {
-            "id": "6",
-            "fileName": "target.png",
-            "alt": "Target Logo"
-        },
-        {
-            "id": "7",
-            "fileName": "walmart.png",
-            "alt": "Walmart Logo"
-        },
-        {
-            "id": "8",
-            "fileName": "wegmans.png",
-            "alt": "Wegmans Logo"
-        },
-        {
-            "id": "9",
-            "fileName": "whole-foods.png",
-            "alt": "Whole Foods Logo"
-        }
+        "position": "right-bottom"
+      }
     ]
+  },
+  "bestSellers": {
+    "id": "best-sellers",
+    "type": "product-slider",
+    "heading": {
+      "subTitle": "Khách hàng yêu thích",
+      "title": "Những Sản Phẩm <span class='text-gradient'>Bán Chạy Nhất</span>"
+    },
+    "description": "Khám phá những sản phẩm bán chạy nhất của chúng tôi, nơi chất lượng kết hợp hương vị trong mỗi tách trà. Hãy tham gia cùng hàng ngàn khách hàng hài lòng đã biến những hỗn hợp này thành sở thích của họ và nâng tầm thời gian uống trà của bạn ngay hôm nay!",
+    "products": [
+      {
+        "id": "best-1",
+        "name": "Peppermint Velvet",
+        "image": "products/matcha1.jpg",
+        "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+        "benefits": [
+          {
+            "title": "Tăng cường năng lượng và tập trung",
+            "percentage": 94,
+            "position": "top"
+          },
+          {
+            "title": "Giàu chất chống oxy hoá",
+            "percentage": 93,
+            "position": "top"
+          },
+          {
+            "title": "Tăng cường trao đổi chất",
+            "percentage": 90,
+            "position": "bot"
+          },
+          {
+            "title": "Thúc đẩy sự bình tĩnh và thư giãn",
+            "percentage": 95,
+            "position": "bot"
+          }
+        ]
+      },
+      {
+        "id": "best-2",
+        "name": "Chamomile Bliss",
+        "image": "products/blacktea1.jpg",
+        "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+        "benefits": [
+          {
+            "title": "Tăng cường năng lượng và tập trung",
+            "percentage": 96
+          },
+          {
+            "title": "Giàu chất chống oxy hoá",
+            "percentage": 97
+          },
+          {
+            "title": "Tăng cường trao đổi chất",
+            "percentage": 90
+          },
+          {
+            "title": "Thúc đẩy sự bình tĩnh và thư giãn",
+            "percentage": 89
+          }
+        ]
+      },
+      {
+        "id": "best-3",
+        "name": "Lemon Ginger Zest",
+        "image": "products/whitetea1.jpg",
+        "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+        "benefits": [
+          {
+            "title": "Tăng cường năng lượng và tập trung",
+            "percentage": 85
+          },
+          {
+            "title": "Giàu chất chống oxy hoá",
+            "percentage": 95
+          },
+          {
+            "title": "Tăng cường trao đổi chất",
+            "percentage": 88
+          },
+          {
+            "title": "Thúc đẩy sự bình tĩnh và thư giãn",
+            "percentage": 99
+          }
+        ]
+      },
+      {
+        "id": "best-4",
+        "name": "Mystic Earl Grey",
+        "image": "products/oolong1.jpg",
+        "description": "Mỗi ngụm mang đến sự pha trộn hài hòa giữa hương vị đậm đà và hương thơm sảng khoái, khiến đây trở thành lựa chọn lý tưởng cho cả nghi lễ buổi sáng và giờ nghỉ giải lao buổi chiều. Trải nghiệm sự ấm áp dễ chịu và những phẩm chất tràn đầy năng lượng đã khiến trà đen trở thành thức uống cổ điển được yêu thích trong nhiều thế kỷ.",
+        "benefits": [
+          {
+            "title": "Tăng cường năng lượng và tập trung",
+            "percentage": 83
+          },
+          {
+            "title": "Giàu chất chống oxy hoá",
+            "percentage": 89
+          },
+          {
+            "title": "Tăng cường trao đổi chất",
+            "percentage": 97
+          },
+          {
+            "title": "Thúc đẩy sự bình tĩnh và thư giãn",
+            "percentage": 99
+          }
+        ]
+      }
+    ]
+  },
+  "about": {
+    "id": "about",
+    "type": "hero-about",
+    "background": "aboutUsImg.jpg",
+    "overlay": "bg-p-950/80",
+    "watermark": "TEA <br />STATION",
+    "heading": {
+      "subTitle": "Khám phá",
+      "title": "Câu Chuyện & Sứ Mệnh"
+    },
+    "content": [
+      "Tại Tea Station, chúng tôi tận tâm tạo ra những loại trà đặc biệt tôn vinh hương vị và sức khỏe. Có nguồn gốc từ những thành phần tốt nhất, các hỗn hợp của chúng tôi được chế tác bằng sự chăm chút và đam mê, đảm bảo mỗi tách trà đều mang đến trải nghiệm thú vị. <br />Cam kết về tính bền vững và hỗ trợ cộng đồng địa phương, chúng tôi mong muốn mang đến cho bạn không chỉ là trà, mà còn là sự kết nối với thiên nhiên và truyền thống trong từng ngụm trà. Hãy cùng chúng tôi thưởng thức hành trình của trà."
+    ]
+  },
+  "productsList": [
+    {
+      "id": "3",
+      "name": "Midnight Spice",
+      "image": "products/blacktea1.jpg",
+      "description": "Một sự pha trộn đậm đà với quế, bạch đậu khấu và chút hương đinh hương.",
+      "categoryId": "blackTea",
+      "slug": "midnight-spice",
+      "images": [
+        "products/blacktea3.jpg",
+        "products/blacktea2.jpg",
+        "products/blacktea4.jpg"
+      ],
+      "basePrice": 69000,
+      "unit": "gói",
+      "sizes": [
+        {
+          "id": "1",
+          "label": "50g",
+          "price": 0
+        },
+        {
+          "id": "2",
+          "label": "100g",
+          "price": 99000
+        },
+        {
+          "id": "3",
+          "label": "200g",
+          "price": 149000
+        }
+      ],
+      "variants": [
+        {
+          "id": "1",
+          "label": "Nguyên chất"
+        },
+        {
+          "id": "2",
+          "label": "Black tea + Mật ong"
+        },
+        {
+          "id": "3",
+          "label": "Black tea + Quế"
+        }
+      ],
+      "origin": "Assam – Ấn Độ",
+      "brewGuide": {
+        "tea": "3g trà đen",
+        "water": "200ml",
+        "temperature": "95°C"
+      },
+      "expiry": "24 tháng kể từ ngày sản xuất",
+      "storage": "Bảo quản nơi khô ráo, tránh ánh nắng",
+      "stock": 150,
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Zen Garden",
+      "image": "products/matcha1.jpg",
+      "description": "Sự kết hợp dịu nhẹ của matcha với chút hương hoa nhài và hoa hồng.",
+      "categoryId": "matcha",
+      "slug": "zen-garden",
+      "images": [
+        "products/matcha2.jpg",
+        "products/matcha3.jpg",
+        "products/matcha4.jpg"
+      ],
+      "basePrice": 89000,
+      "unit": "gói",
+      "sizes": [
+        {
+          "id": "1",
+          "label": "50g",
+          "price": 0
+        },
+        {
+          "id": "2",
+          "label": "100g",
+          "price": 178000
+        },
+        {
+          "id": "3",
+          "label": "200g",
+          "price": 267000
+        }
+      ],
+      "variants": [
+        {
+          "id": "1",
+          "label": "Nguyên chất"
+        },
+        {
+          "id": "2",
+          "label": "Matcha + Hoa nhài"
+        },
+        {
+          "id": "3",
+          "label": "Matcha + Mật ong"
+        }
+      ],
+      "origin": "Uji, Kyoto – Nhật Bản",
+      "brewGuide": {
+        "tea": "2g matcha",
+        "water": "70ml",
+        "temperature": "75°C"
+      },
+      "expiry": "12 tháng kể từ ngày sản xuất",
+      "storage": "Bảo quản kín, tránh ánh nắng và độ ẩm",
+      "stock": 120,
+      "status": "active"
+    },
+    {
+      "id": "1",
+      "name": "Jade Orchid",
+      "image": "products/oolong1.jpg",
+      "description": "Trà ô long thơm ngát với hương hoa lan và hoa nhài tinh tế.",
+      "categoryId": "oolongTea",
+      "slug": "jade-orchid",
+      "images": [
+        "products/oolong4.jpg",
+        "products/oolong2.jpg",
+        "products/oolong3.jpg"
+      ],
+      "basePrice": 79000,
+      "unit": "gói",
+      "sizes": [
+        {
+          "id": "1",
+          "label": "50g",
+          "price": 0
+        },
+        {
+          "id": "2",
+          "label": "100g",
+          "price": 119000
+        },
+        {
+          "id": "3",
+          "label": "200g",
+          "price": 169000
+        }
+      ],
+      "variants": [
+        {
+          "id": "1",
+          "label": "Nguyên chất"
+        },
+        {
+          "id": "2",
+          "label": "Ô long + Hoa nhài"
+        }
+      ],
+      "origin": "Nantou – Đài Loan",
+      "brewGuide": {
+        "tea": "5g trà oolong",
+        "water": "150ml",
+        "temperature": "90°C"
+      },
+      "expiry": "18 tháng kể từ ngày sản xuất",
+      "storage": "Đậy kín, tránh mùi mạnh",
+      "stock": 90,
+      "status": "active"
+    },
+    {
+      "id": "4",
+      "name": "Silver Dew",
+      "image": "products/whitetea1.jpg",
+      "description": "Trà trắng nhẹ nhàng với hương lê tươi mát và chút hoa nhài.",
+      "categoryId": "whiteTea",
+      "slug": "silver-dew",
+      "images": [
+        "products/whitetea3.jpg",
+        "products/whitetea2.jpg",
+        "products/whitetea4.jpg"
+      ],
+      "basePrice": 85000,
+      "unit": "gói",
+      "sizes": [
+        {
+          "id": "1",
+          "label": "50g",
+          "price": 0
+        },
+        {
+          "id": "2",
+          "label": "100g",
+          "price": 125000
+        }
+      ],
+      "variants": [
+        {
+          "id": "1",
+          "label": "Nguyên chất"
+        },
+        {
+          "id": "2",
+          "label": "White tea + Hoa nhài"
+        }
+      ],
+      "origin": "Phúc Đỉnh – Phúc Kiến, Trung Quốc",
+      "brewGuide": {
+        "tea": "4g trà trắng",
+        "water": "200ml",
+        "temperature": "80°C"
+      },
+      "expiry": "18 tháng kể từ ngày sản xuất",
+      "storage": "Bảo quản kín, tránh độ ẩm cao",
+      "stock": 70,
+      "status": "active"
+    }
+  ],
+  "pageProducts": [
+    {
+      "id": 1,
+      "slug": "products",
+      "banner": "banner1.jpg",
+      "subtitle": "Shop with us",
+      "title": "Tất cả sản phẩm",
+      "description": "Cho dù bạn là người đam mê trà lâu năm hay mới bước chân vào thế giới trà, chúng tôi ở đây để giúp bạn khám phá loại trà pha trộn yêu thích tiếp theo của mình. Khám phá bộ sưu tập của chúng tôi và trải nghiệm nghệ thuật pha trà trong từng ngụm."
+    }
+  ],
+  "site_stats": {
+    "products": 100,
+    "customers": "500k+",
+    "rating": 4.9
+  },
+  "address": {
+    "code": "HCM",
+    "name": "TP Hồ Chí Minh",
+    "districts": [
+      {
+        "code": "Q1",
+        "name": "Quận 1",
+        "wards": [
+          {
+            "code": "Q1_PBN",
+            "name": "Phường Bến Nghé"
+          },
+          {
+            "code": "Q1_PBT",
+            "name": "Phường Bến Thành"
+          },
+          {
+            "code": "Q1_PDK",
+            "name": "Phường Đa Kao"
+          },
+          {
+            "code": "Q1_PNTB",
+            "name": "Phường Nguyễn Thái Bình"
+          },
+          {
+            "code": "Q1_PNCT",
+            "name": "Phường Nguyễn Cư Trinh"
+          }
+        ]
+      },
+      {
+        "code": "Q3",
+        "name": "Quận 3",
+        "wards": [
+          {
+            "code": "Q3_P1",
+            "name": "Phường 1"
+          },
+          {
+            "code": "Q3_P3",
+            "name": "Phường 3"
+          },
+          {
+            "code": "Q3_P7",
+            "name": "Phường 7"
+          },
+          {
+            "code": "Q3_P10",
+            "name": "Phường 10"
+          }
+        ]
+      },
+      {
+        "code": "Q4",
+        "name": "Quận 4",
+        "wards": [
+          {
+            "code": "Q4_P1",
+            "name": "Phường 1"
+          },
+          {
+            "code": "Q4_P2",
+            "name": "Phường 2"
+          },
+          {
+            "code": "Q4_P8",
+            "name": "Phường 8"
+          },
+          {
+            "code": "Q4_P9",
+            "name": "Phường 9"
+          }
+        ]
+      },
+      {
+        "code": "Q5",
+        "name": "Quận 5",
+        "wards": [
+          {
+            "code": "Q5_P1",
+            "name": "Phường 1"
+          },
+          {
+            "code": "Q5_P4",
+            "name": "Phường 4"
+          },
+          {
+            "code": "Q5_P7",
+            "name": "Phường 7"
+          }
+        ]
+      },
+      {
+        "code": "Q7",
+        "name": "Quận 7",
+        "wards": [
+          {
+            "code": "Q7_TP",
+            "name": "Phường Tân Phú"
+          },
+          {
+            "code": "Q7_TQ",
+            "name": "Phường Tân Quy"
+          },
+          {
+            "code": "Q7_PM",
+            "name": "Phường Phú Mỹ"
+          },
+          {
+            "code": "Q7_PTH",
+            "name": "Phường Phú Thuận"
+          }
+        ]
+      },
+      {
+        "code": "TPD",
+        "name": "TP Thủ Đức",
+        "wards": [
+          {
+            "code": "TD_LX",
+            "name": "Phường Linh Xuân"
+          },
+          {
+            "code": "TD_LT",
+            "name": "Phường Linh Trung"
+          },
+          {
+            "code": "TD_TP",
+            "name": "Phường Tăng Nhơn Phú"
+          },
+          {
+            "code": "TD_HT",
+            "name": "Phường Hiệp Bình Chánh"
+          }
+        ]
+      },
+      {
+        "code": "BC",
+        "name": "Huyện Bình Chánh",
+        "wards": [
+          {
+            "code": "BC_TK",
+            "name": "Xã Tân Kiên"
+          },
+          {
+            "code": "BC_VL",
+            "name": "Xã Vĩnh Lộc A"
+          },
+          {
+            "code": "BC_PL",
+            "name": "Xã Phong Phú"
+          }
+        ]
+      },
+      {
+        "code": "HM",
+        "name": "Huyện Hóc Môn",
+        "wards": [
+          {
+            "code": "HM_TM",
+            "name": "Xã Tân Xuân"
+          },
+          {
+            "code": "HM_BA",
+            "name": "Xã Bà Điểm"
+          }
+        ]
+      }
+    ]
+  },
+  "partnerLogos": [
+    {
+      "id": "1",
+      "fileName": "costco.png",
+      "alt": "Costco Logo"
+    },
+    {
+      "id": "2",
+      "fileName": "kroger.png",
+      "alt": "Kroger Logo"
+    },
+    {
+      "id": "3",
+      "fileName": "meijer.png",
+      "alt": "Meijer Logo"
+    },
+    {
+      "id": "4",
+      "fileName": "publix.png",
+      "alt": "Publix Logo"
+    },
+    {
+      "id": "5",
+      "fileName": "safeway.png",
+      "alt": "Safeway Logo"
+    },
+    {
+      "id": "6",
+      "fileName": "target.png",
+      "alt": "Target Logo"
+    },
+    {
+      "id": "7",
+      "fileName": "walmart.png",
+      "alt": "Walmart Logo"
+    },
+    {
+      "id": "8",
+      "fileName": "wegmans.png",
+      "alt": "Wegmans Logo"
+    },
+    {
+      "id": "9",
+      "fileName": "whole-foods.png",
+      "alt": "Whole Foods Logo"
+    }
+  ]
 }

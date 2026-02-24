@@ -5,12 +5,6 @@ export class ProductSize {
         this.price = price;
     }
 }
-export class ProductVariant {
-    constructor(id, label) {
-        this.id = id;
-        this.label = label;
-    }
-}
 export class ProductList {
     constructor(id, name, image, description, categoryId, slug, images, basePrice, unit, sizes, variants, origin, brewGuide, expiry, storage, stock, status) {
         this.id = id;

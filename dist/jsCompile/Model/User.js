@@ -1,12 +1,19 @@
+export class UserRole {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+}
 export class User {
-    constructor(id, role, name, email, password, address, phone, createdAt = new Date().toISOString()) {
+    constructor(id, roleId, name, email, password, address, status, phone, createdAt = new Date().toISOString()) {
         this.createdAt = new Date().toISOString();
         this.id = id;
-        this.role = role;
+        this.roleId = roleId;
         this.name = name;
         this.email = email;
         this.password = password;
         this.address = address || "";
+        this.status = status;
         this.phone = phone || "";
         this.createdAt = createdAt || "";
     }

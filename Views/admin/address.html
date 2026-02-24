@@ -56,38 +56,47 @@
                     <span class="text-sm text-gray-500">Tea Station</span>
                 </header>
 
-                <main class="p-8 space-y-8">
+                <main class="p-8 space-y-10">
                     <!-- Page Title -->
                     <div class="flex items-center justify-between">
                         <h2 class="text-2xl font-bold text-p-900">Address Manager</h2>
                     </div>
 
-                    <!-- City Config -->
+                    <!-- ================= CITY ================= -->
+
                     <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
-                        <h3 class="text-lg font-semibold text-p-900">Thành phố / Tỉnh</h3>
+                        <h3 class="text-lg font-semibold text-p-900">Thêm Tỉnh / Thành Phố</h3>
 
-                        <div class="grid gap-4 md:grid-cols-2">
+                        <div class="grid gap-4 md:grid-cols-3">
                             <input
                                 type="text"
-                                value="HCM"
+                                placeholder="City Code (vd: HCM)"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
                             <input
                                 type="text"
-                                value="TP Hồ Chí Minh"
+                                placeholder="Tên Thành Phố"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
+
+                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Thành Phố</button>
                         </div>
-
-                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Lưu Thành Phố</button>
                     </div>
 
-                    <!-- Add District -->
+                    <!-- ================= DISTRICT ================= -->
+
                     <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
                         <h3 class="text-lg font-semibold text-p-900">Thêm Quận / Huyện</h3>
 
-                        <div class="grid gap-4 md:grid-cols-3">
+                        <div class="grid gap-4 md:grid-cols-4">
+                            <!-- Chọn City -->
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                                <option>Chọn Thành Phố</option>
+                                <option value="HCM">TP Hồ Chí Minh</option>
+                                <option value="HN">Hà Nội</option>
+                            </select>
+
                             <input
                                 type="text"
                                 placeholder="District Code (vd: Q8)"
@@ -96,85 +105,115 @@
 
                             <input
                                 type="text"
-                                placeholder="District Name"
+                                placeholder="Tên Quận / Huyện"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
-                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm</button>
+                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Quận</button>
                         </div>
                     </div>
 
-                    <!-- District List -->
-                    <div class="space-y-6">
-                        <!-- District Item -->
-                        <div class="bg-white shadow rounded-2xl">
-                            <!-- District Header -->
-                            <div class="flex items-center justify-between p-6 border-b">
+                    <!-- ================= WARD ================= -->
+
+                    <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
+                        <h3 class="text-lg font-semibold text-p-900">Thêm Phường / Xã</h3>
+
+                        <div class="grid gap-4 md:grid-cols-4">
+                            <!-- Chọn City -->
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                                <option>Chọn Thành Phố</option>
+                                <option value="HCM">TP Hồ Chí Minh</option>
+                            </select>
+
+                            <!-- Chọn District -->
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
+                                <option>Chọn Quận / Huyện</option>
+                                <option value="Q1">Quận 1</option>
+                                <option value="Q3">Quận 3</option>
+                            </select>
+
+                            <input
+                                type="text"
+                                placeholder="Ward Code (vd: Q1_PBN)"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <input
+                                type="text"
+                                placeholder="Tên Phường"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+                        </div>
+
+                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Phường</button>
+                    </div>
+
+                    <!-- ================= LIST VIEW ================= -->
+
+                    <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
+                        <h3 class="text-lg font-semibold text-p-900">Danh sách địa chỉ</h3>
+
+                        <!-- City Item -->
+                        <div class="border rounded-xl">
+                            <!-- City Header -->
+                            <div class="flex items-center justify-between p-4 bg-p-50 rounded-t-xl">
                                 <div>
-                                    <h4 class="font-semibold text-p-900">Quận 1</h4>
-                                    <p class="text-xs text-gray-500">Code: Q1</p>
+                                    <h4 class="font-semibold text-p-900">TP Hồ Chí Minh</h4>
+                                    <p class="text-xs text-gray-500">Code: HCM</p>
                                 </div>
 
-                                <div class="space-x-4">
-                                    <button class="text-sm text-blue-600 hover:underline">Thêm Phường</button>
-
-                                    <button class="text-sm text-red-500 hover:underline">Xóa Quận</button>
-                                </div>
+                                <button class="text-sm text-red-500 hover:underline">Xóa Thành Phố</button>
                             </div>
 
-                            <!-- Ward List -->
-                            <div class="p-6 space-y-4 bg-gray-50">
-                                <!-- Add Ward -->
-                                <div class="grid gap-4 md:grid-cols-3">
-                                    <input
-                                        type="text"
-                                        placeholder="Ward Code (vd: Q1_PBN)"
-                                        class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                                    />
-
-                                    <input
-                                        type="text"
-                                        placeholder="Ward Name"
-                                        class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                                    />
-
-                                    <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Phường</button>
-                                </div>
-
-                                <!-- Ward Items -->
-                                <div class="grid gap-4 md:grid-cols-2">
-                                    <div class="flex items-center justify-between p-4 bg-white border rounded-lg">
+                            <!-- District -->
+                            <div class="p-4 space-y-4">
+                                <div class="border rounded-lg">
+                                    <div class="flex items-center justify-between p-4 rounded-t-lg bg-gray-50">
                                         <div>
-                                            <p class="text-sm font-medium">Phường Bến Nghé</p>
-                                            <p class="text-xs text-gray-500">Code: Q1_PBN</p>
+                                            <p class="font-medium">Quận 1</p>
+                                            <p class="text-xs text-gray-500">Code: Q1</p>
                                         </div>
 
-                                        <button class="text-sm text-red-500 hover:underline">Xóa</button>
+                                        <button class="text-sm text-red-500 hover:underline">Xóa Quận</button>
                                     </div>
 
-                                    <div class="flex items-center justify-between p-4 bg-white border rounded-lg">
-                                        <div>
-                                            <p class="text-sm font-medium">Phường Bến Thành</p>
-                                            <p class="text-xs text-gray-500">Code: Q1_PBT</p>
+                                    <!-- Wards -->
+                                    <div class="grid gap-4 p-4 md:grid-cols-2">
+                                        <div class="flex items-center justify-between p-3 bg-white border rounded-lg">
+                                            <div>
+                                                <p class="text-sm font-medium">Phường Bến Nghé</p>
+                                                <p class="text-xs text-gray-500">Q1_PBN</p>
+                                            </div>
+
+                                            <button class="text-sm text-red-500 hover:underline">Xóa</button>
                                         </div>
 
-                                        <button class="text-sm text-red-500 hover:underline">Xóa</button>
+                                        <div class="flex items-center justify-between p-3 bg-white border rounded-lg">
+                                            <div>
+                                                <p class="text-sm font-medium">Phường Bến Thành</p>
+                                                <p class="text-xs text-gray-500">Q1_PBT</p>
+                                            </div>
+
+                                            <button class="text-sm text-red-500 hover:underline">Xóa</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Business Rules -->
+                    <!-- ================= BUSINESS RULES ================= -->
+
                     <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
                         <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
 
                         <ul class="space-y-1 text-sm text-gray-600">
-                            <li>• Code tỉnh/quận/phường phải unique</li>
-                            <li>• Không được xóa quận nếu còn phường</li>
-                            <li>• Không được trùng code ward</li>
-                            <li>• Dữ liệu hiển thị dạng nested</li>
-                            <li>• Frontend select phụ thuộc theo district → ward</li>
+                            <li>• Code city / district / ward phải unique</li>
+                            <li>• Không được thêm district nếu chưa chọn city</li>
+                            <li>• Không được thêm ward nếu chưa chọn district</li>
+                            <li>• Không được xóa city nếu còn district</li>
+                            <li>• Không được xóa district nếu còn ward</li>
+                            <li>• Frontend dùng select phụ thuộc: City → District → Ward</li>
                         </ul>
                     </div>
                 </main>

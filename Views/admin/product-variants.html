@@ -65,47 +65,46 @@
                     <!-- Add Variant -->
                     <div class="p-6 space-y-6 bg-white shadow rounded-2xl">
                         <h3 class="text-lg font-semibold text-p-900">Thêm Variant</h3>
-
                         <div class="grid gap-4 md:grid-cols-5">
                             <!-- Product -->
-                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
-                                <option>Chọn sản phẩm</option>
-                                <option>Trà Matcha</option>
-                                <option>Trà Oolong</option>
-                                <option>Trà Đen</option>
-                                <option>Trà Trắng</option>
+                            <select id="variant-product" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900">
+                                <option value="">Chọn sản phẩm</option>
                             </select>
 
                             <!-- Size -->
                             <input
+                                id="variant-size"
                                 type="text"
                                 placeholder="Size (50g, 100g...)"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                             />
 
                             <!-- Extra Price -->
                             <input
+                                id="variant-extra"
                                 type="number"
                                 placeholder="Extra Price"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                             />
 
                             <!-- Price -->
                             <input
+                                id="variant-price"
                                 type="number"
                                 placeholder="Final Price"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                             />
 
                             <!-- Stock -->
                             <input
+                                id="variant-stock"
                                 type="number"
                                 placeholder="Stock"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                             />
                         </div>
 
-                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Variant</button>
+                        <button id="add-variant-btn" class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Variant</button>
                     </div>
 
                     <!-- Variants Table -->
@@ -124,103 +123,7 @@
                                 </tr>
                             </thead>
 
-                            <tbody>
-                                <!-- Variant 1 -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">1</td>
-
-                                    <td>Trà Matcha</td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="50g"
-                                            class="w-20 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="0"
-                                            class="w-24 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="89000"
-                                            class="w-24 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="100"
-                                            class="w-20 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
-                                    </td>
-
-                                    <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Variant 2 -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">2</td>
-
-                                    <td>Trà Matcha</td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="100g"
-                                            class="w-20 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="40000"
-                                            class="w-24 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="129000"
-                                            class="w-24 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="60"
-                                            class="w-20 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
-                                    </td>
-
-                                    <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
-                                    </td>
-                                </tr>
-                            </tbody>
+                            <tbody id="variant-table-body"></tbody>
                         </table>
                     </div>
 
@@ -237,5 +140,6 @@
                 </main>
             </div>
         </div>
+        <script type="module" src="../../dist/jsCompile/admin/adminApp.js"></script>
     </body>
 </html>

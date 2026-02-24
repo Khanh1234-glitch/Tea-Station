@@ -70,10 +70,10 @@
                             <input
                                 type="text"
                                 placeholder="Nhập tên role..."
-                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="flex-1 px-4 py-2 border border-gray-300 rounded-lg outline-none role-name-input focus:ring-2 focus:ring-p-900"
                             />
 
-                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm</button>
+                            <button class="px-6 py-2 text-white transition rounded-lg add-role-btn bg-p-900 hover:bg-p-800">Thêm</button>
                         </div>
                     </div>
 
@@ -82,49 +82,15 @@
                         <table class="w-full text-sm">
                             <thead class="text-xs text-gray-600 uppercase bg-gray-100">
                                 <tr>
-                                    <th class="p-4 text-left">ID</th>
-                                    <th class="text-left">Role Name</th>
-                                    <th class="text-left">Users Count</th>
+                                    <th class="p-4 text-center">ID</th>
+                                    <th class="text-center">Role Name</th>
+                                    <th class="text-center">Users Count</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody id="table_role">
                                 <!-- Admin -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">1</td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="admin"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-                                    <td>
-                                        <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 1 User </span>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Customer -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">2</td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="customer"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> 10 Users </span>
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                    </td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -141,5 +107,6 @@
                 </main>
             </div>
         </div>
+        <script type="module" src="../../dist/jsCompile/admin/adminApp.js"></script>
     </body>
 </html>

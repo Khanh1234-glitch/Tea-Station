@@ -57,32 +57,119 @@
                 </header>
 
                 <main class="p-8 space-y-8">
-                    <h2 class="text-2xl font-bold text-p-900">Users</h2>
+                    <!-- Page Title -->
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-2xl font-bold text-p-900">Users Management</h2>
+                    </div>
 
-                    <button class="px-4 py-2 text-white rounded-lg bg-p-900">Thêm User</button>
+                    <!-- Add User Form -->
+                    <div class="p-8 space-y-6 bg-white shadow rounded-2xl">
+                        <h3 class="text-lg font-semibold text-p-900">Thêm User</h3>
 
-                    <div class="mt-6 overflow-x-auto bg-white shadow rounded-2xl">
+                        <div class="grid gap-4 md:grid-cols-3">
+                            <input
+                                type="text"
+                                placeholder="Họ và tên"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <input
+                                type="email"
+                                placeholder="Email"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <input
+                                type="password"
+                                placeholder="Password"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <input
+                                type="text"
+                                placeholder="Số điện thoại"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <input
+                                type="text"
+                                placeholder="Địa chỉ"
+                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            />
+
+                            <!-- Role Select -->
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none create-role-select focus:ring-2 focus:ring-p-900">
+                                <option value="customer">customer</option>
+                                <option value="admin">admin</option>
+                            </select>
+                        </div>
+
+                        <button class="px-6 py-2 text-white transition rounded-lg add-user-btn bg-p-900 hover:bg-p-800">Thêm User</button>
+                    </div>
+
+                    <!-- Users Table -->
+                    <div class="overflow-x-auto bg-white shadow rounded-2xl">
                         <table class="w-full text-sm">
-                            <thead class="bg-gray-100">
+                            <thead class="text-xs text-gray-600 uppercase bg-gray-100">
                                 <tr>
-                                    <th class="p-3 text-left">Name</th>
+                                    <th class="p-4 text-center">id</th>
+                                    <th class="p-4 text-center">Name</th>
                                     <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Role</th>
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    <th class="text-center">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="border-b">
-                                    <td class="p-3">Trương Nguyễn Bảo Khánh</td>
+
+                            <tbody id="table_user">
+                                <!-- Sample User -->
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-4 font-medium">Trương Nguyễn Bảo Khánh</td>
+
                                     <td>khanhtnb220@gmail.com</td>
-                                    <td><span class="px-2 py-1 text-green-600 bg-green-100 rounded">Active</span></td>
-                                    <td><button class="px-3 py-1 text-white bg-red-500 rounded">Khóa</button></td>
+
+                                    <td>0916022815</td>
+
+                                    <!-- Role Editable -->
+                                    <td>
+                                        <select class="px-2 py-1 text-sm border border-gray-300 rounded outline-none focus:ring-1 focus:ring-p-900">
+                                            <option value="customer" selected>customer</option>
+                                            <option value="admin">admin</option>
+                                        </select>
+                                    </td>
+
+                                    <!-- Status -->
+                                    <td>
+                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
+                                    </td>
+
+                                    <!-- Action -->
+                                    <td class="space-x-2 text-center">
+                                        <button class="text-sm text-blue-600 hover:underline">Lưu Role</button>
+
+                                        <button class="text-sm text-red-500 hover:underline">Khóa</button>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
+
+                    <!-- Business Rules -->
+                    <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
+                        <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
+
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li>• Không thể xóa user</li>
+                            <li>• Chỉ có thể khóa user</li>
+                            <li>• Có thể thay đổi role giữa admin / customer</li>
+                            <li>• Email không được chỉnh sửa</li>
+                            <li>• Admin không thể tự khóa chính mình</li>
+                        </ul>
+                    </div>
                 </main>
             </div>
         </div>
+        <script type="module" src="../../dist/jsCompile/admin/adminApp.js"></script>
     </body>
 </html>

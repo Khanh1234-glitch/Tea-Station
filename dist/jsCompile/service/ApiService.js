@@ -15,6 +15,18 @@ export class ApiService {
             throw error;
         }
     }
+    async patch(endpoint, data) {
+        const res = await fetch(`${this.baseUrl}${endpoint}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+        if (!res.ok)
+            throw new Error("Patch failed");
+        return res.json();
+    }
     async getOne(endpoint) {
         const res = await fetch(`${this.baseUrl}${endpoint}`);
         if (!res.ok)
@@ -44,6 +56,13 @@ export class ApiService {
         if (!res.ok)
             throw new Error("Update failed");
         return res.json();
+    }
+    async delete(endpoint) {
+        const res = await fetch(`${this.baseUrl}${endpoint}`, {
+            method: "DELETE",
+        });
+        if (!res.ok)
+            throw new Error("Delete failed");
     }
 }
 //# sourceMappingURL=ApiService.js.map

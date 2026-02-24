@@ -1,3 +1,5 @@
+import type { ProductVariant } from "./ProductVariant.js";
+
 export class ProductSize {
     id: string;
     label: string;
@@ -7,16 +9,6 @@ export class ProductSize {
         this.id = id;
         this.label = label;
         this.price = price;
-    }
-}
-
-export class ProductVariant {
-    id: string;
-    label: string;
-
-    constructor(id: string, label: string) {
-        this.id = id;
-        this.label = label;
     }
 }
 

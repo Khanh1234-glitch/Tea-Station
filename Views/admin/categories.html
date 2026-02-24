@@ -67,18 +67,20 @@
 
                         <div class="grid gap-4 md:grid-cols-3">
                             <input
+                                id="category-name"
                                 type="text"
                                 placeholder="Tên danh mục..."
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
                             <input
+                                id="category-slug"
                                 type="text"
                                 placeholder="Slug (matcha, blackTea...)"
                                 class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
                             />
 
-                            <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm</button>
+                            <button id="add-category-btn" class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm</button>
                         </div>
                     </div>
 
@@ -96,120 +98,73 @@
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody id="categories-table-body">
                                 <!-- Matcha -->
                                 <tr class="border-b hover:bg-gray-50">
                                     <td class="p-4 font-semibold">1</td>
+
+                                    <!-- Cho sửa name -->
                                     <td>
                                         <input
                                             type="text"
                                             value="Trà Matcha"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
+                                            class="px-3 py-1 text-sm border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
                                         />
                                     </td>
+
+                                    <!-- Slug khóa khi đã có product -->
                                     <td>
-                                        <input
-                                            type="text"
-                                            value="matcha"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
+                                        <span class="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded"> matcha </span>
                                     </td>
+
                                     <td>
                                         <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 1 Product </span>
                                     </td>
+
                                     <td>
                                         <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
                                     </td>
+
                                     <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
+                                        <button class="text-sm text-blue-600 hover:underline">Lưu</button>
+
+                                        <button class="text-sm text-red-500 hover:underline">Khóa</button>
                                     </td>
                                 </tr>
 
-                                <!-- Black Tea -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">2</td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Trà Đen"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="blackTea"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-                                    <td>
-                                        <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 1 Product </span>
-                                    </td>
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
-                                    </td>
-                                    <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Oolong -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">3</td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Trà Oolong"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="oolongTea"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-                                    <td>
-                                        <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 1 Product </span>
-                                    </td>
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
-                                    </td>
-                                    <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
-                                    </td>
-                                </tr>
-
-                                <!-- White Tea -->
+                                <!-- Ví dụ category chưa có product -->
                                 <tr class="hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">4</td>
+                                    <td class="p-4 font-semibold">5</td>
+
                                     <td>
                                         <input
                                             type="text"
-                                            value="Trà Trắng"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
+                                            value="Trà Thảo Mộc"
+                                            class="px-3 py-1 text-sm border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
                                         />
                                     </td>
+
+                                    <!-- Cho sửa slug nếu chưa có product -->
                                     <td>
                                         <input
                                             type="text"
-                                            value="whiteTea"
-                                            class="px-3 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
+                                            value="herbalTea"
+                                            class="px-3 py-1 text-sm border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
                                         />
                                     </td>
+
                                     <td>
-                                        <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 1 Product </span>
+                                        <span class="px-2 py-1 text-gray-600 bg-gray-100 rounded"> 0 Product </span>
                                     </td>
+
                                     <td>
                                         <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
                                     </td>
+
                                     <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
+                                        <button class="text-sm text-blue-600 hover:underline">Lưu</button>
+
+                                        <button class="text-sm text-red-500 hover:underline">Xóa</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -228,5 +183,6 @@
                 </main>
             </div>
         </div>
+        <script type="module" src="../../dist/jsCompile/admin/adminApp.js"></script>
     </body>
 </html>

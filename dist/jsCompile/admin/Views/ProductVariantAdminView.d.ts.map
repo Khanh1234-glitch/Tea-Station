@@ -1,0 +1,1 @@
+{"version":3,"file":"ProductVariantAdminView.d.ts","sourceRoot":"","sources":["../../../../src/admin/Views/ProductVariantAdminView.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,mBAAmB,EAAE,MAAM,iCAAiC,CAAC;AAE3E,qBAAa,uBAAuB;IAChC,OAAO,CAAC,SAAS,CAAgE;IAEjF,MAAM,CAAC,QAAQ,EAAE,mBAAmB,EAAE,EAAE,UAAU,EAAE,GAAG,CAAC,MAAM,EAAE,MAAM,CAAC;CAyD1E"}

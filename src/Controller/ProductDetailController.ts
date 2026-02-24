@@ -1,42 +1,61 @@
 import { CartItem } from "../Model/CartItem.js";
 import type { ProductList } from "../Model/ProductList.js";
+import type { ProductVariant } from "../Model/ProductVariant.js";
+
 import { ProductDetailService } from "../service/ProductDetailService.js";
+import { ProductVariantService } from "../service/ProductVariantService.js";
 import { ProductDetailViews } from "../Views/ProductDetailViews.js";
 import { CartService } from "../service/CartService.js";
+
 export class ProductDetailController {
-    private service = new ProductDetailService();
+    private productService = new ProductDetailService();
+    private variantService = new ProductVariantService();
     private view = new ProductDetailViews();
     private cartService = new CartService();
+
     private currentProduct!: ProductList;
+    private currentVariants: ProductVariant[] = [];
+
     public async init(): Promise<void> {
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
-
         if (!id) return;
 
         try {
-            const product = await this.service.getById(id);
-            this.render(product);
-            this.initOptionToggle(product.basePrice);
-            this.initThumbnailChange();
+            // 🔥 Lấy product từ productsList
+            const product = await this.productService.getById(id);
+
+            // 🔥 Lấy tất cả variants
+            const allVariants = await this.variantService.getAll();
+
+            // 🔥 LỌC đúng variant của product này + active
+            const variantsOfProduct = allVariants.filter(
+                (v) => String(v.product_id).trim() === String(product.id).trim() && (v.status ?? "active") === "active",
+            );
+
             this.currentProduct = product;
+            this.currentVariants = variantsOfProduct;
+
+            this.render();
+            this.initThumbnailChange();
+            this.initOptionToggle();
             this.initAddToCart();
         } catch (error) {
             console.error("Product detail error:", error);
         }
     }
 
-    private render(product: ProductList): void {
+    private render(): void {
         const container = document.querySelector("#productDetail");
         if (!container) return;
 
-        container.innerHTML = this.view.renderProductDetail(product);
+        container.innerHTML = this.view.renderProductDetail(this.currentProduct, this.currentVariants);
     }
 
+    // ================= IMAGE =================
     private initThumbnailChange(): void {
         const thumbnails = document.querySelectorAll<HTMLImageElement>(".thumbnail");
         const mainImage = document.querySelector<HTMLImageElement>("#main-product-image");
-
         if (!mainImage) return;
 
         thumbnails.forEach((thumb) => {
@@ -55,50 +74,47 @@ export class ProductDetailController {
         });
     }
 
-    private initOptionToggle(basePrice: number): void {
+    // ================= SIZE TOGGLE =================
+    private initOptionToggle(): void {
         const priceEl = document.querySelector<HTMLSpanElement>("#product-price");
+        if (!priceEl) return;
 
-        const handleGroup = (selector: string) => {
-            const labels = document.querySelectorAll<HTMLLabelElement>(selector);
+        const labels = document.querySelectorAll<HTMLLabelElement>(".size-option");
 
-            labels.forEach((label) => {
-                const input = label.querySelector<HTMLInputElement>("input");
-                if (!input) return;
+        labels.forEach((label) => {
+            const input = label.querySelector<HTMLInputElement>("input");
+            if (!input) return;
 
-                label.addEventListener("click", () => {
-                    labels.forEach((l) => {
-                        l.classList.remove("ring-2", "ring-p-900");
-                        l.classList.add("ring-1", "ring-n-200");
+            label.addEventListener("click", () => {
+                labels.forEach((l) => {
+                    l.classList.remove("ring-2", "ring-p-900");
+                    l.classList.add("ring-1", "ring-n-200");
 
-                        const radio = l.querySelector<HTMLInputElement>("input");
-                        if (radio) radio.checked = false;
-                    });
-
-                    label.classList.remove("ring-1", "ring-n-200");
-                    label.classList.add("ring-2", "ring-p-900");
-
-                    input.checked = true;
-
-                    // 🔥 Cập nhật giá ngay tại đây
-                    if (priceEl && selector === ".size-option") {
-                        const extra = Number(input.dataset.price || 0);
-                        const finalPrice = basePrice + extra;
-                        priceEl.textContent = finalPrice.toLocaleString("vi-VN") + "₫";
-                    }
+                    const radio = l.querySelector<HTMLInputElement>("input");
+                    if (radio) radio.checked = false;
                 });
+
+                label.classList.remove("ring-1", "ring-n-200");
+                label.classList.add("ring-2", "ring-p-900");
+
+                input.checked = true;
+
+                const extra = Number(input.dataset.price || 0);
+                const finalPrice = this.currentProduct.basePrice + extra;
+
+                priceEl.textContent = finalPrice.toLocaleString("vi-VN") + "₫";
             });
-        };
+        });
 
-        handleGroup(".size-option");
-        handleGroup(".variant-option");
-
-        // set giá mặc định theo size đầu tiên
-        const checked = document.querySelector<HTMLInputElement>('input[name="size"]:checked');
-        if (checked && priceEl) {
-            const extra = Number(checked.dataset.price || 0);
-            priceEl.textContent = (basePrice + extra).toLocaleString("vi-VN") + "₫";
+        // set giá mặc định theo option đầu
+        const first = document.querySelector<HTMLInputElement>('input[name="size"]:checked');
+        if (first) {
+            const extra = Number(first.dataset.price || 0);
+            priceEl.textContent = (this.currentProduct.basePrice + extra).toLocaleString("vi-VN") + "₫";
         }
     }
+
+    // ================= ADD TO CART =================
     private initAddToCart(): void {
         const btn = document.querySelector("#add-to-cart");
         if (!btn) return;
@@ -106,15 +122,16 @@ export class ProductDetailController {
         btn.addEventListener("click", () => {
             const quantityInput = document.querySelector<HTMLInputElement>("#product-quantity");
             const sizeInput = document.querySelector<HTMLInputElement>("input[name='size']:checked");
-            const variantInput = document.querySelector<HTMLInputElement>("input[name='variant']:checked");
 
-            if (!quantityInput || !sizeInput || !variantInput) return;
+            if (!quantityInput || !sizeInput) return;
 
             const quantity = Number(quantityInput.value);
-            const size = sizeInput.value;
-            const variant = variantInput.value;
+            const variant_id = sizeInput.dataset.id;
 
-            const variant_id = variantInput.dataset.id!; // 🔥 lấy ID thật
+            if (!variant_id) {
+                alert("Không tìm thấy biến thể");
+                return;
+            }
 
             const extraPrice = Number(sizeInput.dataset.price || 0);
             const finalPrice = this.currentProduct.basePrice + extraPrice;
@@ -126,8 +143,8 @@ export class ProductDetailController {
                 finalPrice,
                 this.currentProduct.image,
                 quantity,
-                size,
-                variant,
+                sizeInput.value,
+                "", // nếu bạn không dùng variant label riêng
             );
 
             this.cartService.add(item);

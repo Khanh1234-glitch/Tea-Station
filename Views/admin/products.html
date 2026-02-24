@@ -62,177 +62,96 @@
                         <h2 class="text-2xl font-bold text-p-900">Products Management</h2>
                     </div>
 
-                    <!-- Add Product -->
+                    <!-- ================= ADD PRODUCT ================= -->
                     <div class="p-6 space-y-6 bg-white shadow rounded-2xl">
                         <h3 class="text-lg font-semibold text-p-900">Thêm Sản Phẩm</h3>
 
                         <div class="grid gap-4 md:grid-cols-3">
                             <input
+                                id="product-name"
                                 type="text"
                                 placeholder="Tên sản phẩm..."
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                             />
 
                             <input
+                                id="product-slug"
                                 type="text"
                                 placeholder="Slug..."
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                             />
 
-                            <select class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900">
-                                <option>Chọn Category</option>
-                                <option>Trà Matcha</option>
-                                <option>Trà Đen</option>
-                                <option>Trà Oolong</option>
-                                <option>Trà Trắng</option>
+                            <select id="product-category" class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900">
+                                <option value="">Chọn Category</option>
+                                <!-- Render bằng JS -->
                             </select>
 
                             <input
+                                id="product-base-price"
                                 type="number"
                                 placeholder="Base Price"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                                class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                             />
 
-                            <input
-                                type="text"
-                                placeholder="Ảnh đại diện (product_1.jpg)"
-                                class="px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
-                            />
+                            <div class="space-y-2">
+                                <label class="block text-sm font-medium text-gray-700"> Ảnh đại diện </label>
+
+                                <input
+                                    id="product-image"
+                                    type="file"
+                                    accept="image/*"
+                                    class="block w-full text-sm text-gray-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-p-100 file:text-p-900 hover:file:bg-p-200"
+                                />
+
+                                <!-- Preview -->
+                                <img id="product-image-preview" class="hidden object-cover w-24 h-24 mt-2 border rounded" />
+                            </div>
 
                             <label class="flex items-center gap-2">
-                                <input type="checkbox" class="w-4 h-4 text-p-900" />
+                                <input id="product-featured" type="checkbox" class="w-4 h-4" />
                                 <span class="text-sm">Featured Product</span>
                             </label>
                         </div>
 
                         <textarea
+                            id="product-short-desc"
                             placeholder="Short Description..."
-                            class="w-full h-20 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            class="w-full h-20 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                         ></textarea>
 
                         <textarea
+                            id="product-description"
                             placeholder="Full Description..."
-                            class="w-full h-32 px-4 py-2 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-p-900"
+                            class="w-full h-32 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-p-900"
                         ></textarea>
 
-                        <button class="px-6 py-2 text-white transition rounded-lg bg-p-900 hover:bg-p-800">Thêm Sản Phẩm</button>
+                        <button id="add-product-btn" class="px-6 py-2 text-white rounded-lg bg-p-900 hover:bg-p-800">Thêm Sản Phẩm</button>
                     </div>
 
-                    <!-- Products Table -->
+                    <!-- ================= PRODUCTS TABLE ================= -->
                     <div class="overflow-x-auto bg-white shadow rounded-2xl">
                         <table class="w-full text-sm">
                             <thead class="text-xs text-gray-600 uppercase bg-gray-100">
                                 <tr>
                                     <th class="p-4 text-left">ID</th>
                                     <th>Name</th>
+                                    <th>Slug</th>
                                     <th>Category</th>
                                     <th>Base Price</th>
+                                    <th>Image</th>
                                     <th>Featured</th>
-                                    <th>Stock</th>
                                     <th>Status</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
 
-                            <tbody>
-                                <!-- Product 1 -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">1</td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Trà Matcha"
-                                            class="w-40 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <select class="px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900">
-                                            <option selected>Trà Matcha</option>
-                                            <option>Trà Đen</option>
-                                            <option>Trà Oolong</option>
-                                            <option>Trà Trắng</option>
-                                        </select>
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="89000"
-                                            class="w-24 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Yes </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 190 </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
-                                    </td>
-
-                                    <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
-                                    </td>
-                                </tr>
-
-                                <!-- Product 2 -->
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4 font-semibold">2</td>
-
-                                    <td>
-                                        <input
-                                            type="text"
-                                            value="Trà Oolong"
-                                            class="w-40 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <select class="px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900">
-                                            <option>Trà Matcha</option>
-                                            <option>Trà Đen</option>
-                                            <option selected>Trà Oolong</option>
-                                            <option>Trà Trắng</option>
-                                        </select>
-                                    </td>
-
-                                    <td>
-                                        <input
-                                            type="number"
-                                            value="99000"
-                                            class="w-24 px-2 py-1 border border-gray-200 rounded outline-none focus:ring-1 focus:ring-p-900"
-                                        />
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Yes </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 rounded bg-p-100 text-p-900"> 80 </span>
-                                    </td>
-
-                                    <td>
-                                        <span class="px-2 py-1 text-green-700 bg-green-100 rounded"> Active </span>
-                                    </td>
-
-                                    <td class="space-x-2 text-center">
-                                        <button class="text-blue-600 hover:underline">Lưu</button>
-                                        <button class="text-red-500 hover:underline">Khóa</button>
-                                    </td>
-                                </tr>
+                            <tbody id="products-table-body">
+                                <!-- Render bằng JS -->
                             </tbody>
                         </table>
                     </div>
 
-                    <!-- Business Rules -->
+                    <!-- ================= BUSINESS RULES ================= -->
                     <div class="p-6 border bg-p-50 border-p-200 rounded-2xl">
                         <h3 class="mb-2 font-semibold text-p-900">Quy tắc nghiệp vụ</h3>
                         <ul class="space-y-1 text-sm text-gray-600">
@@ -240,10 +159,12 @@
                             <li>• Stock được tính từ Product Variants</li>
                             <li>• Khi khóa sản phẩm → không hiển thị ngoài website</li>
                             <li>• Featured product sẽ hiển thị ở trang chủ</li>
+                            <li>• Slug phải unique</li>
                         </ul>
                     </div>
                 </main>
             </div>
         </div>
+        <script type="module" src="../../dist/jsCompile/admin/adminApp.js"></script>
     </body>
 </html>

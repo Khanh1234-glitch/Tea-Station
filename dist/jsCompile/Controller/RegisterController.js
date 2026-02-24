@@ -41,7 +41,7 @@ export class RegisterController {
                     alert("Email đã tồn tại");
                     return;
                 }
-                await this.userService.create(new User(undefined, "customer", name, email, password, "", phone));
+                await this.userService.create(new User(undefined, "customer", name, email, password, "", "active", phone));
                 console.log("User created");
                 alert("Đăng ký thành công");
                 location.href = "login.html";

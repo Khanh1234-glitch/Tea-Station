@@ -9,7 +9,7 @@ export class UserService extends ApiService {
     }
     async create(user) {
         const data = await this.post("/users", user);
-        return new User(data.id, data.role, data.name, data.email, data.password, data.address || "", data.phone, data.createdAt);
+        return new User(data.id, data.roleId, data.name, data.email, data.password, data.address || "", data.status, data.phone, data.createdAt);
     }
     async checkEmailValid(email) {
         const data = await this.get(`/users?email=${email}`);
@@ -23,10 +23,10 @@ export class UserService extends ApiService {
             return null;
         }
         const user = data[0];
-        if (!(user === null || user === void 0 ? void 0 : user.role)) {
+        if (!(user === null || user === void 0 ? void 0 : user.roleId)) {
             throw new Error("User role is missing");
         }
-        return new User(user.id, user.role, user.name, user.email, user.password, user.address || "", user.phone, user.createdAt);
+        return new User(user.id, user.roleId, user.name, user.email, user.password, user.address || "", user.status, user.phone, user.createdAt);
     }
     saveLoginState(user) {
         localStorage.setItem("user", JSON.stringify(user));
@@ -38,7 +38,7 @@ export class UserService extends ApiService {
         let userString = localStorage.getItem(`user`);
         if (localStorage.getItem("user")) {
             let user = JSON.parse(userString);
-            return new User(user.id, user.role, user.name, user.email, user.password, user.address || "", user.phone, user.createdAt);
+            return new User(user.id, user.roleId, user.name, user.email, user.password, user.phone || "", user.status, user.phone, user.createdAt);
         }
         return false;
     }

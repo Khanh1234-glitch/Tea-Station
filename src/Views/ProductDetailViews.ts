@@ -1,7 +1,8 @@
 import type { ProductList } from "../Model/ProductList.js";
+import type { ProductVariant } from "../Model/ProductVariant.js";
 
 export class ProductDetailViews {
-    renderProductDetail(product: ProductList): string {
+    renderProductDetail(product: ProductList, productVariant: ProductVariant[]): string {
         return `
                         <div class="grid items-start grid-cols-1 lg:grid-cols-12 gap-14">
                     <!-- ================= LEFT: IMAGES ================= -->
@@ -46,54 +47,32 @@ export class ProductDetailViews {
                         <div>
                             <h3 class="mb-3 font-medium">Kích cỡ</h3>
                             <div class="flex gap-4">
-                           ${product.sizes
-                               .map(
-                                   (s, index) => `
-                                        <label class="size-option px-5 py-2 rounded-xl cursor-pointer 
-                                            ${index === 0 ? "ring-2 ring-p-900" : "ring-1 ring-n-200"}">
+                   ${productVariant
+                       .filter((v) => v.status !== "inactive")
+                       .map(
+                           (s, index) => `
+        <label class="size-option px-5 py-2 rounded-xl cursor-pointer 
+            ${index === 0 ? "ring-2 ring-p-900" : "ring-1 ring-n-200"}">
 
-                                            <input type="radio"
-                                                name="size"
-                                                value="${s.label}"
-                                                data-price="${s.price}"
-                                                ${index === 0 ? "checked" : ""}
-                                                hidden />
+            <input type="radio"
+                name="size"
+                value="${s.size}"
+                data-price="${s.extra_price}"
+                data-id="${s.id}"
+                ${index === 0 ? "checked" : ""}
+                hidden />
 
-                                            ${s.label} (+${s.price.toLocaleString("vi-VN")})
-                                        </label>
-                                    `,
-                               )
-                               .join("")}
+            ${s.size} (+${s.extra_price.toLocaleString("vi-VN")})
+        </label>
+    `,
+                       )
+                       .join("")}
                          
 
                             </div>
                         </div>
 
                         <!-- Variants -->
-                        <div>
-                            <h3 class="mb-3 font-medium">Biến thể</h3>
-                            <div class="flex gap-4">
-                            ${product.variants
-                                .map(
-                                    (v, index) => `
-                                            <label class="variant-option px-4 py-2 rounded-xl cursor-pointer
-                                                ${index === 0 ? "ring-2 ring-p-900" : "ring-1 ring-n-200"}">
-
-                                                <input type="radio"
-                                                    name="variant"
-                                                    value="${v.label}"
-                                                    ${index === 0 ? "checked" : ""}
-                                                    hidden />
-
-                                                ${v.label}
-                                            </label>
-                                        `,
-                                )
-                                .join("")}
-                               
-                                
-                            </div>
-                        </div>
 
                         <!-- Quantity -->
                         <div class="flex items-center gap-6">

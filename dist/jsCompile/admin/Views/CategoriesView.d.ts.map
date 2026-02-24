@@ -1,0 +1,1 @@
+{"version":3,"file":"CategoriesView.d.ts","sourceRoot":"","sources":["../../../../src/admin/Views/CategoriesView.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,QAAQ,EAAE,MAAM,oBAAoB,CAAC;AAEnD,qBAAa,mBAAmB;IAC5B,OAAO,CAAC,SAAS,CAAkD;IAE5D,MAAM,CAAC,UAAU,EAAE,QAAQ,EAAE,GAAG,IAAI;CAkD9C"}
