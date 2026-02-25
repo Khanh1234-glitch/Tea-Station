@@ -4,9 +4,11 @@
         "dev": "tailwindcss -c ./tailwind.config.js -i ./public/css/main.css -o ./dist/output.css --watch"
     },
     "dependencies": {
-        "@tailwindcss/cli": "^4.1.10"
+        "@tailwindcss/cli": "^4.1.10",
+        "chart.js": "^4.5.1"
     },
     "devDependencies": {
+        "@types/chart.js": "^2.9.41",
         "@types/jquery": "^3.5.33",
         "tailwindcss": "^4.1.18"
     }

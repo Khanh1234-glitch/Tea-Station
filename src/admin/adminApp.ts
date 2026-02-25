@@ -1,4 +1,5 @@
 import { CategoriesAdminController } from "./Controller/CategoriesAdminController.js";
+import { DashboardController } from "./Controller/DashboardController.js";
 import { ProductAdminController } from "./Controller/ProductAdminController.js";
 import { ProductAttributeAdminController } from "./Controller/ProductAttributeAdminController.js";
 import { ProductListAdminController } from "./Controller/ProductListAdminController.js";
@@ -28,5 +29,8 @@ if (page.includes("product-attributes.html")) {
 }
 if (page.includes("products-list.html")) {
     controller = new ProductListAdminController();
+}
+if (page.includes("dashboard.html")) {
+    controller = new DashboardController();
 }
 controller?.init();

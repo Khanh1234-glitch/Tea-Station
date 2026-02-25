@@ -43,13 +43,44 @@
     {
       "id": "d85b",
       "createdAt": "2026-02-24T17:10:11.424Z",
-      "roleId": "1",
+      "roleId": "740c",
       "name": "Trương Nguyễn Bảo Khánh",
       "email": "khanhtnb220@gmail.com",
       "password": "123456",
       "address": "",
       "status": "active",
       "phone": "0916022815"
+    },
+    {
+      "createdAt": "2026-02-25T01:12:55.745Z",
+      "id": "a1b4",
+      "roleId": "customer",
+      "name": "Cường",
+      "email": "cuong123@gmail.com",
+      "password": "123456",
+      "address": "0916022815",
+      "status": "active",
+      "phone": "0916022815"
+    },
+    {
+      "id": "dc06",
+      "name": "ádasdqwdq",
+      "email": "qưdqwdqwdqd@gmail.com",
+      "password": "123456",
+      "phone": "123123213",
+      "address": "123213123",
+      "roleId": "2",
+      "status": "inactive"
+    },
+    {
+      "id": "4c8a",
+      "name": "adsqwdwqdqwd",
+      "email": "khanh@gmail.com",
+      "password": "123123",
+      "phone": "",
+      "address": "",
+      "roleId": "1",
+      "status": "inactive"
     }
   ],
   "categories": [
@@ -57,13 +88,13 @@
       "name": "Trà Matcha",
       "id": "1",
       "slug": "matcha",
-      "status": "inactive"
+      "status": "active"
     },
     {
       "id": "2",
       "name": "Trà Đen",
       "slug": "blackTea",
-      "status": "inactive"
+      "status": "active"
     },
     {
       "id": "3",
@@ -436,7 +467,7 @@
       "extra_price": 0,
       "price": 312312,
       "stock": 32,
-      "status": "inactive"
+      "status": "active"
     },
     {
       "id": "4856",
@@ -445,6 +476,15 @@
       "extra_price": 123123,
       "price": 23,
       "stock": 12312,
+      "status": "active"
+    },
+    {
+      "id": "438a",
+      "product_id": "3",
+      "size": "300g",
+      "extra_price": 1000000,
+      "price": 1000000,
+      "stock": 100,
       "status": "active"
     }
   ],
@@ -460,10 +500,10 @@
     {
       "id": "3e02",
       "product_id": "3",
-      "origin": "Việt Nam",
-      "brew_guide": "15g Trà đen– 150ml nước – 35°C",
-      "shelf_life": "3 tháng",
-      "storage": "Nơi khô ráo"
+      "origin": "Việt Nam - HCM",
+      "brew_guide": "10g Trà đen– 150ml nước – 35°C",
+      "shelf_life": "30 tháng",
+      "storage": "Nơi khô ráo, tránh ánh nắng"
     },
     {
       "id": "4b08",
@@ -568,6 +608,20 @@
       "total": 89000,
       "shipping_fee": 0,
       "created_at": "2026-02-23"
+    },
+    {
+      "id": "5fa3",
+      "user_id": "a1b4",
+      "customer_name": "Trương Nguyễn Bảo Khánh",
+      "phone": "0916022815",
+      "email": "khanhtnb220@gmail.com",
+      "address": "324 Phạm Văn Chí, Phường 7, Quận 3, TP Hồ Chí Minh",
+      "note": "qưdqdqqdqwd",
+      "payment_method": "cod",
+      "status": "pending",
+      "total": 218000,
+      "shipping_fee": 0,
+      "created_at": "2026-02-25"
     }
   ],
   "order_items": [
@@ -628,6 +682,24 @@
       "price": 89000,
       "quantity": 1,
       "total": 89000
+    },
+    {
+      "id": "a31b",
+      "order_id": "5fa3",
+      "product_id": "2",
+      "variant_id": "1",
+      "price": 89000,
+      "quantity": 1,
+      "total": 89000
+    },
+    {
+      "id": "b57a",
+      "order_id": "5fa3",
+      "product_id": "2",
+      "variant_id": "2",
+      "price": 129000,
+      "quantity": 1,
+      "total": 129000
     }
   ],
   "payments": [
